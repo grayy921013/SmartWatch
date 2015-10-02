@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
-
+@property (strong, nonatomic) HKHealthStore *store;
 @end
 
 @implementation AppDelegate
@@ -17,6 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.store = [[HKHealthStore alloc] init];
     return YES;
 }
 
@@ -40,6 +41,11 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)applicationShouldRequestHealthAuthorization:(UIApplication *)application {
+    [self.store handleAuthorizationForExtensionWithCompletion:^(BOOL success, NSError * _Nullable error) {
+    }];
 }
 
 @end

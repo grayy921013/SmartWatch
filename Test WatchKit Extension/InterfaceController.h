@@ -7,8 +7,10 @@
 //
 
 #import <WatchKit/WatchKit.h>
+#import <HealthKit/HealthKit.h>
 #import <Foundation/Foundation.h>
+@import WatchConnectivity;
 
-@interface InterfaceController : WKInterfaceController
+@interface InterfaceController : WKInterfaceController<HKWorkoutSessionDelegate,WCSessionDelegate>
 
 @end
