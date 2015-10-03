@@ -22,19 +22,26 @@
                                 <label width="0.5" alignment="left" minimumScaleFactor="0.69999999999999996" id="QPa-lF-HVv"/>
                             </items>
                         </group>
-                        <button width="1" alignment="left" title="Start" id="hcw-uO-pff">
-                            <connections>
-                                <action selector="onClick" destination="AgC-eL-Hgc" id="5xo-7P-5Ze"/>
-                            </connections>
-                        </button>
-                        <button width="1" alignment="left" title="End" id="LUC-dU-p9g">
-                            <connections>
-                                <action selector="onCancel" destination="AgC-eL-Hgc" id="Ss7-fa-aSi"/>
-                            </connections>
-                        </button>
+                        <group width="1" alignment="left" id="DrT-53-MHy">
+                            <items>
+                                <button width="0.5" alignment="left" title="Start" id="hcw-uO-pff">
+                                    <connections>
+                                        <action selector="onClick" destination="AgC-eL-Hgc" id="5xo-7P-5Ze"/>
+                                    </connections>
+                                </button>
+                                <button width="0.5" alignment="left" title="End" id="LUC-dU-p9g">
+                                    <connections>
+                                        <action selector="onCancel" destination="AgC-eL-Hgc" id="Ss7-fa-aSi"/>
+                                    </connections>
+                                </button>
+                                <imageView alignment="left" id="Gnc-BI-JYS"/>
+                            </items>
+                        </group>
+                        <imageView width="76" height="66" alignment="left" image="Heart" id="sAg-6g-Bp4"/>
                     </items>
                     <connections>
                         <outlet property="button" destination="hcw-uO-pff" id="IEb-e7-shE"/>
+                        <outlet property="heartIcon" destination="sAg-6g-Bp4" id="YyF-Ya-lSl"/>
                         <outlet property="heartrateLabel" destination="woN-tS-u7c" id="7er-mR-5so"/>
                         <outlet property="stepLabel" destination="QPa-lF-HVv" id="LYm-cz-RUL"/>
                     </connections>

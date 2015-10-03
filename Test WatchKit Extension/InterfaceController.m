@@ -13,6 +13,7 @@
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *heartrateLabel;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *stepLabel;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceButton *button;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceImage *heartIcon;
 @property (strong, nonatomic) HKHealthStore *healthStore;
 @property (strong, nonatomic) HKWorkoutSession *workoutSession;
 @property (strong, nonatomic) WCSession *session;
@@ -129,6 +130,18 @@
             [self.session sendMessage:applicationData replyHandler:nil errorHandler:^(NSError * _Nonnull error) {
                 NSLog(@"sent error");
             }];
+            [self animateWithDuration:0.5 animations:^{
+                [self.heartIcon setWidth:68.8];
+                [self.heartIcon setHeight:52.8];
+            }];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.5 * NSEC_PER_SEC),
+                           dispatch_get_main_queue(), ^{
+                               [self animateWithDuration:0.5 animations:^{
+                                   [self.heartIcon setWidth:76];
+                                   [self.heartIcon setHeight:66];
+                               }];
+            });
+
         }
     });
 }
