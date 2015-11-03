@@ -23,6 +23,10 @@
 		842CD2661BB66482000E2703 /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 842CD2651BB66482000E2703 /* ExtensionDelegate.m */; };
 		842CD2691BB66482000E2703 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842CD2681BB66482000E2703 /* NotificationController.m */; };
 		842CD26B1BB66482000E2703 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842CD26A1BB66482000E2703 /* Assets.xcassets */; };
+		84B8FD4E1BE8880B00CCE8DC /* WatchSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B8FD4D1BE8880B00CCE8DC /* WatchSessionManager.m */; };
+		84B8FD511BE8E27300CCE8DC /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84B8FD4F1BE8E27300CCE8DC /* Model.xcdatamodeld */; };
+		84B8FD561BE8ED1400CCE8DC /* Heartrate+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B8FD531BE8ED1400CCE8DC /* Heartrate+CoreDataProperties.m */; };
+		84B8FD571BE8ED1400CCE8DC /* Heartrate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B8FD551BE8ED1400CCE8DC /* Heartrate.m */; };
 		84D0054C1BB9313D005992E5 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D0054B1BB9313D005992E5 /* HealthKit.framework */; };
 		84F8B68D1BBC0C830054C199 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F8B68C1BBC0C830054C199 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
@@ -114,6 +118,13 @@
 		842CD2681BB66482000E2703 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
 		842CD26A1BB66482000E2703 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		842CD26C1BB66482000E2703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84B8FD4C1BE8880B00CCE8DC /* WatchSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WatchSessionManager.h; sourceTree = "<group>"; };
+		84B8FD4D1BE8880B00CCE8DC /* WatchSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WatchSessionManager.m; sourceTree = "<group>"; };
+		84B8FD501BE8E27300CCE8DC /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		84B8FD521BE8ED1400CCE8DC /* Heartrate+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Heartrate+CoreDataProperties.h"; sourceTree = "<group>"; };
+		84B8FD531BE8ED1400CCE8DC /* Heartrate+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Heartrate+CoreDataProperties.m"; sourceTree = "<group>"; };
+		84B8FD541BE8ED1400CCE8DC /* Heartrate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Heartrate.h; sourceTree = "<group>"; };
+		84B8FD551BE8ED1400CCE8DC /* Heartrate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Heartrate.m; sourceTree = "<group>"; };
 		84D0054B1BB9313D005992E5 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		84D0054D1BB9313D005992E5 /* Test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Test.entitlements; sourceTree = "<group>"; };
 		84F8B68C1BBC0C830054C199 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.0.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -157,6 +168,7 @@
 		842CD2151BB66481000E2703 = {
 			isa = PBXGroup;
 			children = (
+				84B8FD4F1BE8E27300CCE8DC /* Model.xcdatamodeld */,
 				84F8B68C1BBC0C830054C199 /* HealthKit.framework */,
 				84D0054B1BB9313D005992E5 /* HealthKit.framework */,
 				842CD2201BB66481000E2703 /* Test */,
@@ -183,6 +195,10 @@
 		842CD2201BB66481000E2703 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				84B8FD521BE8ED1400CCE8DC /* Heartrate+CoreDataProperties.h */,
+				84B8FD531BE8ED1400CCE8DC /* Heartrate+CoreDataProperties.m */,
+				84B8FD541BE8ED1400CCE8DC /* Heartrate.h */,
+				84B8FD551BE8ED1400CCE8DC /* Heartrate.m */,
 				84D0054D1BB9313D005992E5 /* Test.entitlements */,
 				842CD2241BB66481000E2703 /* AppDelegate.h */,
 				842CD2251BB66481000E2703 /* AppDelegate.m */,
@@ -193,6 +209,8 @@
 				842CD22F1BB66481000E2703 /* LaunchScreen.storyboard */,
 				842CD2321BB66481000E2703 /* Info.plist */,
 				842CD2211BB66481000E2703 /* Supporting Files */,
+				84B8FD4C1BE8880B00CCE8DC /* WatchSessionManager.h */,
+				84B8FD4D1BE8880B00CCE8DC /* WatchSessionManager.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -463,7 +481,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				842CD2291BB66481000E2703 /* ViewController.m in Sources */,
+				84B8FD571BE8ED1400CCE8DC /* Heartrate.m in Sources */,
 				842CD2261BB66481000E2703 /* AppDelegate.m in Sources */,
+				84B8FD561BE8ED1400CCE8DC /* Heartrate+CoreDataProperties.m in Sources */,
+				84B8FD511BE8E27300CCE8DC /* Model.xcdatamodeld in Sources */,
+				84B8FD4E1BE8880B00CCE8DC /* WatchSessionManager.m in Sources */,
 				842CD2231BB66481000E2703 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -835,6 +857,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		84B8FD4F1BE8E27300CCE8DC /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				84B8FD501BE8E27300CCE8DC /* Model.xcdatamodel */,
+			);
+			currentVersion = 84B8FD501BE8E27300CCE8DC /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 842CD2161BB66481000E2703 /* Project object */;
 }
