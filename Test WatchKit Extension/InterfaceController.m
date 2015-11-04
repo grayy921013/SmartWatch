@@ -11,7 +11,7 @@
 
 @interface InterfaceController()
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *heartrateLabel;
-@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *stepLabel;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *calLabel;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceButton *button;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceImage *heartIcon;
 @property (strong, nonatomic) HKHealthStore *healthStore;
@@ -152,7 +152,7 @@
         if (sample != nil && [sample isKindOfClass:[HKQuantitySample class]]) {
             double value = [((HKQuantitySample *)sample).quantity doubleValueForUnit:[HKUnit countUnit]];
             int intValue = (int)value;
-            [self.stepLabel setText:[NSString stringWithFormat:@"%d",intValue]];
+            [self.calLabel setText:[NSString stringWithFormat:@"%d",intValue]];
             NSString *counterString = [NSString stringWithFormat:@"%d", intValue];
             NSDictionary *applicationData = [[NSDictionary alloc] initWithObjects:@[counterString] forKeys:@[@"stepcount"]];
             

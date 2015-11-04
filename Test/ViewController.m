@@ -9,12 +9,11 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *textLabel;
-@property (weak, nonatomic) IBOutlet UILabel *stepLabel;
 
 @end
 
 @implementation ViewController
+NSArray *array;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -53,15 +52,40 @@
             NSError *error;
             NSArray *fetchedObjects = [managedObjectContext executeFetchRequest:fetchRequest error:&error];
             if (fetchedObjects != nil && [fetchedObjects count] > 0) {
-                Heartrate *rate = [fetchedObjects lastObject];
-                [self.textLabel setText:[NSString stringWithFormat: @"%@", rate.point]];
+                array = fetchedObjects;
+                [self.tableView reloadData];
             }
-        });
-    } else if ([[notification name] isEqualToString:@"stepcount"]) {
-        dispatch_async (dispatch_get_main_queue(), ^{
-            [self.stepLabel setText:[notification object]];
         });
     }
 }
+#pragma mark - Methods
 
+- (void)configureCell:(UITableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath {
+    Heartrate *rate = [array objectAtIndex:indexPath.row];
+    [[cell textLabel] setText:[NSString stringWithFormat: @"Heartrate:%@", rate.point]];
+}
+
+#pragma mark - Table view
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    [self configureCell:cell forIndexPath:indexPath];
+    
+    return cell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return array == nil? 0:[array count];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    [self.navigationController.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%@", @(indexPath.row + 1)]];
+}
 @end
