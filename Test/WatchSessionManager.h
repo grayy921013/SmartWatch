@@ -10,8 +10,8 @@
 @import WatchConnectivity;
 #import <CoreData/CoreData.h>
 #import "WatchSessionManager.h"
-#import "Heartrate.h"
 #import "AppDelegate.h"
+#import "SensorData.h"
 @interface WatchSessionManager : NSObject<WCSessionDelegate>
 - (void)startSession;
 +(instancetype)sharedInstance;

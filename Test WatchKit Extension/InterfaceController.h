@@ -10,6 +10,7 @@
 #import <HealthKit/HealthKit.h>
 #import <Foundation/Foundation.h>
 @import WatchConnectivity;
+#import "Data.h"
 
 @interface InterfaceController : WKInterfaceController<HKWorkoutSessionDelegate,WCSessionDelegate>
 

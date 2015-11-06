@@ -40,25 +40,23 @@ WCSession *session;
     return [self sharedInstance];
 }
 - (void)session:(WCSession *)session didReceiveMessage:(NSDictionary<NSString *, id> *)message {
-    NSString *heartrate = [message objectForKey:@"heartrate"];
-    NSString *stepcount = [message objectForKey:@"stepcount"];
+    Data *data = [Data initWithDic:message];
+    if (data == nil) return;
     AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = ad.managedObjectContext;
-    if (heartrate != nil) {
-        Heartrate *rate = [NSEntityDescription
-                           insertNewObjectForEntityForName:@"Heartrate"
-                           inManagedObjectContext:context];
-        rate.date = [NSDate date];
-        rate.point = [NSNumber numberWithInt:[heartrate intValue]];
-        [ad saveContext];
+    SensorData *rate = [NSEntityDescription
+                        insertNewObjectForEntityForName:@"SensorData"
+                        inManagedObjectContext:context];
+    [rate copyValue:data];
+    [ad saveContext];
+    if (data.type == HEARTRATE) {
         [[NSNotificationCenter defaultCenter]
          postNotificationName:@"heartrate"
-         object:heartrate];
-    }
-    if (stepcount != nil) {
+         object:data];
+    } else if (data.type == ENERGY) {
         [[NSNotificationCenter defaultCenter]
-         postNotificationName:@"stepcount"
-         object:stepcount];
+         postNotificationName:@"energy"
+         object:data];
     }
 }
 @end

@@ -23,12 +23,17 @@
 		842CD2661BB66482000E2703 /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 842CD2651BB66482000E2703 /* ExtensionDelegate.m */; };
 		842CD2691BB66482000E2703 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842CD2681BB66482000E2703 /* NotificationController.m */; };
 		842CD26B1BB66482000E2703 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842CD26A1BB66482000E2703 /* Assets.xcassets */; };
+		8493B3821BEC53EE00F93E0E /* SensorData+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 8493B37F1BEC53EE00F93E0E /* SensorData+CoreDataProperties.m */; };
+		8493B3831BEC53EE00F93E0E /* SensorData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8493B3811BEC53EE00F93E0E /* SensorData.m */; };
+		8493B3851BEC58EE00F93E0E /* SensorData+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 8493B37F1BEC53EE00F93E0E /* SensorData+CoreDataProperties.m */; };
+		8493B3881BEC5A7200F93E0E /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 8493B3871BEC5A7200F93E0E /* Data.m */; };
+		8493B3891BEC5A7200F93E0E /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 8493B3871BEC5A7200F93E0E /* Data.m */; };
+		8493B38A1BEC68AC00F93E0E /* SensorData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8493B3811BEC53EE00F93E0E /* SensorData.m */; };
 		84B8FD4E1BE8880B00CCE8DC /* WatchSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B8FD4D1BE8880B00CCE8DC /* WatchSessionManager.m */; };
 		84B8FD511BE8E27300CCE8DC /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84B8FD4F1BE8E27300CCE8DC /* Model.xcdatamodeld */; };
-		84B8FD561BE8ED1400CCE8DC /* Heartrate+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B8FD531BE8ED1400CCE8DC /* Heartrate+CoreDataProperties.m */; };
-		84B8FD571BE8ED1400CCE8DC /* Heartrate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B8FD551BE8ED1400CCE8DC /* Heartrate.m */; };
 		84D0054C1BB9313D005992E5 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D0054B1BB9313D005992E5 /* HealthKit.framework */; };
 		84F8B68D1BBC0C830054C199 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F8B68C1BBC0C830054C199 /* HealthKit.framework */; };
+		FB9D246DDE13C85C0B8B1F80 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDC12AEFAC4DF9FAB0B1EA1 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +93,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		09BA1639C411435668F004CC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		0F6C3FE867D88A99F68942EC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		4EDC12AEFAC4DF9FAB0B1EA1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		842CD21E1BB66481000E2703 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		842CD2221BB66481000E2703 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		842CD2241BB66481000E2703 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -118,13 +126,15 @@
 		842CD2681BB66482000E2703 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
 		842CD26A1BB66482000E2703 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		842CD26C1BB66482000E2703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8493B37E1BEC53EE00F93E0E /* SensorData+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SensorData+CoreDataProperties.h"; sourceTree = "<group>"; };
+		8493B37F1BEC53EE00F93E0E /* SensorData+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SensorData+CoreDataProperties.m"; sourceTree = "<group>"; };
+		8493B3801BEC53EE00F93E0E /* SensorData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorData.h; sourceTree = "<group>"; };
+		8493B3811BEC53EE00F93E0E /* SensorData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensorData.m; sourceTree = "<group>"; };
+		8493B3861BEC5A7200F93E0E /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
+		8493B3871BEC5A7200F93E0E /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Data.m; sourceTree = "<group>"; };
 		84B8FD4C1BE8880B00CCE8DC /* WatchSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WatchSessionManager.h; sourceTree = "<group>"; };
 		84B8FD4D1BE8880B00CCE8DC /* WatchSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WatchSessionManager.m; sourceTree = "<group>"; };
 		84B8FD501BE8E27300CCE8DC /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		84B8FD521BE8ED1400CCE8DC /* Heartrate+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Heartrate+CoreDataProperties.h"; sourceTree = "<group>"; };
-		84B8FD531BE8ED1400CCE8DC /* Heartrate+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Heartrate+CoreDataProperties.m"; sourceTree = "<group>"; };
-		84B8FD541BE8ED1400CCE8DC /* Heartrate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Heartrate.h; sourceTree = "<group>"; };
-		84B8FD551BE8ED1400CCE8DC /* Heartrate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Heartrate.m; sourceTree = "<group>"; };
 		84D0054B1BB9313D005992E5 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		84D0054D1BB9313D005992E5 /* Test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Test.entitlements; sourceTree = "<group>"; };
 		84F8B68C1BBC0C830054C199 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.0.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -137,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84D0054C1BB9313D005992E5 /* HealthKit.framework in Frameworks */,
+				FB9D246DDE13C85C0B8B1F80 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,7 +179,13 @@
 		842CD2151BB66481000E2703 = {
 			isa = PBXGroup;
 			children = (
+				8493B3861BEC5A7200F93E0E /* Data.h */,
+				8493B3871BEC5A7200F93E0E /* Data.m */,
 				84B8FD4F1BE8E27300CCE8DC /* Model.xcdatamodeld */,
+				8493B37E1BEC53EE00F93E0E /* SensorData+CoreDataProperties.h */,
+				8493B37F1BEC53EE00F93E0E /* SensorData+CoreDataProperties.m */,
+				8493B3801BEC53EE00F93E0E /* SensorData.h */,
+				8493B3811BEC53EE00F93E0E /* SensorData.m */,
 				84F8B68C1BBC0C830054C199 /* HealthKit.framework */,
 				84D0054B1BB9313D005992E5 /* HealthKit.framework */,
 				842CD2201BB66481000E2703 /* Test */,
@@ -177,6 +194,8 @@
 				842CD24F1BB66481000E2703 /* Test WatchKit App */,
 				842CD25E1BB66482000E2703 /* Test WatchKit Extension */,
 				842CD21F1BB66481000E2703 /* Products */,
+				E9AE2A4D397686DF6E592011 /* Pods */,
+				B66D2AB70457FE491FC4FCFF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -195,10 +214,6 @@
 		842CD2201BB66481000E2703 /* Test */ = {
 			isa = PBXGroup;
 			children = (
-				84B8FD521BE8ED1400CCE8DC /* Heartrate+CoreDataProperties.h */,
-				84B8FD531BE8ED1400CCE8DC /* Heartrate+CoreDataProperties.m */,
-				84B8FD541BE8ED1400CCE8DC /* Heartrate.h */,
-				84B8FD551BE8ED1400CCE8DC /* Heartrate.m */,
 				84D0054D1BB9313D005992E5 /* Test.entitlements */,
 				842CD2241BB66481000E2703 /* AppDelegate.h */,
 				842CD2251BB66481000E2703 /* AppDelegate.m */,
@@ -276,6 +291,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B66D2AB70457FE491FC4FCFF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4EDC12AEFAC4DF9FAB0B1EA1 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E9AE2A4D397686DF6E592011 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				09BA1639C411435668F004CC /* Pods.debug.xcconfig */,
+				0F6C3FE867D88A99F68942EC /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -283,10 +315,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 842CD2771BB66482000E2703 /* Build configuration list for PBXNativeTarget "Test" */;
 			buildPhases = (
+				AC1EA9B00BFAD8D4ABE4065A /* Check Pods Manifest.lock */,
 				842CD21A1BB66481000E2703 /* Sources */,
 				842CD21B1BB66481000E2703 /* Frameworks */,
 				842CD21C1BB66481000E2703 /* Resources */,
 				842CD2761BB66482000E2703 /* Embed Watch Content */,
+				5383EE6537C05D3671B1615F /* Embed Pods Frameworks */,
+				84FE8E4C321B69C98B7B775B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -475,16 +510,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5383EE6537C05D3671B1615F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84FE8E4C321B69C98B7B775B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC1EA9B00BFAD8D4ABE4065A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		842CD21A1BB66481000E2703 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8493B3831BEC53EE00F93E0E /* SensorData.m in Sources */,
 				842CD2291BB66481000E2703 /* ViewController.m in Sources */,
-				84B8FD571BE8ED1400CCE8DC /* Heartrate.m in Sources */,
 				842CD2261BB66481000E2703 /* AppDelegate.m in Sources */,
-				84B8FD561BE8ED1400CCE8DC /* Heartrate+CoreDataProperties.m in Sources */,
+				8493B3881BEC5A7200F93E0E /* Data.m in Sources */,
 				84B8FD511BE8E27300CCE8DC /* Model.xcdatamodeld in Sources */,
+				8493B3821BEC53EE00F93E0E /* SensorData+CoreDataProperties.m in Sources */,
 				84B8FD4E1BE8880B00CCE8DC /* WatchSessionManager.m in Sources */,
 				842CD2231BB66481000E2703 /* main.m in Sources */,
 			);
@@ -510,9 +594,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8493B3891BEC5A7200F93E0E /* Data.m in Sources */,
 				842CD2661BB66482000E2703 /* ExtensionDelegate.m in Sources */,
 				842CD2631BB66482000E2703 /* InterfaceController.m in Sources */,
 				842CD2691BB66482000E2703 /* NotificationController.m in Sources */,
+				8493B3851BEC58EE00F93E0E /* SensorData+CoreDataProperties.m in Sources */,
+				8493B38A1BEC68AC00F93E0E /* SensorData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -723,6 +810,7 @@
 		};
 		842CD2781BB66482000E2703 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09BA1639C411435668F004CC /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Test/Test.entitlements;
@@ -738,6 +826,7 @@
 		};
 		842CD2791BB66482000E2703 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F6C3FE867D88A99F68942EC /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Test/Test.entitlements;

@@ -1,19 +1,21 @@
 //
-//  Heartrate+CoreDataProperties.m
+//  SensorData+CoreDataProperties.m
 //  Test
 //
-//  Created by vincent on 11/3/15.
+//  Created by vincent on 11/6/15.
 //  Copyright © 2015 vincent. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
 //  to delete and recreate this implementation file for your updated model.
 //
 
-#import "Heartrate+CoreDataProperties.h"
+#import "SensorData+CoreDataProperties.h"
 
-@implementation Heartrate (CoreDataProperties)
+@implementation SensorData (CoreDataProperties)
 
-@dynamic point;
-@dynamic date;
+@dynamic endDate;
+@dynamic startDate;
+@dynamic type;
+@dynamic value;
 
 @end

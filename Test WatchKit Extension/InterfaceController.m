@@ -71,7 +71,7 @@
         [self.heartrateLabel setText:@"heath not available"];
     } else {
         
-        NSSet <HKQuantityType *> * dataTypes = [NSSet setWithObjects:[HKQuantityType quantityTypeForIdentifier:HKQuantityTypeIdentifierHeartRate],[HKQuantityType quantityTypeForIdentifier:HKQuantityTypeIdentifierStepCount], nil];
+        NSSet <HKQuantityType *> * dataTypes = [NSSet setWithObjects:[HKQuantityType quantityTypeForIdentifier:HKQuantityTypeIdentifierHeartRate],[HKQuantityType quantityTypeForIdentifier:HKQuantityTypeIdentifierActiveEnergyBurned], nil];
         
         [self.healthStore requestAuthorizationToShareTypes:nil readTypes:dataTypes completion:^(BOOL success, NSError * _Nullable error) {
             if (!success) {
@@ -83,7 +83,7 @@
 }
 - (void)workoutDidStart:(NSDate *)date {
     [self.queries addObject:[self createHeartRateQuery:date quantity:HKQuantityTypeIdentifierHeartRate updateHandler:@selector(updateHeartRate:) index:0]];
-    [self.queries addObject:[self createHeartRateQuery:date quantity:HKQuantityTypeIdentifierStepCount updateHandler:@selector(updateStepCount:) index:1]];
+    [self.queries addObject:[self createHeartRateQuery:date quantity:HKQuantityTypeIdentifierActiveEnergyBurned updateHandler:@selector(updateEnergy:) index:1]];
     for (HKAnchoredObjectQuery *query in self.queries) {
         [self.healthStore executeQuery:query];
     }
@@ -123,9 +123,9 @@
         if (sample != nil && [sample isKindOfClass:[HKQuantitySample class]]) {
             double value = [((HKQuantitySample *)sample).quantity doubleValueForUnit:[HKUnit unitFromString:@"count/min"]];
             int intValue = (int)value;
+            Data *data = [[Data alloc]initWithValue:value startDate:((HKQuantitySample *)sample).startDate endDate:((HKQuantitySample *)sample).endDate dataType:HEARTRATE];
             [self.heartrateLabel setText:[NSString stringWithFormat:@"%d",intValue]];
-            NSString *counterString = [NSString stringWithFormat:@"%d", intValue];
-            NSDictionary *applicationData = [[NSDictionary alloc] initWithObjects:@[counterString] forKeys:@[@"heartrate"]];
+            NSDictionary *applicationData = [data convertToDic];
             
             [self.session sendMessage:applicationData replyHandler:nil errorHandler:^(NSError * _Nonnull error) {
                 NSLog(@"sent error");
@@ -146,15 +146,15 @@
     });
 }
 
-- (void) updateStepCount:(NSArray<HKSample *> *) sampleObjects {
+- (void) updateEnergy:(NSArray<HKSample *> *) sampleObjects {
     dispatch_async(dispatch_get_main_queue(), ^{
         HKSample * sample = sampleObjects.firstObject;
         if (sample != nil && [sample isKindOfClass:[HKQuantitySample class]]) {
-            double value = [((HKQuantitySample *)sample).quantity doubleValueForUnit:[HKUnit countUnit]];
+            double value = [((HKQuantitySample *)sample).quantity doubleValueForUnit:[HKUnit unitFromString:@"cal"]];
             int intValue = (int)value;
+            Data *data = [[Data alloc]initWithValue:value startDate:((HKQuantitySample *)sample).startDate endDate:((HKQuantitySample *)sample).endDate dataType:ENERGY];
             [self.calLabel setText:[NSString stringWithFormat:@"%d",intValue]];
-            NSString *counterString = [NSString stringWithFormat:@"%d", intValue];
-            NSDictionary *applicationData = [[NSDictionary alloc] initWithObjects:@[counterString] forKeys:@[@"stepcount"]];
+            NSDictionary *applicationData = [data convertToDic];
             
             [self.session sendMessage:applicationData replyHandler:nil errorHandler:^(NSError * _Nonnull error) {
                 NSLog(@"sent error");

@@ -20,13 +20,27 @@ NSArray *array;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *managedObjectContext = ad.managedObjectContext;
+    NSEntityDescription *entity = [NSEntityDescription
+                                       entityForName:@"SensorData" inManagedObjectContext:managedObjectContext];
+    [fetchRequest setEntity:entity];
+    //NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(date == %@)",[NSDate date]];
+    //[fetchRequest setPredicate:predicate];
+    NSError *error;
+    NSArray *fetchedObjects = [managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    if (fetchedObjects != nil && [fetchedObjects count] > 0) {
+        array = fetchedObjects;
+        [self.tableView reloadData];
+    }
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(updateUI:)
                                                  name:@"heartrate"
                                                object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(updateUI:)
-                                                 name:@"stepcount"
+                                                 name:@"energy"
                                                object:nil];
 }
 
@@ -39,13 +53,13 @@ NSArray *array;
     // Dispose of any resources that can be recreated.
 }
 - (void)updateUI:(NSNotification*) notification {
-    if ([[notification name] isEqualToString:@"heartrate"]) {
+    if ([[notification name] isEqualToString:@"heartrate"] || [[notification name] isEqualToString:@"energy"]) {
         dispatch_async (dispatch_get_main_queue(), ^{
             NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
             AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
             NSManagedObjectContext *managedObjectContext = ad.managedObjectContext;
             NSEntityDescription *entity = [NSEntityDescription
-                                           entityForName:@"Heartrate" inManagedObjectContext:managedObjectContext];
+                                           entityForName:@"SensorData" inManagedObjectContext:managedObjectContext];
             [fetchRequest setEntity:entity];
             //NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(date == %@)",[NSDate date]];
             //[fetchRequest setPredicate:predicate];
@@ -61,8 +75,8 @@ NSArray *array;
 #pragma mark - Methods
 
 - (void)configureCell:(UITableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath {
-    Heartrate *rate = [array objectAtIndex:indexPath.row];
-    [[cell textLabel] setText:[NSString stringWithFormat: @"Heartrate:%@", rate.point]];
+    SensorData *data = [array objectAtIndex:indexPath.row];
+    [[cell textLabel] setText:[NSString stringWithFormat: @"%@ value:%@ | %@ |%@",data.type ,data.value, data.startDate, data.endDate]];
 }
 
 #pragma mark - Table view
@@ -73,7 +87,6 @@ NSArray *array;
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    
     [self configureCell:cell forIndexPath:indexPath];
     
     return cell;

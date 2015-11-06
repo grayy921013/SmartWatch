@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @import WatchConnectivity;
-#import "Heartrate.h"
+#import "SensorData.h"
 #import "AppDelegate.h"
 @interface ViewController : UITableViewController <WCSessionDelegate>
 
