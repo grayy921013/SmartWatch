@@ -6,19 +6,29 @@
 //  Copyright © 2015 vincent. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "DataTableViewController.h"
 
-@interface ViewController ()
+@interface DataTableViewController ()
 
 @end
 
-@implementation ViewController
+@implementation DataTableViewController
 NSArray *array;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    if (self.type == HEARTRATE) {
+        self.title = @"Heartrate";
+    } else {
+        self.title = @"Energy";
+    }
 }
-
+- (id) initWithType:(DataType)type {
+    if (self) {
+        self.type = type;
+    }
+    return self;
+}
 - (void)viewWillAppear:(BOOL)animated {
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -26,22 +36,25 @@ NSArray *array;
     NSEntityDescription *entity = [NSEntityDescription
                                        entityForName:@"SensorData" inManagedObjectContext:managedObjectContext];
     [fetchRequest setEntity:entity];
-    //NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(date == %@)",[NSDate date]];
-    //[fetchRequest setPredicate:predicate];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(type == %d)",self.type];
+    [fetchRequest setPredicate:predicate];
     NSError *error;
     NSArray *fetchedObjects = [managedObjectContext executeFetchRequest:fetchRequest error:&error];
     if (fetchedObjects != nil && [fetchedObjects count] > 0) {
         array = fetchedObjects;
         [self.tableView reloadData];
     }
+    if (self.type == HEARTRATE) {
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(updateUI:)
                                                  name:@"heartrate"
                                                object:nil];
+    } else {
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(updateUI:)
                                                  name:@"energy"
                                                object:nil];
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -61,8 +74,8 @@ NSArray *array;
             NSEntityDescription *entity = [NSEntityDescription
                                            entityForName:@"SensorData" inManagedObjectContext:managedObjectContext];
             [fetchRequest setEntity:entity];
-            //NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(date == %@)",[NSDate date]];
-            //[fetchRequest setPredicate:predicate];
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(type == %d)",self.type];
+            [fetchRequest setPredicate:predicate];
             NSError *error;
             NSArray *fetchedObjects = [managedObjectContext executeFetchRequest:fetchRequest error:&error];
             if (fetchedObjects != nil && [fetchedObjects count] > 0) {
@@ -76,7 +89,7 @@ NSArray *array;
 
 - (void)configureCell:(UITableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath {
     SensorData *data = [array objectAtIndex:indexPath.row];
-    [[cell textLabel] setText:[NSString stringWithFormat: @"%@ value:%@ | %@ |%@",data.type ,data.value, data.startDate, data.endDate]];
+    [[cell textLabel] setText:[NSString stringWithFormat: @"value:%@ | %@",data.value, data.startDate]];
 }
 
 #pragma mark - Table view

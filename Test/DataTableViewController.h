@@ -10,8 +10,8 @@
 @import WatchConnectivity;
 #import "SensorData.h"
 #import "AppDelegate.h"
-@interface ViewController : UITableViewController <WCSessionDelegate>
-
-
+@interface DataTableViewController : UITableViewController <WCSessionDelegate>
+@property (assign, nonatomic) DataType type;
+- (id) initWithType:(DataType)type;
 @end
 

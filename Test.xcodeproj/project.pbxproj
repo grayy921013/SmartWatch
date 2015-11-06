@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		842CD2231BB66481000E2703 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 842CD2221BB66481000E2703 /* main.m */; };
 		842CD2261BB66481000E2703 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 842CD2251BB66481000E2703 /* AppDelegate.m */; };
-		842CD2291BB66481000E2703 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842CD2281BB66481000E2703 /* ViewController.m */; };
+		842CD2291BB66481000E2703 /* DataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842CD2281BB66481000E2703 /* DataTableViewController.m */; };
 		842CD22C1BB66481000E2703 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842CD22A1BB66481000E2703 /* Main.storyboard */; };
 		842CD22E1BB66481000E2703 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842CD22D1BB66481000E2703 /* Assets.xcassets */; };
 		842CD2311BB66481000E2703 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842CD22F1BB66481000E2703 /* LaunchScreen.storyboard */; };
@@ -29,6 +29,11 @@
 		8493B3881BEC5A7200F93E0E /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 8493B3871BEC5A7200F93E0E /* Data.m */; };
 		8493B3891BEC5A7200F93E0E /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 8493B3871BEC5A7200F93E0E /* Data.m */; };
 		8493B38A1BEC68AC00F93E0E /* SensorData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8493B3811BEC53EE00F93E0E /* SensorData.m */; };
+		8493B38D1BECBB0D00F93E0E /* CYLTabBarControllerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 8493B38C1BECBB0D00F93E0E /* CYLTabBarControllerConfig.m */; };
+		8493B3911BECCC7700F93E0E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8493B38F1BECCC7700F93E0E /* HomeViewController.m */; };
+		8493B3921BECCC7700F93E0E /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8493B3901BECCC7700F93E0E /* HomeViewController.xib */; };
+		8493B3951BECD2B400F93E0E /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 8493B3941BECD2B400F93E0E /* Constants.m */; };
+		8493B3961BECD2B400F93E0E /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 8493B3941BECD2B400F93E0E /* Constants.m */; };
 		84B8FD4E1BE8880B00CCE8DC /* WatchSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B8FD4D1BE8880B00CCE8DC /* WatchSessionManager.m */; };
 		84B8FD511BE8E27300CCE8DC /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84B8FD4F1BE8E27300CCE8DC /* Model.xcdatamodeld */; };
 		84D0054C1BB9313D005992E5 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D0054B1BB9313D005992E5 /* HealthKit.framework */; };
@@ -100,8 +105,8 @@
 		842CD2221BB66481000E2703 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		842CD2241BB66481000E2703 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		842CD2251BB66481000E2703 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		842CD2271BB66481000E2703 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		842CD2281BB66481000E2703 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		842CD2271BB66481000E2703 /* DataTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataTableViewController.h; sourceTree = "<group>"; };
+		842CD2281BB66481000E2703 /* DataTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataTableViewController.m; sourceTree = "<group>"; };
 		842CD22B1BB66481000E2703 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		842CD22D1BB66481000E2703 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		842CD2301BB66481000E2703 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -132,6 +137,13 @@
 		8493B3811BEC53EE00F93E0E /* SensorData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensorData.m; sourceTree = "<group>"; };
 		8493B3861BEC5A7200F93E0E /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
 		8493B3871BEC5A7200F93E0E /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Data.m; sourceTree = "<group>"; };
+		8493B38B1BECBB0D00F93E0E /* CYLTabBarControllerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLTabBarControllerConfig.h; sourceTree = "<group>"; };
+		8493B38C1BECBB0D00F93E0E /* CYLTabBarControllerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYLTabBarControllerConfig.m; sourceTree = "<group>"; };
+		8493B38E1BECCC7700F93E0E /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		8493B38F1BECCC7700F93E0E /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		8493B3901BECCC7700F93E0E /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		8493B3931BECD2B400F93E0E /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		8493B3941BECD2B400F93E0E /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		84B8FD4C1BE8880B00CCE8DC /* WatchSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WatchSessionManager.h; sourceTree = "<group>"; };
 		84B8FD4D1BE8880B00CCE8DC /* WatchSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WatchSessionManager.m; sourceTree = "<group>"; };
 		84B8FD501BE8E27300CCE8DC /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -179,6 +191,8 @@
 		842CD2151BB66481000E2703 = {
 			isa = PBXGroup;
 			children = (
+				8493B3931BECD2B400F93E0E /* Constants.h */,
+				8493B3941BECD2B400F93E0E /* Constants.m */,
 				8493B3861BEC5A7200F93E0E /* Data.h */,
 				8493B3871BEC5A7200F93E0E /* Data.m */,
 				84B8FD4F1BE8E27300CCE8DC /* Model.xcdatamodeld */,
@@ -217,8 +231,8 @@
 				84D0054D1BB9313D005992E5 /* Test.entitlements */,
 				842CD2241BB66481000E2703 /* AppDelegate.h */,
 				842CD2251BB66481000E2703 /* AppDelegate.m */,
-				842CD2271BB66481000E2703 /* ViewController.h */,
-				842CD2281BB66481000E2703 /* ViewController.m */,
+				842CD2271BB66481000E2703 /* DataTableViewController.h */,
+				842CD2281BB66481000E2703 /* DataTableViewController.m */,
 				842CD22A1BB66481000E2703 /* Main.storyboard */,
 				842CD22D1BB66481000E2703 /* Assets.xcassets */,
 				842CD22F1BB66481000E2703 /* LaunchScreen.storyboard */,
@@ -226,6 +240,11 @@
 				842CD2211BB66481000E2703 /* Supporting Files */,
 				84B8FD4C1BE8880B00CCE8DC /* WatchSessionManager.h */,
 				84B8FD4D1BE8880B00CCE8DC /* WatchSessionManager.m */,
+				8493B38B1BECBB0D00F93E0E /* CYLTabBarControllerConfig.h */,
+				8493B38C1BECBB0D00F93E0E /* CYLTabBarControllerConfig.m */,
+				8493B38E1BECCC7700F93E0E /* HomeViewController.h */,
+				8493B38F1BECCC7700F93E0E /* HomeViewController.m */,
+				8493B3901BECCC7700F93E0E /* HomeViewController.xib */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -474,6 +493,7 @@
 				842CD2311BB66481000E2703 /* LaunchScreen.storyboard in Resources */,
 				842CD22E1BB66481000E2703 /* Assets.xcassets in Resources */,
 				842CD22C1BB66481000E2703 /* Main.storyboard in Resources */,
+				8493B3921BECCC7700F93E0E /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,8 +583,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8493B3951BECD2B400F93E0E /* Constants.m in Sources */,
+				8493B38D1BECBB0D00F93E0E /* CYLTabBarControllerConfig.m in Sources */,
 				8493B3831BEC53EE00F93E0E /* SensorData.m in Sources */,
-				842CD2291BB66481000E2703 /* ViewController.m in Sources */,
+				842CD2291BB66481000E2703 /* DataTableViewController.m in Sources */,
+				8493B3911BECCC7700F93E0E /* HomeViewController.m in Sources */,
 				842CD2261BB66481000E2703 /* AppDelegate.m in Sources */,
 				8493B3881BEC5A7200F93E0E /* Data.m in Sources */,
 				84B8FD511BE8E27300CCE8DC /* Model.xcdatamodeld in Sources */,
@@ -599,6 +622,7 @@
 				842CD2631BB66482000E2703 /* InterfaceController.m in Sources */,
 				842CD2691BB66482000E2703 /* NotificationController.m in Sources */,
 				8493B3851BEC58EE00F93E0E /* SensorData+CoreDataProperties.m in Sources */,
+				8493B3961BECD2B400F93E0E /* Constants.m in Sources */,
 				8493B38A1BEC68AC00F93E0E /* SensorData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "WatchSessionManager.h"
+#import "CYLTabBarControllerConfig.h"
 
 @interface AppDelegate ()
 @property (strong, nonatomic) HKHealthStore *store;
@@ -22,7 +23,52 @@
     // Override point for customization after application launch.
     self.store = [[HKHealthStore alloc] init];
     [[WatchSessionManager sharedInstance]startSession];
+    self.window = [[UIWindow alloc]init];
+    self.window.frame = [UIScreen mainScreen].bounds;
+    CYLTabBarControllerConfig *tabBarControllerConfig = [[CYLTabBarControllerConfig alloc] init];
+    [self.window setRootViewController:tabBarControllerConfig.tabBarController];
+    [self.window makeKeyAndVisible];
+    [self customizeInterface];
+    
     return YES;
+}
+
+- (void)customizeInterface {
+    [self setUpNavigationBarAppearance];
+}
+
+/**
+ *  设置navigationBar样式
+ */
+- (void)setUpNavigationBarAppearance {
+    UINavigationBar *navigationBarAppearance = [UINavigationBar appearance];
+    
+    UIImage *backgroundImage = nil;
+    NSDictionary *textAttributes = nil;
+    
+    if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1) {
+        backgroundImage = [UIImage imageNamed:@"navigationbar_background_tall"];
+        
+        textAttributes = @{
+                           NSFontAttributeName: [UIFont boldSystemFontOfSize:18],
+                           NSForegroundColorAttributeName: [UIColor blackColor],
+                           };
+    } else {
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_7_0
+        backgroundImage = [UIImage imageNamed:@"navigationbar_background"];
+        
+        textAttributes = @{
+                           UITextAttributeFont: [UIFont boldSystemFontOfSize:18],
+                           UITextAttributeTextColor: [UIColor blackColor],
+                           UITextAttributeTextShadowColor: [UIColor clearColor],
+                           UITextAttributeTextShadowOffset: [NSValue valueWithUIOffset:UIOffsetZero],
+                           };
+#endif
+    }
+    
+    [navigationBarAppearance setBackgroundImage:backgroundImage
+                                  forBarMetrics:UIBarMetricsDefault];
+    [navigationBarAppearance setTitleTextAttributes:textAttributes];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

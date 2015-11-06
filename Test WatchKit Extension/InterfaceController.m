@@ -88,6 +88,9 @@
         [self.healthStore executeQuery:query];
     }
     [self.heartrateLabel setText:@"started"];
+    [self.session sendMessage:@{@"control":@"start"} replyHandler:nil errorHandler:^(NSError * _Nonnull error) {
+        NSLog(@"sent error");
+    }];
 }
 - (void)workoutDidEnd:(NSDate *)date {
     for (HKAnchoredObjectQuery *query in self.queries) {
@@ -96,6 +99,9 @@
     [self.queries removeAllObjects];
     [self.heartrateLabel setText:@"ended"];
     self.workoutSession = nil;
+    [self.session sendMessage:@{@"control":@"end"} replyHandler:nil errorHandler:^(NSError * _Nonnull error) {
+        NSLog(@"sent error");
+    }];
 }
 - (HKAnchoredObjectQuery*) createHeartRateQuery:(NSDate *)startDate quantity:(NSString *)quantity updateHandler:(SEL)handlerMethod index:(int) index {
     
