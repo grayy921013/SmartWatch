@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)copyValue:(Data*)sensorData;
 -(DataType)itemTypeRaw;
 -(void)setDataTypeRaw:(DataType)type;
+-(Data *)getDataFromSensorData;
 @end
 
 NS_ASSUME_NONNULL_END

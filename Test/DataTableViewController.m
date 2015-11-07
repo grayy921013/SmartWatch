@@ -9,11 +9,10 @@
 #import "DataTableViewController.h"
 
 @interface DataTableViewController ()
-
+@property (retain,nonatomic) NSMutableArray *array;
 @end
 
 @implementation DataTableViewController
-NSArray *array;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -22,6 +21,27 @@ NSArray *array;
     } else {
         self.title = @"Energy";
     }
+    UIBarButtonItem *resetButton = [[UIBarButtonItem alloc]
+                                   initWithTitle:@"Remove All"
+                                   style:UIBarButtonItemStylePlain
+                                   target:self
+                                   action:@selector(resetData)];
+    self.navigationItem.rightBarButtonItem = resetButton;
+    self.array = [[NSMutableArray alloc] init];
+}
+- (void)resetData {
+    NSArray *fetchedObjects = [self fetchObjects];
+    if (fetchedObjects != nil && [fetchedObjects count] > 0) {
+        AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        NSManagedObjectContext *managedObjectContext = ad.managedObjectContext;
+        for (SensorData *sensorData in fetchedObjects) {
+            [managedObjectContext deleteObject:sensorData];
+            NSError *error;
+            [managedObjectContext save:&error];
+        }
+        self.array = [[NSMutableArray alloc] init];
+        [self.tableView reloadData];
+    }
 }
 - (id) initWithType:(DataType)type {
     if (self) {
@@ -29,21 +49,31 @@ NSArray *array;
     }
     return self;
 }
-- (void)viewWillAppear:(BOOL)animated {
+- (NSArray *)fetchObjects {
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *managedObjectContext = ad.managedObjectContext;
     NSEntityDescription *entity = [NSEntityDescription
-                                       entityForName:@"SensorData" inManagedObjectContext:managedObjectContext];
+                                   entityForName:@"SensorData" inManagedObjectContext:managedObjectContext];
     [fetchRequest setEntity:entity];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(type == %d)",self.type];
     [fetchRequest setPredicate:predicate];
     NSError *error;
-    NSArray *fetchedObjects = [managedObjectContext executeFetchRequest:fetchRequest error:&error];
-    if (fetchedObjects != nil && [fetchedObjects count] > 0) {
-        array = fetchedObjects;
-        [self.tableView reloadData];
+    return [managedObjectContext executeFetchRequest:fetchRequest error:&error];
+}
+- (void)loadDataFromDatabase {
+    NSArray *fetchedObjects = [self fetchObjects];
+    if (fetchedObjects != nil) {
+        self.array = [[NSMutableArray alloc] init];
+        for (SensorData *sensorData in fetchedObjects) {
+            Data *data = [sensorData getDataFromSensorData];
+            [self.array addObject:data];
+        }
     }
+    [self.tableView reloadData];
+}
+- (void)viewWillAppear:(BOOL)animated {
+    [self loadDataFromDatabase];
     if (self.type == HEARTRATE) {
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(updateUI:)
@@ -67,29 +97,20 @@ NSArray *array;
 }
 - (void)updateUI:(NSNotification*) notification {
     if ([[notification name] isEqualToString:@"heartrate"] || [[notification name] isEqualToString:@"energy"]) {
-        dispatch_async (dispatch_get_main_queue(), ^{
-            NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-            AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-            NSManagedObjectContext *managedObjectContext = ad.managedObjectContext;
-            NSEntityDescription *entity = [NSEntityDescription
-                                           entityForName:@"SensorData" inManagedObjectContext:managedObjectContext];
-            [fetchRequest setEntity:entity];
-            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(type == %d)",self.type];
-            [fetchRequest setPredicate:predicate];
-            NSError *error;
-            NSArray *fetchedObjects = [managedObjectContext executeFetchRequest:fetchRequest error:&error];
-            if (fetchedObjects != nil && [fetchedObjects count] > 0) {
-                array = fetchedObjects;
+        SensorData *sensorData = notification.object;
+        if ([sensorData.type intValue] == self.type) {
+            dispatch_async (dispatch_get_main_queue(), ^{
+                [self.array addObject:sensorData];
                 [self.tableView reloadData];
-            }
-        });
+            });
+        }
     }
 }
 #pragma mark - Methods
 
 - (void)configureCell:(UITableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath {
-    SensorData *data = [array objectAtIndex:indexPath.row];
-    [[cell textLabel] setText:[NSString stringWithFormat: @"value:%@ | %@",data.value, data.startDate]];
+    Data *data = [self.array objectAtIndex:indexPath.row];
+    [[cell textLabel] setText:[NSString stringWithFormat: @"value:%ld | %@",data.value, data.startDate]];
 }
 
 #pragma mark - Table view
@@ -106,12 +127,11 @@ NSArray *array;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return array == nil? 0:[array count];
+    return self.array == nil? 0:[self.array count];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    [self.navigationController.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%@", @(indexPath.row + 1)]];
 }
 @end

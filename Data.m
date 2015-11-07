@@ -26,7 +26,7 @@
 }
 +(instancetype)initWithDic:(NSDictionary*)dic{
     Data *instance = [[Data alloc]init];
-    instance.value = [[dic objectForKey:@"value"] intValue];
+    instance.value = [[dic objectForKey:@"value"] integerValue];
     instance.startDate = [dic objectForKey:@"startDate"];
     instance.endDate = [dic objectForKey:@"endDate"];
     instance.type = (DataType)[[dic objectForKey:@"type"] intValue];

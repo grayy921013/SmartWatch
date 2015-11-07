@@ -26,6 +26,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    [self updateUI:nil];
    [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(updateUI:)
                                                      name:@"heartrate"
@@ -38,7 +39,13 @@
     dispatch_async (dispatch_get_main_queue(), ^{
     NSInteger point = [[NSUserDefaults standardUserDefaults] integerForKey:POINT_KEY];
     [self.pointLabel setText:[@(point) stringValue]];
+    [self.levelLabel setText:[@((int)log10(point)) stringValue]];
     });
+}
+- (IBAction)resetClick:(id)sender {
+    [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:POINT_KEY];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    [self updateUI:nil];
 }
 /*
 #pragma mark - Navigation

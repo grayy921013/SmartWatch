@@ -10,4 +10,6 @@
 
 @implementation Constants
 NSString *const POINT_KEY = @"Point_key";
+int THRESHOLD = 100;
+BOOL GEN_DATA = YES;
 @end

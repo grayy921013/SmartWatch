@@ -5,7 +5,6 @@
 //  Created by vincent on 11/3/15.
 //  Copyright © 2015 vincent. All rights reserved.
 //
-
 #import "WatchSessionManager.h"
 @implementation WatchSessionManager
 int last_heartrate_value;
@@ -23,6 +22,21 @@ WCSession *session;
 }
 - (void)startSession {
     [session activateSession];
+    if (GEN_DATA) {
+        [self gendata];
+    }
+}
+- (void)gendata {
+    [NSTimer scheduledTimerWithTimeInterval:5
+                                     target:self
+                                   selector:@selector(gendataentry)
+                                   userInfo:nil
+                                    repeats:YES];
+}
+- (void)gendataentry {
+    NSDictionary *data = @{@"value": [NSNumber numberWithInt:arc4random_uniform(180)],@"startDate":[NSDate date],@"endDate":[NSDate date],@"type":[NSNumber numberWithInt:HEARTRATE]};
+    [self session:nil didReceiveMessage:data];
+    
 }
 +(instancetype)sharedInstance
 {
@@ -61,12 +75,15 @@ WCSession *session;
         if (data.type == HEARTRATE) {
             //get time interval since last data, and point = (time) * exp(heartrate - 100)
             if (last_heartrate_time != nil) {
-                if (last_heartrate_value > 60) {
+                if (last_heartrate_value > THRESHOLD) {
                     NSTimeInterval diff = [data.startDate timeIntervalSinceDate:last_heartrate_time]; // in seconds
-                    int point = (int)(exp(last_heartrate_value - 60) * diff);
-                    NSInteger newpoint = point + [[NSUserDefaults standardUserDefaults] integerForKey:POINT_KEY];
-                    [[NSUserDefaults standardUserDefaults] setInteger:newpoint forKey:POINT_KEY];
-                    [[NSUserDefaults standardUserDefaults] synchronize];
+                    if (diff > 0 && diff < 300) {
+                        //filter error value
+                        int point = (int)(pow(1.1,last_heartrate_value - THRESHOLD) * diff / 100);
+                        NSInteger newpoint = point + [[NSUserDefaults standardUserDefaults] integerForKey:POINT_KEY];
+                        [[NSUserDefaults standardUserDefaults] setInteger:newpoint forKey:POINT_KEY];
+                        [[NSUserDefaults standardUserDefaults] synchronize];
+                    }
                 }
             }
             last_heartrate_time = data.startDate;

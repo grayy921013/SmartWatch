@@ -10,5 +10,7 @@
 #import "Constants.h"
 @interface HomeViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *pointLabel;
+@property (weak, nonatomic) IBOutlet UIButton *resetBtn;
+@property (weak, nonatomic) IBOutlet UILabel *levelLabel;
 
 @end

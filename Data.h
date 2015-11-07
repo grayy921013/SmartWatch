@@ -7,13 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-
 @interface Data : NSObject
 typedef enum {
     HEARTRATE = 0,
     ENERGY = 1,
 } DataType;
-@property (assign, nonatomic) int value;
+@property (assign, nonatomic) NSInteger value;
 @property (retain, nonatomic) NSDate* startDate;
 @property (retain, nonatomic) NSDate* endDate;
 @property (assign, nonatomic) DataType type;

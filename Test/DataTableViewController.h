@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-@import WatchConnectivity;
 #import "SensorData.h"
 #import "AppDelegate.h"
 @interface DataTableViewController : UITableViewController <WCSessionDelegate>
