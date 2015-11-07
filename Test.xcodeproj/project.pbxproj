@@ -34,6 +34,15 @@
 		8493B3921BECCC7700F93E0E /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8493B3901BECCC7700F93E0E /* HomeViewController.xib */; };
 		8493B3951BECD2B400F93E0E /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 8493B3941BECD2B400F93E0E /* Constants.m */; };
 		8493B3961BECD2B400F93E0E /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 8493B3941BECD2B400F93E0E /* Constants.m */; };
+		8493B39C1BEDF1C800F93E0E /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 8493B39B1BEDF1C800F93E0E /* UIImage+animatedGIF.m */; };
+		8493B3A11BEDF75400F93E0E /* gif0.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8493B3A01BEDF75400F93E0E /* gif0.gif */; };
+		8493B3A91BEDF85400F93E0E /* gif1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8493B3A21BEDF85300F93E0E /* gif1.gif */; };
+		8493B3AA1BEDF85400F93E0E /* gif2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8493B3A31BEDF85300F93E0E /* gif2.gif */; };
+		8493B3AB1BEDF85400F93E0E /* gif3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8493B3A41BEDF85300F93E0E /* gif3.gif */; };
+		8493B3AC1BEDF85400F93E0E /* gif4.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8493B3A51BEDF85300F93E0E /* gif4.gif */; };
+		8493B3AD1BEDF85400F93E0E /* gif5.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8493B3A61BEDF85300F93E0E /* gif5.gif */; };
+		8493B3AE1BEDF85400F93E0E /* gif6.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8493B3A71BEDF85300F93E0E /* gif6.gif */; };
+		8493B3AF1BEDF85400F93E0E /* gif7.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8493B3A81BEDF85400F93E0E /* gif7.gif */; };
 		84B8FD4E1BE8880B00CCE8DC /* WatchSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B8FD4D1BE8880B00CCE8DC /* WatchSessionManager.m */; };
 		84B8FD511BE8E27300CCE8DC /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84B8FD4F1BE8E27300CCE8DC /* Model.xcdatamodeld */; };
 		84D0054C1BB9313D005992E5 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D0054B1BB9313D005992E5 /* HealthKit.framework */; };
@@ -144,6 +153,16 @@
 		8493B3901BECCC7700F93E0E /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		8493B3931BECD2B400F93E0E /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		8493B3941BECD2B400F93E0E /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		8493B39A1BEDF1C800F93E0E /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
+		8493B39B1BEDF1C800F93E0E /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
+		8493B3A01BEDF75400F93E0E /* gif0.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = gif0.gif; path = gifs/gif0.gif; sourceTree = "<group>"; };
+		8493B3A21BEDF85300F93E0E /* gif1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = gif1.gif; path = gifs/gif1.gif; sourceTree = "<group>"; };
+		8493B3A31BEDF85300F93E0E /* gif2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = gif2.gif; path = gifs/gif2.gif; sourceTree = "<group>"; };
+		8493B3A41BEDF85300F93E0E /* gif3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = gif3.gif; path = gifs/gif3.gif; sourceTree = "<group>"; };
+		8493B3A51BEDF85300F93E0E /* gif4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = gif4.gif; path = gifs/gif4.gif; sourceTree = "<group>"; };
+		8493B3A61BEDF85300F93E0E /* gif5.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = gif5.gif; path = gifs/gif5.gif; sourceTree = "<group>"; };
+		8493B3A71BEDF85300F93E0E /* gif6.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = gif6.gif; path = gifs/gif6.gif; sourceTree = "<group>"; };
+		8493B3A81BEDF85400F93E0E /* gif7.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = gif7.gif; path = gifs/gif7.gif; sourceTree = "<group>"; };
 		84B8FD4C1BE8880B00CCE8DC /* WatchSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WatchSessionManager.h; sourceTree = "<group>"; };
 		84B8FD4D1BE8880B00CCE8DC /* WatchSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WatchSessionManager.m; sourceTree = "<group>"; };
 		84B8FD501BE8E27300CCE8DC /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -191,15 +210,8 @@
 		842CD2151BB66481000E2703 = {
 			isa = PBXGroup;
 			children = (
-				8493B3931BECD2B400F93E0E /* Constants.h */,
-				8493B3941BECD2B400F93E0E /* Constants.m */,
-				8493B3861BEC5A7200F93E0E /* Data.h */,
-				8493B3871BEC5A7200F93E0E /* Data.m */,
-				84B8FD4F1BE8E27300CCE8DC /* Model.xcdatamodeld */,
-				8493B37E1BEC53EE00F93E0E /* SensorData+CoreDataProperties.h */,
-				8493B37F1BEC53EE00F93E0E /* SensorData+CoreDataProperties.m */,
-				8493B3801BEC53EE00F93E0E /* SensorData.h */,
-				8493B3811BEC53EE00F93E0E /* SensorData.m */,
+				8493B3981BEDF18700F93E0E /* library */,
+				8493B3971BEDEAF600F93E0E /* Model */,
 				84F8B68C1BBC0C830054C199 /* HealthKit.framework */,
 				84D0054B1BB9313D005992E5 /* HealthKit.framework */,
 				842CD2201BB66481000E2703 /* Test */,
@@ -308,6 +320,55 @@
 				842CD2601BB66482000E2703 /* PushNotificationPayload.apns */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8493B3971BEDEAF600F93E0E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8493B3931BECD2B400F93E0E /* Constants.h */,
+				8493B3941BECD2B400F93E0E /* Constants.m */,
+				8493B3861BEC5A7200F93E0E /* Data.h */,
+				8493B3871BEC5A7200F93E0E /* Data.m */,
+				84B8FD4F1BE8E27300CCE8DC /* Model.xcdatamodeld */,
+				8493B37E1BEC53EE00F93E0E /* SensorData+CoreDataProperties.h */,
+				8493B37F1BEC53EE00F93E0E /* SensorData+CoreDataProperties.m */,
+				8493B3801BEC53EE00F93E0E /* SensorData.h */,
+				8493B3811BEC53EE00F93E0E /* SensorData.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8493B3981BEDF18700F93E0E /* library */ = {
+			isa = PBXGroup;
+			children = (
+				8493B3991BEDF1A300F93E0E /* uiimage-from-animated-gif */,
+			);
+			name = library;
+			sourceTree = "<group>";
+		};
+		8493B3991BEDF1A300F93E0E /* uiimage-from-animated-gif */ = {
+			isa = PBXGroup;
+			children = (
+				8493B39D1BEDF27000F93E0E /* gifs */,
+				8493B39A1BEDF1C800F93E0E /* UIImage+animatedGIF.h */,
+				8493B39B1BEDF1C800F93E0E /* UIImage+animatedGIF.m */,
+			);
+			name = "uiimage-from-animated-gif";
+			sourceTree = "<group>";
+		};
+		8493B39D1BEDF27000F93E0E /* gifs */ = {
+			isa = PBXGroup;
+			children = (
+				8493B3A21BEDF85300F93E0E /* gif1.gif */,
+				8493B3A31BEDF85300F93E0E /* gif2.gif */,
+				8493B3A41BEDF85300F93E0E /* gif3.gif */,
+				8493B3A51BEDF85300F93E0E /* gif4.gif */,
+				8493B3A61BEDF85300F93E0E /* gif5.gif */,
+				8493B3A71BEDF85300F93E0E /* gif6.gif */,
+				8493B3A81BEDF85400F93E0E /* gif7.gif */,
+				8493B3A01BEDF75400F93E0E /* gif0.gif */,
+			);
+			name = gifs;
 			sourceTree = "<group>";
 		};
 		B66D2AB70457FE491FC4FCFF /* Frameworks */ = {
@@ -491,8 +552,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				842CD2311BB66481000E2703 /* LaunchScreen.storyboard in Resources */,
+				8493B3AF1BEDF85400F93E0E /* gif7.gif in Resources */,
+				8493B3A91BEDF85400F93E0E /* gif1.gif in Resources */,
 				842CD22E1BB66481000E2703 /* Assets.xcassets in Resources */,
+				8493B3A11BEDF75400F93E0E /* gif0.gif in Resources */,
 				842CD22C1BB66481000E2703 /* Main.storyboard in Resources */,
+				8493B3AB1BEDF85400F93E0E /* gif3.gif in Resources */,
+				8493B3AA1BEDF85400F93E0E /* gif2.gif in Resources */,
+				8493B3AE1BEDF85400F93E0E /* gif6.gif in Resources */,
+				8493B3AD1BEDF85400F93E0E /* gif5.gif in Resources */,
+				8493B3AC1BEDF85400F93E0E /* gif4.gif in Resources */,
 				8493B3921BECCC7700F93E0E /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -584,6 +653,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8493B3951BECD2B400F93E0E /* Constants.m in Sources */,
+				8493B39C1BEDF1C800F93E0E /* UIImage+animatedGIF.m in Sources */,
 				8493B38D1BECBB0D00F93E0E /* CYLTabBarControllerConfig.m in Sources */,
 				8493B3831BEC53EE00F93E0E /* SensorData.m in Sources */,
 				842CD2291BB66481000E2703 /* DataTableViewController.m in Sources */,

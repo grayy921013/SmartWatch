@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
             <connections>
+                <outlet property="imageView" destination="SCu-Hw-GgW" id="wWA-8Z-f2R"/>
                 <outlet property="levelLabel" destination="wmg-MS-tdQ" id="N98-Sg-krb"/>
                 <outlet property="pointLabel" destination="uzd-XX-v0R" id="Rr1-5a-y2C"/>
                 <outlet property="resetBtn" destination="VSb-u6-YoH" id="JjC-kW-d2c"/>
@@ -73,13 +74,23 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SCu-Hw-GgW">
+                    <rect key="frame" x="100" y="302" width="120" height="120"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="i2g-m7-Z6E"/>
+                        <constraint firstAttribute="height" constant="120" id="yAG-zz-hYb"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="VSb-u6-YoH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="192" id="HiQ-cd-hWV"/>
                 <constraint firstItem="P4F-Fc-xhN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="49" id="LxY-Ce-wCC"/>
+                <constraint firstItem="SCu-Hw-GgW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="M2T-7Z-R8Z"/>
                 <constraint firstItem="VSb-u6-YoH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="OA6-Bm-WXX"/>
+                <constraint firstItem="SCu-Hw-GgW" firstAttribute="top" secondItem="VSb-u6-YoH" secondAttribute="bottom" constant="80" id="QJn-OR-sH5"/>
                 <constraint firstItem="wmg-MS-tdQ" firstAttribute="top" secondItem="uzd-XX-v0R" secondAttribute="bottom" constant="26" id="TV3-Gz-UHd"/>
                 <constraint firstItem="IpP-EU-dTC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="49" id="f7E-8b-Fz2"/>
                 <constraint firstItem="uzd-XX-v0R" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="85" id="iwM-Ri-NlM"/>
