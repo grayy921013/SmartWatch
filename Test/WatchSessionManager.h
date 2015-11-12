@@ -17,4 +17,5 @@
 @interface WatchSessionManager : NSObject<WCSessionDelegate>
 - (void)startSession;
 +(instancetype)sharedInstance;
+- (void)shouldGenData:(BOOL)generate;
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "HomeViewController.h"
-
+#import "WatchSessionManager.h"
 @interface HomeViewController ()
 @property (assign, nonatomic) int level_now;
 @end
@@ -54,6 +54,9 @@
     [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:POINT_KEY];
     [[NSUserDefaults standardUserDefaults] synchronize];
     [self updateUI:nil];
+}
+- (IBAction)shouldGenData:(id)sender {
+    [[WatchSessionManager sharedInstance] shouldGenData:[sender isOn]];
 }
 /*
  #pragma mark - Navigation

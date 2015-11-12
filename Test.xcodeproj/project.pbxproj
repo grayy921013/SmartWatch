@@ -110,7 +110,7 @@
 		09BA1639C411435668F004CC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		0F6C3FE867D88A99F68942EC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		4EDC12AEFAC4DF9FAB0B1EA1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		842CD21E1BB66481000E2703 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		842CD21E1BB66481000E2703 /* Smart Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		842CD2221BB66481000E2703 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		842CD2241BB66481000E2703 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		842CD2251BB66481000E2703 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -228,7 +228,7 @@
 		842CD21F1BB66481000E2703 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				842CD21E1BB66481000E2703 /* Test.app */,
+				842CD21E1BB66481000E2703 /* Smart Watch.app */,
 				842CD2371BB66481000E2703 /* TestTests.xctest */,
 				842CD2421BB66481000E2703 /* TestUITests.xctest */,
 				842CD24B1BB66481000E2703 /* Test WatchKit App.app */,
@@ -410,7 +410,7 @@
 			);
 			name = Test;
 			productName = Test;
-			productReference = 842CD21E1BB66481000E2703 /* Test.app */;
+			productReference = 842CD21E1BB66481000E2703 /* Smart Watch.app */;
 			productType = "com.apple.product-type.application";
 		};
 		842CD2361BB66481000E2703 /* TestTests */ = {
@@ -913,7 +913,7 @@
 				INFOPLIST_FILE = Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VincentZhou.Test;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Smart Watch";
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -929,7 +929,7 @@
 				INFOPLIST_FILE = Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VincentZhou.Test;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Smart Watch";
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;

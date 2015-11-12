@@ -9,6 +9,7 @@
 @implementation WatchSessionManager
 int last_heartrate_value;
 NSDate *last_heartrate_time = nil;
+NSTimer *timer;
 static WatchSessionManager *sharedInstance;
 WCSession *session;
 - (instancetype)init {
@@ -22,16 +23,21 @@ WCSession *session;
 }
 - (void)startSession {
     [session activateSession];
-    if (GEN_DATA) {
-        [self gendata];
-    }
+//    if (GEN_DATA) {
+//        [self shouldGenData:YES];
+//    }
 }
-- (void)gendata {
-    [NSTimer scheduledTimerWithTimeInterval:5
+- (void)shouldGenData:(BOOL)generate {
+    if (generate) {
+    timer = [NSTimer scheduledTimerWithTimeInterval:5
                                      target:self
                                    selector:@selector(gendataentry)
                                    userInfo:nil
                                     repeats:YES];
+    } else {
+        [timer invalidate];
+        timer = nil;
+    }
 }
 - (void)gendataentry {
     NSDictionary *data = @{@"value": [NSNumber numberWithInt:arc4random_uniform(180)],@"startDate":[NSDate date],@"endDate":[NSDate date],@"type":[NSNumber numberWithInt:HEARTRATE]};
