@@ -21,6 +21,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    NSURL *defaultPrefsFile = [[NSBundle mainBundle]
+                               URLForResource:@"Defaults" withExtension:@"plist"];
+    NSDictionary *defaultPrefs =
+    [NSDictionary dictionaryWithContentsOfURL:defaultPrefsFile];
+    [[NSUserDefaults standardUserDefaults] registerDefaults:defaultPrefs];
+    
+    
     self.store = [[HKHealthStore alloc] init];
     [[WatchSessionManager sharedInstance]startSession];
     self.window = [[UIWindow alloc]init];

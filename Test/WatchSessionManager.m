@@ -7,7 +7,7 @@
 //
 #import "WatchSessionManager.h"
 @implementation WatchSessionManager
-int last_heartrate_value;
+NSInteger last_heartrate_value;
 NSDate *last_heartrate_time = nil;
 NSTimer *timer;
 static WatchSessionManager *sharedInstance;
@@ -23,17 +23,17 @@ WCSession *session;
 }
 - (void)startSession {
     [session activateSession];
-//    if (GEN_DATA) {
-//        [self shouldGenData:YES];
-//    }
+    //    if (GEN_DATA) {
+    //        [self shouldGenData:YES];
+    //    }
 }
 - (void)shouldGenData:(BOOL)generate {
     if (generate) {
-    timer = [NSTimer scheduledTimerWithTimeInterval:5
-                                     target:self
-                                   selector:@selector(gendataentry)
-                                   userInfo:nil
-                                    repeats:YES];
+        timer = [NSTimer scheduledTimerWithTimeInterval:5
+                                                 target:self
+                                               selector:@selector(gendataentry)
+                                               userInfo:nil
+                                                repeats:YES];
     } else {
         [timer invalidate];
         timer = nil;
@@ -81,15 +81,58 @@ WCSession *session;
         if (data.type == HEARTRATE) {
             //get time interval since last data, and point = (time) * exp(heartrate - 100)
             if (last_heartrate_time != nil) {
-                if (last_heartrate_value > THRESHOLD) {
-                    NSTimeInterval diff = [data.startDate timeIntervalSinceDate:last_heartrate_time]; // in seconds
-                    if (diff > 0 && diff < 300) {
-                        //filter error value
-                        int point = (int)(pow(1.1,last_heartrate_value - THRESHOLD) * diff / 100);
-                        NSInteger newpoint = point + [[NSUserDefaults standardUserDefaults] integerForKey:POINT_KEY];
-                        [[NSUserDefaults standardUserDefaults] setInteger:newpoint forKey:POINT_KEY];
-                        [[NSUserDefaults standardUserDefaults] synchronize];
+                NSTimeInterval time = [data.startDate timeIntervalSinceDate:last_heartrate_time]; // in seconds
+                int diff = round(time);
+                if (diff > 0 && diff < 300) {
+                    NSInteger max = 220-[[NSUserDefaults standardUserDefaults] integerForKey:AGE_KEY];
+                    NSInteger rest = [[NSUserDefaults standardUserDefaults] integerForKey:RATE_KEY];
+                    NSInteger point = 0;
+                    int totalTime = 0;
+                    double multi = 1;
+                    
+                    //add duration to work out time of today
+                    if (last_heartrate_value > max*0.6+rest*0.4) {
+                        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+                        NSEntityDescription *entity = [NSEntityDescription
+                                                       entityForName:@"TrainingTime" inManagedObjectContext:context];
+                        [fetchRequest setEntity:entity];
+                        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(date == %@)",[Util beginningOfDay:data.startDate]];
+                        [fetchRequest setPredicate:predicate];
+                        NSError *error;
+                        NSArray *array = [context executeFetchRequest:fetchRequest error:&error];
+                        if (array == nil || [array count] == 0) {
+                            TrainingTime *timeSlot = [NSEntityDescription
+                                                      insertNewObjectForEntityForName:@"TrainingTime"
+                                                      inManagedObjectContext:context];
+                            timeSlot.date = [Util beginningOfDay:data.startDate];
+                            timeSlot.totalTime = [NSNumber numberWithInt:diff];
+                            totalTime = diff;
+                            [ad saveContext];
+                        } else {
+                            TrainingTime *timeSlot = [array objectAtIndex:0];
+                            totalTime = diff+[timeSlot.totalTime intValue];
+                            timeSlot.totalTime = [NSNumber numberWithInt:totalTime];
+                            
+                        }
                     }
+                    if (totalTime > 1.5*3600) {
+                        multi = 0.5;
+                    }
+                    
+                    //add point
+                    if (last_heartrate_value > max*0.8+rest*0.2) {
+                        //zone1
+                        point = round(diff*multi);
+                    } else if (last_heartrate_value > max*0.7+rest*0.3) {
+                        //zone2
+                        point = round(0.8*diff*multi);
+                    } else if (last_heartrate_value > max*0.6+rest*0.4) {
+                        //zone3
+                        point = round(0.6*diff*multi);
+                    }
+                    NSInteger newpoint = point + [[NSUserDefaults standardUserDefaults] integerForKey:POINT_KEY];
+                    [[NSUserDefaults standardUserDefaults] setInteger:newpoint forKey:POINT_KEY];
+                    [[NSUserDefaults standardUserDefaults] synchronize];
                 }
             }
             last_heartrate_time = data.startDate;

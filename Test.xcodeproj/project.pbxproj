@@ -23,6 +23,12 @@
 		842CD2661BB66482000E2703 /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 842CD2651BB66482000E2703 /* ExtensionDelegate.m */; };
 		842CD2691BB66482000E2703 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842CD2681BB66482000E2703 /* NotificationController.m */; };
 		842CD26B1BB66482000E2703 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842CD26A1BB66482000E2703 /* Assets.xcassets */; };
+		846D3AF01C0D8635006BB020 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846D3AEE1C0D8635006BB020 /* InfoViewController.m */; };
+		846D3AF11C0D8635006BB020 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846D3AEF1C0D8635006BB020 /* InfoViewController.xib */; };
+		846D3AF31C0DAD4B006BB020 /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 846D3AF21C0DAD4B006BB020 /* Defaults.plist */; };
+		846D3AF81C0DC8CE006BB020 /* TrainingTime+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 846D3AF51C0DC8CE006BB020 /* TrainingTime+CoreDataProperties.m */; };
+		846D3AF91C0DC8CE006BB020 /* TrainingTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 846D3AF71C0DC8CE006BB020 /* TrainingTime.m */; };
+		846D3AFC1C0DD1D8006BB020 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 846D3AFB1C0DD1D8006BB020 /* Util.m */; };
 		8493B3821BEC53EE00F93E0E /* SensorData+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 8493B37F1BEC53EE00F93E0E /* SensorData+CoreDataProperties.m */; };
 		8493B3831BEC53EE00F93E0E /* SensorData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8493B3811BEC53EE00F93E0E /* SensorData.m */; };
 		8493B3851BEC58EE00F93E0E /* SensorData+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 8493B37F1BEC53EE00F93E0E /* SensorData+CoreDataProperties.m */; };
@@ -140,6 +146,16 @@
 		842CD2681BB66482000E2703 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
 		842CD26A1BB66482000E2703 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		842CD26C1BB66482000E2703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		846D3AED1C0D8635006BB020 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		846D3AEE1C0D8635006BB020 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		846D3AEF1C0D8635006BB020 /* InfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
+		846D3AF21C0DAD4B006BB020 /* Defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Defaults.plist; sourceTree = "<group>"; };
+		846D3AF41C0DC8CE006BB020 /* TrainingTime+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TrainingTime+CoreDataProperties.h"; sourceTree = "<group>"; };
+		846D3AF51C0DC8CE006BB020 /* TrainingTime+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TrainingTime+CoreDataProperties.m"; sourceTree = "<group>"; };
+		846D3AF61C0DC8CE006BB020 /* TrainingTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainingTime.h; sourceTree = "<group>"; };
+		846D3AF71C0DC8CE006BB020 /* TrainingTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainingTime.m; sourceTree = "<group>"; };
+		846D3AFA1C0DD1D8006BB020 /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		846D3AFB1C0DD1D8006BB020 /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
 		8493B37E1BEC53EE00F93E0E /* SensorData+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SensorData+CoreDataProperties.h"; sourceTree = "<group>"; };
 		8493B37F1BEC53EE00F93E0E /* SensorData+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SensorData+CoreDataProperties.m"; sourceTree = "<group>"; };
 		8493B3801BEC53EE00F93E0E /* SensorData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorData.h; sourceTree = "<group>"; };
@@ -257,6 +273,12 @@
 				8493B38E1BECCC7700F93E0E /* HomeViewController.h */,
 				8493B38F1BECCC7700F93E0E /* HomeViewController.m */,
 				8493B3901BECCC7700F93E0E /* HomeViewController.xib */,
+				846D3AED1C0D8635006BB020 /* InfoViewController.h */,
+				846D3AEE1C0D8635006BB020 /* InfoViewController.m */,
+				846D3AEF1C0D8635006BB020 /* InfoViewController.xib */,
+				846D3AF21C0DAD4B006BB020 /* Defaults.plist */,
+				846D3AFA1C0DD1D8006BB020 /* Util.h */,
+				846D3AFB1C0DD1D8006BB020 /* Util.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -334,6 +356,10 @@
 				8493B37F1BEC53EE00F93E0E /* SensorData+CoreDataProperties.m */,
 				8493B3801BEC53EE00F93E0E /* SensorData.h */,
 				8493B3811BEC53EE00F93E0E /* SensorData.m */,
+				846D3AF41C0DC8CE006BB020 /* TrainingTime+CoreDataProperties.h */,
+				846D3AF51C0DC8CE006BB020 /* TrainingTime+CoreDataProperties.m */,
+				846D3AF61C0DC8CE006BB020 /* TrainingTime.h */,
+				846D3AF71C0DC8CE006BB020 /* TrainingTime.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -553,11 +579,13 @@
 			files = (
 				842CD2311BB66481000E2703 /* LaunchScreen.storyboard in Resources */,
 				8493B3AF1BEDF85400F93E0E /* gif7.gif in Resources */,
+				846D3AF11C0D8635006BB020 /* InfoViewController.xib in Resources */,
 				8493B3A91BEDF85400F93E0E /* gif1.gif in Resources */,
 				842CD22E1BB66481000E2703 /* Assets.xcassets in Resources */,
 				8493B3A11BEDF75400F93E0E /* gif0.gif in Resources */,
 				842CD22C1BB66481000E2703 /* Main.storyboard in Resources */,
 				8493B3AB1BEDF85400F93E0E /* gif3.gif in Resources */,
+				846D3AF31C0DAD4B006BB020 /* Defaults.plist in Resources */,
 				8493B3AA1BEDF85400F93E0E /* gif2.gif in Resources */,
 				8493B3AE1BEDF85400F93E0E /* gif6.gif in Resources */,
 				8493B3AD1BEDF85400F93E0E /* gif5.gif in Resources */,
@@ -659,11 +687,15 @@
 				842CD2291BB66481000E2703 /* DataTableViewController.m in Sources */,
 				8493B3911BECCC7700F93E0E /* HomeViewController.m in Sources */,
 				842CD2261BB66481000E2703 /* AppDelegate.m in Sources */,
+				846D3AF01C0D8635006BB020 /* InfoViewController.m in Sources */,
 				8493B3881BEC5A7200F93E0E /* Data.m in Sources */,
+				846D3AF91C0DC8CE006BB020 /* TrainingTime.m in Sources */,
 				84B8FD511BE8E27300CCE8DC /* Model.xcdatamodeld in Sources */,
+				846D3AF81C0DC8CE006BB020 /* TrainingTime+CoreDataProperties.m in Sources */,
 				8493B3821BEC53EE00F93E0E /* SensorData+CoreDataProperties.m in Sources */,
 				84B8FD4E1BE8880B00CCE8DC /* WatchSessionManager.m in Sources */,
 				842CD2231BB66481000E2703 /* main.m in Sources */,
+				846D3AFC1C0DD1D8006BB020 /* Util.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

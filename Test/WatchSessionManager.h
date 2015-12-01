@@ -13,6 +13,8 @@
 #import "AppDelegate.h"
 #import "SensorData.h"
 #import "Constants.h"
+#import "TrainingTime.h"
+#import "Util.h"
 #include <stdlib.h>
 @interface WatchSessionManager : NSObject<WCSessionDelegate>
 - (void)startSession;

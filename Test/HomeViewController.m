@@ -9,7 +9,7 @@
 #import "HomeViewController.h"
 #import "WatchSessionManager.h"
 @interface HomeViewController ()
-@property (assign, nonatomic) int level_now;
+
 @end
 
 @implementation HomeViewController
@@ -39,15 +39,23 @@
     dispatch_async (dispatch_get_main_queue(), ^{
         NSInteger point = [[NSUserDefaults standardUserDefaults] integerForKey:POINT_KEY];
         [self.pointLabel setText:[@(point) stringValue]];
-        int level = (int)log10(point+1);
-        if (self.level_now != level) {
-            [self.levelLabel setText:[@(level) stringValue]];
-            NSURL *url = [[NSBundle mainBundle] URLForResource:[NSString stringWithFormat:@"gif%d",level]withExtension:@"gif"];
-            if (url != nil) {
-                self.imageView.image = [UIImage animatedImageWithAnimatedGIFURL:url];
-            }
+        
+        AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        NSManagedObjectContext *context = ad.managedObjectContext;
+        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+        NSEntityDescription *entity = [NSEntityDescription
+                                       entityForName:@"TrainingTime" inManagedObjectContext:context];
+        [fetchRequest setEntity:entity];
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(date == %@)",[Util beginningOfDay:[NSDate date]]];
+        [fetchRequest setPredicate:predicate];
+        NSError *error;
+        NSArray *array = [context executeFetchRequest:fetchRequest error:&error];
+        if (array == nil || [array count] == 0) {
+            [self.levelLabel setText:@""];
+        } else {
+            TrainingTime *timeSlot = [array objectAtIndex:0];
+            [self.levelLabel setText:[timeSlot.totalTime stringValue]];
         }
-        self.level_now = level;
     });
 }
 - (IBAction)resetClick:(id)sender {

@@ -43,7 +43,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "842CD21D1BB66481000E2703"
-               BuildableName = "Test.app"
+               BuildableName = "Smart Watch.app"
                BlueprintName = "Test"
                ReferencedContainer = "container:Test.xcodeproj">
             </BuildableReference>

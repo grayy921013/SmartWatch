@@ -110,7 +110,7 @@
 
 - (void)configureCell:(UITableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath {
     Data *data = [self.array objectAtIndex:indexPath.row];
-    [[cell textLabel] setText:[NSString stringWithFormat: @"value:%ld | %@",data.value, data.startDate]];
+    [[cell textLabel] setText:[NSString stringWithFormat: @"value:%ld | %@",data.value, [data.startDate descriptionWithLocale:[NSLocale systemLocale]]]];
 }
 
 #pragma mark - Table view

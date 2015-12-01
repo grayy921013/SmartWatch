@@ -10,6 +10,7 @@
 //View Controllers
 #import "DataTableViewController.h"
 #import "HomeViewController.h"
+#import "InfoViewController.h"
 
 @interface CYLTabBarControllerConfig ()
 
@@ -31,7 +32,7 @@
         UIViewController *firstNavigationController = [[UINavigationController alloc]
                                                        initWithRootViewController:firstViewController];
         
-        DataTableViewController *secondViewController = [[DataTableViewController alloc] initWithType:ENERGY];
+        InfoViewController *secondViewController = [[InfoViewController alloc] init];
         UIViewController *secondNavigationController = [[UINavigationController alloc]
                                                         initWithRootViewController:secondViewController];
         
@@ -70,7 +71,7 @@
                             //CYLTabBarItemSelectedImage : @"heartrate_highlight",
                             };
     NSDictionary *dict2 = @{
-                            CYLTabBarItemTitle : @"Energy",
+                            CYLTabBarItemTitle : @"Info",
                             CYLTabBarItemImage : @"energy",
                             //CYLTabBarItemSelectedImage : @"energy_highlight",
                             };

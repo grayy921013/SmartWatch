@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Constants.h"
 #import "UIImage+animatedGIF.h"
+#import "Util.h"
 @interface HomeViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *pointLabel;
 @property (weak, nonatomic) IBOutlet UIButton *resetBtn;
