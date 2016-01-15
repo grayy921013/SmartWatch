@@ -36,6 +36,10 @@
         UIViewController *secondNavigationController = [[UINavigationController alloc]
                                                         initWithRootViewController:secondViewController];
         
+        DataTableViewController *thirdViewController = [[DataTableViewController alloc] initWithType:ENERGY];
+        UIViewController *thirdNavigationController = [[UINavigationController alloc]
+                                                       initWithRootViewController:thirdViewController];
+        
         HomeViewController *homeViewController = [[HomeViewController alloc] init];
         UIViewController *homeNavigationController = [[UINavigationController alloc]
                                                         initWithRootViewController:homeViewController];
@@ -48,6 +52,7 @@
         [tabBarController setViewControllers:@[
                                                homeNavigationController,
                                                firstNavigationController,
+                                               thirdNavigationController,
                                                secondNavigationController,
                                                ]];
         
@@ -75,9 +80,15 @@
                             CYLTabBarItemImage : @"energy",
                             //CYLTabBarItemSelectedImage : @"energy_highlight",
                             };
+    NSDictionary *dict3 = @{
+                            CYLTabBarItemTitle : @"Energy",
+                            CYLTabBarItemImage : @"energy",
+                            //CYLTabBarItemSelectedImage : @"energy_highlight",
+                            };
     NSArray *tabBarItemsAttributes = @[
                                        dict0,
                                        dict1,
+                                       dict3,
                                        dict2
                                        ];
     tabBarController.tabBarItemsAttributes = tabBarItemsAttributes;

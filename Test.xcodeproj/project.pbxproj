@@ -23,6 +23,8 @@
 		842CD2661BB66482000E2703 /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 842CD2651BB66482000E2703 /* ExtensionDelegate.m */; };
 		842CD2691BB66482000E2703 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842CD2681BB66482000E2703 /* NotificationController.m */; };
 		842CD26B1BB66482000E2703 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842CD26A1BB66482000E2703 /* Assets.xcassets */; };
+		8462EF9C1C48942D005A984E /* DataTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8462EF9A1C48942D005A984E /* DataTableViewCell.m */; };
+		8462EF9D1C48942D005A984E /* DataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8462EF9B1C48942D005A984E /* DataTableViewCell.xib */; };
 		846D3AF01C0D8635006BB020 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846D3AEE1C0D8635006BB020 /* InfoViewController.m */; };
 		846D3AF11C0D8635006BB020 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846D3AEF1C0D8635006BB020 /* InfoViewController.xib */; };
 		846D3AF31C0DAD4B006BB020 /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 846D3AF21C0DAD4B006BB020 /* Defaults.plist */; };
@@ -146,6 +148,9 @@
 		842CD2681BB66482000E2703 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
 		842CD26A1BB66482000E2703 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		842CD26C1BB66482000E2703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8462EF991C48942D005A984E /* DataTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataTableViewCell.h; path = View/DataTableViewCell.h; sourceTree = "<group>"; };
+		8462EF9A1C48942D005A984E /* DataTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataTableViewCell.m; path = View/DataTableViewCell.m; sourceTree = "<group>"; };
+		8462EF9B1C48942D005A984E /* DataTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DataTableViewCell.xib; path = View/DataTableViewCell.xib; sourceTree = "<group>"; };
 		846D3AED1C0D8635006BB020 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		846D3AEE1C0D8635006BB020 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		846D3AEF1C0D8635006BB020 /* InfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
@@ -256,6 +261,7 @@
 		842CD2201BB66481000E2703 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				8462EF981C4893DB005A984E /* View */,
 				84D0054D1BB9313D005992E5 /* Test.entitlements */,
 				842CD2241BB66481000E2703 /* AppDelegate.h */,
 				842CD2251BB66481000E2703 /* AppDelegate.m */,
@@ -342,6 +348,16 @@
 				842CD2601BB66482000E2703 /* PushNotificationPayload.apns */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8462EF981C4893DB005A984E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8462EF991C48942D005A984E /* DataTableViewCell.h */,
+				8462EF9A1C48942D005A984E /* DataTableViewCell.m */,
+				8462EF9B1C48942D005A984E /* DataTableViewCell.xib */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		8493B3971BEDEAF600F93E0E /* Model */ = {
@@ -587,6 +603,7 @@
 				8493B3AB1BEDF85400F93E0E /* gif3.gif in Resources */,
 				846D3AF31C0DAD4B006BB020 /* Defaults.plist in Resources */,
 				8493B3AA1BEDF85400F93E0E /* gif2.gif in Resources */,
+				8462EF9D1C48942D005A984E /* DataTableViewCell.xib in Resources */,
 				8493B3AE1BEDF85400F93E0E /* gif6.gif in Resources */,
 				8493B3AD1BEDF85400F93E0E /* gif5.gif in Resources */,
 				8493B3AC1BEDF85400F93E0E /* gif4.gif in Resources */,
@@ -688,6 +705,7 @@
 				8493B3911BECCC7700F93E0E /* HomeViewController.m in Sources */,
 				842CD2261BB66481000E2703 /* AppDelegate.m in Sources */,
 				846D3AF01C0D8635006BB020 /* InfoViewController.m in Sources */,
+				8462EF9C1C48942D005A984E /* DataTableViewCell.m in Sources */,
 				8493B3881BEC5A7200F93E0E /* Data.m in Sources */,
 				846D3AF91C0DC8CE006BB020 /* TrainingTime.m in Sources */,
 				84B8FD511BE8E27300CCE8DC /* Model.xcdatamodeld in Sources */,

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SensorData.h"
 #import "AppDelegate.h"
+#import "DataTableViewCell.h"
 @interface DataTableViewController : UITableViewController <WCSessionDelegate>
 @property (assign, nonatomic) DataType type;
 - (id) initWithType:(DataType)type;

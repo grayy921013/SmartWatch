@@ -28,6 +28,8 @@
                                    action:@selector(resetData)];
     self.navigationItem.rightBarButtonItem = resetButton;
     self.array = [[NSMutableArray alloc] init];
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
+    [self.tableView setSeparatorColor:[UIColor blueColor]];
 }
 - (void)resetData {
     NSArray *fetchedObjects = [self fetchObjects];
@@ -108,18 +110,21 @@
 }
 #pragma mark - Methods
 
-- (void)configureCell:(UITableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath {
+- (void)configureCell:(DataTableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath {
     Data *data = [self.array objectAtIndex:indexPath.row];
-    [[cell textLabel] setText:[NSString stringWithFormat: @"value:%ld | %@",data.value, [data.startDate descriptionWithLocale:[NSLocale systemLocale]]]];
+    [[cell label1] setText:[NSString stringWithFormat: @"value:%ld",data.value]];
+    [[cell label2] setText:[NSString stringWithFormat: @"%@",[data.startDate descriptionWithLocale:[NSLocale systemLocale]]]];
+    [[cell label3] setText:[NSString stringWithFormat: @"%@",[data.endDate descriptionWithLocale:[NSLocale systemLocale]]]];
 }
 
 #pragma mark - Table view
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    DataTableViewCell *cell = (DataTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DataTableViewCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
     }
     [self configureCell:cell forIndexPath:indexPath];
     
@@ -128,6 +133,11 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.array == nil? 0:[self.array count];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 160;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
