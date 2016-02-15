@@ -71,17 +71,17 @@
                             };
     
     NSDictionary *dict1 = @{
-                            CYLTabBarItemTitle : @"Heartrate",
+                            CYLTabBarItemTitle : @"Shop",
                             CYLTabBarItemImage : @"heartrate",
                             //CYLTabBarItemSelectedImage : @"heartrate_highlight",
                             };
     NSDictionary *dict2 = @{
-                            CYLTabBarItemTitle : @"Info",
+                            CYLTabBarItemTitle : @"Rank",
                             CYLTabBarItemImage : @"energy",
                             //CYLTabBarItemSelectedImage : @"energy_highlight",
                             };
     NSDictionary *dict3 = @{
-                            CYLTabBarItemTitle : @"Energy",
+                            CYLTabBarItemTitle : @"Info",
                             CYLTabBarItemImage : @"energy",
                             //CYLTabBarItemSelectedImage : @"energy_highlight",
                             };

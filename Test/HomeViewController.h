@@ -12,8 +12,6 @@
 #import "Util.h"
 @interface HomeViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *pointLabel;
-@property (weak, nonatomic) IBOutlet UIButton *resetBtn;
-@property (weak, nonatomic) IBOutlet UILabel *levelLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end

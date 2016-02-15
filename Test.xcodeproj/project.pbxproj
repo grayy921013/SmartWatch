@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840EA8A41C717FE7009476B6 /* FightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840EA8A21C717FE7009476B6 /* FightViewController.m */; };
+		840EA8A51C717FE7009476B6 /* FightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840EA8A31C717FE7009476B6 /* FightViewController.xib */; };
+		840EA8A91C719674009476B6 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840EA8A71C719674009476B6 /* GameViewController.m */; };
+		840EA8AA1C719674009476B6 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840EA8A81C719674009476B6 /* GameViewController.xib */; };
+		840EA8AD1C71975E009476B6 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = 840EA8AC1C71975E009476B6 /* Character.m */; };
 		842CD2231BB66481000E2703 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 842CD2221BB66481000E2703 /* main.m */; };
 		842CD2261BB66481000E2703 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 842CD2251BB66481000E2703 /* AppDelegate.m */; };
 		842CD2291BB66481000E2703 /* DataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842CD2281BB66481000E2703 /* DataTableViewController.m */; };
@@ -118,6 +123,14 @@
 		09BA1639C411435668F004CC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		0F6C3FE867D88A99F68942EC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		4EDC12AEFAC4DF9FAB0B1EA1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		840EA8A11C717FE7009476B6 /* FightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FightViewController.h; sourceTree = "<group>"; };
+		840EA8A21C717FE7009476B6 /* FightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FightViewController.m; sourceTree = "<group>"; };
+		840EA8A31C717FE7009476B6 /* FightViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FightViewController.xib; sourceTree = "<group>"; };
+		840EA8A61C719674009476B6 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		840EA8A71C719674009476B6 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		840EA8A81C719674009476B6 /* GameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
+		840EA8AB1C71975E009476B6 /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
+		840EA8AC1C71975E009476B6 /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character.m; sourceTree = "<group>"; };
 		842CD21E1BB66481000E2703 /* Smart Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		842CD2221BB66481000E2703 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		842CD2241BB66481000E2703 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -285,6 +298,12 @@
 				846D3AF21C0DAD4B006BB020 /* Defaults.plist */,
 				846D3AFA1C0DD1D8006BB020 /* Util.h */,
 				846D3AFB1C0DD1D8006BB020 /* Util.m */,
+				840EA8A11C717FE7009476B6 /* FightViewController.h */,
+				840EA8A21C717FE7009476B6 /* FightViewController.m */,
+				840EA8A31C717FE7009476B6 /* FightViewController.xib */,
+				840EA8A61C719674009476B6 /* GameViewController.h */,
+				840EA8A71C719674009476B6 /* GameViewController.m */,
+				840EA8A81C719674009476B6 /* GameViewController.xib */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -376,6 +395,8 @@
 				846D3AF51C0DC8CE006BB020 /* TrainingTime+CoreDataProperties.m */,
 				846D3AF61C0DC8CE006BB020 /* TrainingTime.h */,
 				846D3AF71C0DC8CE006BB020 /* TrainingTime.m */,
+				840EA8AB1C71975E009476B6 /* Character.h */,
+				840EA8AC1C71975E009476B6 /* Character.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -602,9 +623,11 @@
 				842CD22C1BB66481000E2703 /* Main.storyboard in Resources */,
 				8493B3AB1BEDF85400F93E0E /* gif3.gif in Resources */,
 				846D3AF31C0DAD4B006BB020 /* Defaults.plist in Resources */,
+				840EA8A51C717FE7009476B6 /* FightViewController.xib in Resources */,
 				8493B3AA1BEDF85400F93E0E /* gif2.gif in Resources */,
 				8462EF9D1C48942D005A984E /* DataTableViewCell.xib in Resources */,
 				8493B3AE1BEDF85400F93E0E /* gif6.gif in Resources */,
+				840EA8AA1C719674009476B6 /* GameViewController.xib in Resources */,
 				8493B3AD1BEDF85400F93E0E /* gif5.gif in Resources */,
 				8493B3AC1BEDF85400F93E0E /* gif4.gif in Resources */,
 				8493B3921BECCC7700F93E0E /* HomeViewController.xib in Resources */,
@@ -698,14 +721,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				8493B3951BECD2B400F93E0E /* Constants.m in Sources */,
+				840EA8A91C719674009476B6 /* GameViewController.m in Sources */,
 				8493B39C1BEDF1C800F93E0E /* UIImage+animatedGIF.m in Sources */,
 				8493B38D1BECBB0D00F93E0E /* CYLTabBarControllerConfig.m in Sources */,
 				8493B3831BEC53EE00F93E0E /* SensorData.m in Sources */,
 				842CD2291BB66481000E2703 /* DataTableViewController.m in Sources */,
+				840EA8A41C717FE7009476B6 /* FightViewController.m in Sources */,
 				8493B3911BECCC7700F93E0E /* HomeViewController.m in Sources */,
 				842CD2261BB66481000E2703 /* AppDelegate.m in Sources */,
 				846D3AF01C0D8635006BB020 /* InfoViewController.m in Sources */,
 				8462EF9C1C48942D005A984E /* DataTableViewCell.m in Sources */,
+				840EA8AD1C71975E009476B6 /* Character.m in Sources */,
 				8493B3881BEC5A7200F93E0E /* Data.m in Sources */,
 				846D3AF91C0DC8CE006BB020 /* TrainingTime.m in Sources */,
 				84B8FD511BE8E27300CCE8DC /* Model.xcdatamodeld in Sources */,

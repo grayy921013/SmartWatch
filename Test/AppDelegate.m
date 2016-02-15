@@ -56,22 +56,20 @@
         
         textAttributes = @{
                            NSFontAttributeName: [UIFont boldSystemFontOfSize:18],
-                           NSForegroundColorAttributeName: [UIColor whiteColor],
                            };
     } else {
 #if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_7_0
         
         textAttributes = @{
                            UITextAttributeFont: [UIFont boldSystemFontOfSize:18],
-                           UITextAttributeTextColor: [UIColor whiteColor],
                            UITextAttributeTextShadowColor: [UIColor clearColor],
                            UITextAttributeTextShadowOffset: [NSValue valueWithUIOffset:UIOffsetZero],
                            };
 #endif
     }
     [navigationBarAppearance setTitleTextAttributes:textAttributes];
-    [navigationBarAppearance setBarTintColor:[UIColor blueColor]];
-    [navigationBarAppearance setTintColor:[UIColor whiteColor]];
+//    [navigationBarAppearance setBarTintColor:[UIColor blueColor]];
+//    [navigationBarAppearance setTintColor:[UIColor whiteColor]];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

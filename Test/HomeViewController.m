@@ -8,6 +8,7 @@
 
 #import "HomeViewController.h"
 #import "WatchSessionManager.h"
+#import "FightViewController.h"
 @interface HomeViewController ()
 
 @end
@@ -50,12 +51,6 @@
         [fetchRequest setPredicate:predicate];
         NSError *error;
         NSArray *array = [context executeFetchRequest:fetchRequest error:&error];
-        if (array == nil || [array count] == 0) {
-            [self.levelLabel setText:@""];
-        } else {
-            TrainingTime *timeSlot = [array objectAtIndex:0];
-            [self.levelLabel setText:[timeSlot.totalTime stringValue]];
-        }
     });
 }
 - (IBAction)resetClick:(id)sender {
@@ -65,6 +60,11 @@
 }
 - (IBAction)shouldGenData:(id)sender {
     [[WatchSessionManager sharedInstance] shouldGenData:[sender isOn]];
+}
+- (IBAction)gotoFight:(id)sender {
+    FightViewController *fight = [[FightViewController alloc] initWithNibName:@"FightViewController" bundle:nil];
+    fight.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:fight animated:YES];
 }
 /*
  #pragma mark - Navigation
