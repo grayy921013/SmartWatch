@@ -13,6 +13,7 @@
     self = [super init];
     if (self) {
         self.health = health;
+        self.healthNow = health;
         self.attack = attack;
         self.defense = defense;
         self.timeToAttack = timeToAttack;
@@ -26,15 +27,17 @@
     if (dice == 0) {
         return -1;
     } else if (dice == 1) {
-        opponent.health = opponent.health + opponent.defense - self.attack * 2;
+        opponent.healthNow = opponent.healthNow + opponent.defense - self.attack * 2;
+        if (opponent.healthNow < 0) opponent.healthNow = 0;
         return 1;
     } else {
-        opponent.health = opponent.health + opponent.defense - self.attack;
+        opponent.healthNow = opponent.healthNow + opponent.defense - self.attack;
+        if (opponent.healthNow < 0) opponent.healthNow = 0;
         return 0;
     }
 }
 -(BOOL)isAlive{
-    return (self.health > 0);
+    return (self.healthNow > 0);
 }
 -(void)resetTime{
     self.timeNeedToAttack = self.timeToAttack;

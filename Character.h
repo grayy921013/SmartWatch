@@ -10,8 +10,13 @@
 
 @interface Character : NSObject
 @property (assign, nonatomic) NSInteger health;
+@property (assign, nonatomic) NSInteger healthNow;
 @property (assign, nonatomic) NSInteger timeToAttack;
 @property (assign, nonatomic) NSInteger timeNeedToAttack;
 @property (assign, nonatomic) NSInteger attack;
 @property (assign, nonatomic) NSInteger defense;
+-(NSInteger)attack:(Character*)opponent;
+-(BOOL)isAlive;
+-(void)resetTime;
+-(id)initWithHealth:(NSInteger)health attack:(NSInteger)attack defense:(NSInteger)defense timeToAttack:(NSInteger)timeToAttack;
 @end

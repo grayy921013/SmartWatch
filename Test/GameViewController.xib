@@ -6,6 +6,17 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameViewController">
             <connections>
+                <outlet property="imageView1" destination="vpv-Kf-DzE" id="AEx-Qp-pJJ"/>
+                <outlet property="imageView1X" destination="Z5s-kg-CDq" id="CQ7-IQ-7Ng"/>
+                <outlet property="imageView1Y" destination="Amg-3r-3zb" id="RNj-Yz-Kmh"/>
+                <outlet property="imageView2" destination="Edj-rF-AjM" id="WjB-q3-cQO"/>
+                <outlet property="imageView2X" destination="OUq-Ss-f3A" id="C6n-sP-eEp"/>
+                <outlet property="imageView2Y" destination="XkP-m4-Ybu" id="An8-zd-M8m"/>
+                <outlet property="label1" destination="0v1-7H-n8P" id="UMq-w6-a8z"/>
+                <outlet property="label2" destination="B9Q-2e-vLA" id="12Q-wu-vX4"/>
+                <outlet property="notif" destination="h3P-gi-R7k" id="V3V-0O-s7i"/>
+                <outlet property="progress1" destination="wec-8o-1fi" id="wg9-br-dXl"/>
+                <outlet property="progress2" destination="Dbv-Qi-LKC" id="emK-JC-jOm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,7 +32,7 @@
                         <constraint firstAttribute="width" constant="150" id="9DB-sd-LIL"/>
                     </constraints>
                 </progressView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vpv-Kf-DzE">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bear" translatesAutoresizingMaskIntoConstraints="NO" id="vpv-Kf-DzE">
                     <rect key="frame" x="170" y="192" width="120" height="120"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="120" id="4L1-5c-8g0"/>
@@ -29,19 +40,12 @@
                     </constraints>
                 </imageView>
                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Dbv-Qi-LKC">
-                    <rect key="frame" x="30" y="366" width="150" height="2"/>
+                    <rect key="frame" x="30" y="497" width="150" height="2"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="2" id="9XP-gH-HG9"/>
                         <constraint firstAttribute="width" constant="150" id="UTm-4Z-3g0"/>
                     </constraints>
                 </progressView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Edj-rF-AjM">
-                    <rect key="frame" x="30" y="408" width="120" height="120"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="120" id="PuP-qU-CYw"/>
-                        <constraint firstAttribute="width" constant="120" id="YT5-iE-gWr"/>
-                    </constraints>
-                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0v1-7H-n8P">
                     <rect key="frame" x="190" y="160" width="100" height="21"/>
                     <constraints>
@@ -53,7 +57,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9Q-2e-vLA">
-                    <rect key="frame" x="30" y="376" width="100" height="21"/>
+                    <rect key="frame" x="30" y="507" width="100" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="c3k-R0-82L"/>
                         <constraint firstAttribute="width" constant="100" id="cML-yU-kO8"/>
@@ -62,6 +66,23 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="critical!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3P-gi-R7k">
+                    <rect key="frame" x="120" y="274" width="80" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="JVA-qI-Ylj"/>
+                        <constraint firstAttribute="height" constant="21" id="WdC-eo-hFz"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bear" translatesAutoresizingMaskIntoConstraints="NO" id="Edj-rF-AjM">
+                    <rect key="frame" x="30" y="347" width="120" height="120"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="PuP-qU-CYw"/>
+                        <constraint firstAttribute="width" constant="120" id="YT5-iE-gWr"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -69,16 +90,21 @@
                 <constraint firstAttribute="trailing" secondItem="wec-8o-1fi" secondAttribute="trailing" constant="30" id="IWo-p4-Iey"/>
                 <constraint firstItem="B9Q-2e-vLA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="Jq7-dX-TTc"/>
                 <constraint firstAttribute="trailing" secondItem="0v1-7H-n8P" secondAttribute="trailing" constant="30" id="Kuc-te-V8f"/>
+                <constraint firstItem="h3P-gi-R7k" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="MCl-Wg-ZFW"/>
+                <constraint firstItem="h3P-gi-R7k" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="MkW-fn-W6j"/>
                 <constraint firstItem="Edj-rF-AjM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="OUq-Ss-f3A"/>
                 <constraint firstItem="0v1-7H-n8P" firstAttribute="top" secondItem="wec-8o-1fi" secondAttribute="bottom" constant="8" id="TUv-gB-bUb"/>
-                <constraint firstItem="B9Q-2e-vLA" firstAttribute="top" secondItem="Dbv-Qi-LKC" secondAttribute="bottom" constant="8" id="UnB-uF-UPo"/>
-                <constraint firstItem="Edj-rF-AjM" firstAttribute="top" secondItem="Dbv-Qi-LKC" secondAttribute="bottom" constant="40" id="XZl-6M-o01"/>
+                <constraint firstItem="Dbv-Qi-LKC" firstAttribute="top" secondItem="Edj-rF-AjM" secondAttribute="bottom" constant="30" id="XkP-m4-Ybu"/>
                 <constraint firstAttribute="trailing" secondItem="vpv-Kf-DzE" secondAttribute="trailing" constant="30" id="Z5s-kg-CDq"/>
                 <constraint firstItem="wec-8o-1fi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="150" id="cnH-BP-EjL"/>
-                <constraint firstAttribute="bottom" secondItem="Edj-rF-AjM" secondAttribute="bottom" constant="40" id="fs8-1K-VCi"/>
                 <constraint firstItem="Dbv-Qi-LKC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="ijG-zI-JQS"/>
+                <constraint firstItem="B9Q-2e-vLA" firstAttribute="top" secondItem="Dbv-Qi-LKC" secondAttribute="bottom" constant="8" id="paJ-tD-gxW"/>
+                <constraint firstAttribute="bottom" secondItem="B9Q-2e-vLA" secondAttribute="bottom" constant="40" id="wb7-ik-C2t"/>
             </constraints>
             <point key="canvasLocation" x="327" y="256"/>
         </view>
     </objects>
+    <resources>
+        <image name="bear" width="112" height="94"/>
+    </resources>
 </document>
