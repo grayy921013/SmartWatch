@@ -19,9 +19,8 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SCu-Hw-GgW">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bear" translatesAutoresizingMaskIntoConstraints="NO" id="SCu-Hw-GgW">
                     <rect key="frame" x="80" y="179" width="160" height="160"/>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="160" id="0U9-5F-9q0"/>
                         <constraint firstAttribute="width" constant="160" id="dPz-sI-ZNV"/>
@@ -93,6 +92,7 @@
         </view>
     </objects>
     <resources>
+        <image name="bear" width="112" height="94"/>
         <image name="fight" width="47" height="47"/>
     </resources>
 </document>

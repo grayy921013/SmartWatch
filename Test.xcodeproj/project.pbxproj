@@ -12,6 +12,12 @@
 		840EA8A91C719674009476B6 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840EA8A71C719674009476B6 /* GameViewController.m */; };
 		840EA8AA1C719674009476B6 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840EA8A81C719674009476B6 /* GameViewController.xib */; };
 		840EA8AD1C71975E009476B6 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = 840EA8AC1C71975E009476B6 /* Character.m */; };
+		840EA8B71C72B5AC009476B6 /* ShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840EA8B51C72B5AC009476B6 /* ShopViewController.m */; };
+		840EA8B81C72B5AC009476B6 /* ShopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840EA8B61C72B5AC009476B6 /* ShopViewController.xib */; };
+		840EA8BC1C72B5BA009476B6 /* RankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840EA8BA1C72B5BA009476B6 /* RankViewController.m */; };
+		840EA8BD1C72B5BA009476B6 /* RankViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840EA8BB1C72B5BA009476B6 /* RankViewController.xib */; };
+		840EA8C91C72C7B8009476B6 /* RankTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840EA8C71C72C7B8009476B6 /* RankTableViewController.m */; };
+		840EA8CA1C72C7B8009476B6 /* RankTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840EA8C81C72C7B8009476B6 /* RankTableViewController.xib */; };
 		842CD2231BB66481000E2703 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 842CD2221BB66481000E2703 /* main.m */; };
 		842CD2261BB66481000E2703 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 842CD2251BB66481000E2703 /* AppDelegate.m */; };
 		842CD2291BB66481000E2703 /* DataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842CD2281BB66481000E2703 /* DataTableViewController.m */; };
@@ -131,6 +137,15 @@
 		840EA8A81C719674009476B6 /* GameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
 		840EA8AB1C71975E009476B6 /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
 		840EA8AC1C71975E009476B6 /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character.m; sourceTree = "<group>"; };
+		840EA8B41C72B5AC009476B6 /* ShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopViewController.h; sourceTree = "<group>"; };
+		840EA8B51C72B5AC009476B6 /* ShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopViewController.m; sourceTree = "<group>"; };
+		840EA8B61C72B5AC009476B6 /* ShopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopViewController.xib; sourceTree = "<group>"; };
+		840EA8B91C72B5BA009476B6 /* RankViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankViewController.h; sourceTree = "<group>"; };
+		840EA8BA1C72B5BA009476B6 /* RankViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankViewController.m; sourceTree = "<group>"; };
+		840EA8BB1C72B5BA009476B6 /* RankViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RankViewController.xib; sourceTree = "<group>"; };
+		840EA8C61C72C7B8009476B6 /* RankTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankTableViewController.h; sourceTree = "<group>"; };
+		840EA8C71C72C7B8009476B6 /* RankTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankTableViewController.m; sourceTree = "<group>"; };
+		840EA8C81C72C7B8009476B6 /* RankTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RankTableViewController.xib; sourceTree = "<group>"; };
 		842CD21E1BB66481000E2703 /* Smart Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		842CD2221BB66481000E2703 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		842CD2241BB66481000E2703 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -304,6 +319,15 @@
 				840EA8A61C719674009476B6 /* GameViewController.h */,
 				840EA8A71C719674009476B6 /* GameViewController.m */,
 				840EA8A81C719674009476B6 /* GameViewController.xib */,
+				840EA8B41C72B5AC009476B6 /* ShopViewController.h */,
+				840EA8B51C72B5AC009476B6 /* ShopViewController.m */,
+				840EA8B61C72B5AC009476B6 /* ShopViewController.xib */,
+				840EA8B91C72B5BA009476B6 /* RankViewController.h */,
+				840EA8BA1C72B5BA009476B6 /* RankViewController.m */,
+				840EA8BB1C72B5BA009476B6 /* RankViewController.xib */,
+				840EA8C61C72C7B8009476B6 /* RankTableViewController.h */,
+				840EA8C71C72C7B8009476B6 /* RankTableViewController.m */,
+				840EA8C81C72C7B8009476B6 /* RankTableViewController.xib */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -625,9 +649,12 @@
 				846D3AF31C0DAD4B006BB020 /* Defaults.plist in Resources */,
 				840EA8A51C717FE7009476B6 /* FightViewController.xib in Resources */,
 				8493B3AA1BEDF85400F93E0E /* gif2.gif in Resources */,
+				840EA8CA1C72C7B8009476B6 /* RankTableViewController.xib in Resources */,
 				8462EF9D1C48942D005A984E /* DataTableViewCell.xib in Resources */,
+				840EA8B81C72B5AC009476B6 /* ShopViewController.xib in Resources */,
 				8493B3AE1BEDF85400F93E0E /* gif6.gif in Resources */,
 				840EA8AA1C719674009476B6 /* GameViewController.xib in Resources */,
+				840EA8BD1C72B5BA009476B6 /* RankViewController.xib in Resources */,
 				8493B3AD1BEDF85400F93E0E /* gif5.gif in Resources */,
 				8493B3AC1BEDF85400F93E0E /* gif4.gif in Resources */,
 				8493B3921BECCC7700F93E0E /* HomeViewController.xib in Resources */,
@@ -722,6 +749,7 @@
 			files = (
 				8493B3951BECD2B400F93E0E /* Constants.m in Sources */,
 				840EA8A91C719674009476B6 /* GameViewController.m in Sources */,
+				840EA8C91C72C7B8009476B6 /* RankTableViewController.m in Sources */,
 				8493B39C1BEDF1C800F93E0E /* UIImage+animatedGIF.m in Sources */,
 				8493B38D1BECBB0D00F93E0E /* CYLTabBarControllerConfig.m in Sources */,
 				8493B3831BEC53EE00F93E0E /* SensorData.m in Sources */,
@@ -733,10 +761,12 @@
 				8462EF9C1C48942D005A984E /* DataTableViewCell.m in Sources */,
 				840EA8AD1C71975E009476B6 /* Character.m in Sources */,
 				8493B3881BEC5A7200F93E0E /* Data.m in Sources */,
+				840EA8B71C72B5AC009476B6 /* ShopViewController.m in Sources */,
 				846D3AF91C0DC8CE006BB020 /* TrainingTime.m in Sources */,
 				84B8FD511BE8E27300CCE8DC /* Model.xcdatamodeld in Sources */,
 				846D3AF81C0DC8CE006BB020 /* TrainingTime+CoreDataProperties.m in Sources */,
 				8493B3821BEC53EE00F93E0E /* SensorData+CoreDataProperties.m in Sources */,
+				840EA8BC1C72B5BA009476B6 /* RankViewController.m in Sources */,
 				84B8FD4E1BE8880B00CCE8DC /* WatchSessionManager.m in Sources */,
 				842CD2231BB66481000E2703 /* main.m in Sources */,
 				846D3AFC1C0DD1D8006BB020 /* Util.m in Sources */,

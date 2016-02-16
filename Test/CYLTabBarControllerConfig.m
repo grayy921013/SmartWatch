@@ -8,9 +8,10 @@
 
 #import "CYLTabBarControllerConfig.h"
 //View Controllers
-#import "DataTableViewController.h"
+#import "ShopViewController.h"
 #import "HomeViewController.h"
 #import "InfoViewController.h"
+#import "RankViewController.h"
 
 @interface CYLTabBarControllerConfig ()
 
@@ -28,17 +29,19 @@
 - (CYLTabBarController *)tabBarController
 {
     if (_tabBarController == nil) {
-        DataTableViewController *firstViewController = [[DataTableViewController alloc] initWithType:HEARTRATE];
+        ShopViewController *firstViewController = [[ShopViewController alloc] init];
         UIViewController *firstNavigationController = [[UINavigationController alloc]
                                                        initWithRootViewController:firstViewController];
         
-        InfoViewController *secondViewController = [[InfoViewController alloc] init];
+        RankViewController *secondViewController = [[RankViewController alloc] init];
         UIViewController *secondNavigationController = [[UINavigationController alloc]
-                                                        initWithRootViewController:secondViewController];
+                                                       initWithRootViewController:secondViewController];
         
-        DataTableViewController *thirdViewController = [[DataTableViewController alloc] initWithType:ENERGY];
+        InfoViewController *thirdViewController = [[InfoViewController alloc] init];
         UIViewController *thirdNavigationController = [[UINavigationController alloc]
-                                                       initWithRootViewController:thirdViewController];
+                                                        initWithRootViewController:thirdViewController];
+        
+        
         
         HomeViewController *homeViewController = [[HomeViewController alloc] init];
         UIViewController *homeNavigationController = [[UINavigationController alloc]
@@ -52,8 +55,8 @@
         [tabBarController setViewControllers:@[
                                                homeNavigationController,
                                                firstNavigationController,
-                                               thirdNavigationController,
                                                secondNavigationController,
+                                               thirdNavigationController,
                                                ]];
         
         // [[self class] customizeTabBarAppearance];
@@ -88,8 +91,8 @@
     NSArray *tabBarItemsAttributes = @[
                                        dict0,
                                        dict1,
-                                       dict3,
-                                       dict2
+                                       dict2,
+                                       dict3
                                        ];
     tabBarController.tabBarItemsAttributes = tabBarItemsAttributes;
 }
