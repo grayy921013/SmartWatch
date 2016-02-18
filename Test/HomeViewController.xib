@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -10,6 +10,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
             <connections>
                 <outlet property="imageView" destination="SCu-Hw-GgW" id="wWA-8Z-f2R"/>
+                <outlet property="infoLabel" destination="twA-Rq-fby" id="t0H-fJ-2vx"/>
+                <outlet property="levelUpBtn" destination="yIx-ix-DTd" id="2I0-DZ-hLC"/>
                 <outlet property="pointLabel" destination="uzd-XX-v0R" id="Rr1-5a-y2C"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -71,9 +73,37 @@
                         <action selector="gotoFight:" destination="-1" eventType="touchUpInside" id="15m-9b-O2y"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yIx-ix-DTd">
+                    <rect key="frame" x="125" y="159" width="70" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="066-TZ-eAR"/>
+                        <constraint firstAttribute="width" constant="70" id="911-1X-p7Z"/>
+                    </constraints>
+                    <state key="normal" title="Level up"/>
+                    <connections>
+                        <action selector="levelUp:" destination="-1" eventType="touchUpInside" id="ZQn-Pp-fxe"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twA-Rq-fby">
+                    <rect key="frame" x="100" y="344" width="120" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="Hkt-zJ-Arx"/>
+                        <constraint firstAttribute="width" constant="120" id="egv-jg-Yov"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="chN-Pu-vc3">
+                    <rect key="frame" x="221" y="519" width="51" height="31"/>
+                    <connections>
+                        <action selector="shouldGenData:" destination="-1" eventType="valueChanged" id="UJY-ID-rUo"/>
+                    </connections>
+                </switch>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="twA-Rq-fby" firstAttribute="top" secondItem="SCu-Hw-GgW" secondAttribute="bottom" constant="5" id="5na-QJ-nLv"/>
                 <constraint firstItem="uzd-XX-v0R" firstAttribute="leading" secondItem="P4F-Fc-xhN" secondAttribute="trailing" constant="13" id="BAq-aI-ZCq"/>
                 <constraint firstItem="rdg-uQ-cJ5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="Cc0-Z9-7Ca"/>
                 <constraint firstItem="9Oi-q6-9xE" firstAttribute="top" secondItem="SCu-Hw-GgW" secondAttribute="bottom" constant="50" id="Shi-3Q-S5A"/>
@@ -82,10 +112,13 @@
                 <constraint firstItem="uzd-XX-v0R" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" constant="-5" id="XEh-K6-aDe"/>
                 <constraint firstItem="uzd-XX-v0R" firstAttribute="baseline" secondItem="P4F-Fc-xhN" secondAttribute="baseline" id="arm-1l-UkT"/>
                 <constraint firstAttribute="trailing" secondItem="D0k-8u-P9J" secondAttribute="trailing" constant="30" id="bel-xf-6Ty"/>
+                <constraint firstItem="twA-Rq-fby" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dFf-B2-yx5"/>
                 <constraint firstAttribute="trailing" secondItem="9Oi-q6-9xE" secondAttribute="trailing" constant="30" id="eGA-ho-nBi"/>
+                <constraint firstItem="yIx-ix-DTd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="egY-hi-S0V"/>
                 <constraint firstItem="P4F-Fc-xhN" firstAttribute="baseline" secondItem="uzd-XX-v0R" secondAttribute="firstBaseline" id="nDd-Or-Dmz"/>
                 <constraint firstItem="P4F-Fc-xhN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" constant="70" id="tad-LR-cdC"/>
                 <constraint firstItem="rdg-uQ-cJ5" firstAttribute="top" secondItem="SCu-Hw-GgW" secondAttribute="bottom" constant="50" id="wWI-4E-KZE"/>
+                <constraint firstItem="yIx-ix-DTd" firstAttribute="top" secondItem="P4F-Fc-xhN" secondAttribute="bottom" constant="60" id="yPa-Qd-DLx"/>
                 <constraint firstItem="SCu-Hw-GgW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="zKb-qm-L1a"/>
             </constraints>
             <point key="canvasLocation" x="357" y="347"/>

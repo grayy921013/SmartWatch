@@ -9,6 +9,7 @@
 #import "FightViewController.h"
 #import "GameViewController.h"
 #import "Character.h"
+#import "CharacterMO.h"
 
 @interface FightViewController ()
 
@@ -27,8 +28,12 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)gotoSingleGame:(id)sender {
-    Character *c1 = [[Character alloc] initWithHealth:100 attack:20 defense:10 timeToAttack:20];
-    Character *c2 = [[Character alloc] initWithHealth:100 attack:25 defense:10 timeToAttack:30];
+    Character *c1 = [CharacterMO getCharacterByID:0];
+    Character *c2 = [CharacterMO getCharacterByID:1];
+    c1.timeNeedToAttack = c2.speed;
+    c1.timeToAttack = c2.speed;
+    c2.timeNeedToAttack = c1.speed;
+    c2.timeToAttack = c1.speed;
     GameViewController *game = [[GameViewController alloc] initWithNibName:@"GameViewController" bundle:nil Character1:c1 Character2:c2];
     [self.navigationController pushViewController:game animated:YES];
 }

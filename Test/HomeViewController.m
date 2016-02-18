@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import "WatchSessionManager.h"
 #import "FightViewController.h"
+#import "CharacterMO.h"
 @interface HomeViewController ()
 
 @end
@@ -51,12 +52,27 @@
         [fetchRequest setPredicate:predicate];
         NSError *error;
         NSArray *array = [context executeFetchRequest:fetchRequest error:&error];
+        CharacterMO* character = [CharacterMO getRecordByID:0];
+        NSInteger expNeeded = [character.experiencePerLevel integerValue] * [character.level integerValue];
+        [self.infoLabel setText:[NSString stringWithFormat:@"Exp need:%ld\nLevel now:%ld",expNeeded,[character.level integerValue]]];
+        if (point >= expNeeded) [self.levelUpBtn setEnabled:YES];
+        else [self.levelUpBtn setEnabled:NO];
     });
 }
-- (IBAction)resetClick:(id)sender {
-    [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:POINT_KEY];
+- (void)setPoint:(NSInteger)point {
+    [[NSUserDefaults standardUserDefaults] setInteger:point forKey:POINT_KEY];
     [[NSUserDefaults standardUserDefaults] synchronize];
     [self updateUI:nil];
+}
+- (IBAction)levelUp:(id)sender {
+    CharacterMO* character = [CharacterMO getRecordByID:0];
+    NSInteger expNeeded = [character.experiencePerLevel integerValue] * [character.level integerValue];
+    NSInteger point = [[NSUserDefaults standardUserDefaults] integerForKey:POINT_KEY];
+    if (point >= expNeeded) {
+        point -= expNeeded;
+        [self setPoint:point];
+        [character levelUp];
+    }
 }
 - (IBAction)shouldGenData:(id)sender {
     [[WatchSessionManager sharedInstance] shouldGenData:[sender isOn]];

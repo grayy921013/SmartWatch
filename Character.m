@@ -9,15 +9,14 @@
 #import "Character.h"
 
 @implementation Character
--(id)initWithHealth:(NSInteger)health attack:(NSInteger)attack defense:(NSInteger)defense timeToAttack:(NSInteger)timeToAttack{
+-(id)initWithHealth:(NSInteger)health attack:(NSInteger)attack defense:(NSInteger)defense speed:(NSInteger)speed{
     self = [super init];
     if (self) {
         self.health = health;
         self.healthNow = health;
         self.attack = attack;
         self.defense = defense;
-        self.timeToAttack = timeToAttack;
-        self.timeNeedToAttack = timeToAttack;
+        self.speed = speed;
     }
     return self;
 }

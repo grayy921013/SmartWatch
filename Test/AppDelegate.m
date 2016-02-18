@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "WatchSessionManager.h"
 #import "CYLTabBarControllerConfig.h"
+#import "CharacterMO.h"
 
 @interface AppDelegate ()
 @property (strong, nonatomic) HKHealthStore *store;
@@ -36,6 +37,7 @@
     [self.window setRootViewController:tabBarControllerConfig.tabBarController];
     [self.window makeKeyAndVisible];
     [self customizeInterface];
+    [CharacterMO init];
     
     return YES;
 }

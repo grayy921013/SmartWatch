@@ -34,6 +34,8 @@
 		842CD2661BB66482000E2703 /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 842CD2651BB66482000E2703 /* ExtensionDelegate.m */; };
 		842CD2691BB66482000E2703 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842CD2681BB66482000E2703 /* NotificationController.m */; };
 		842CD26B1BB66482000E2703 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842CD26A1BB66482000E2703 /* Assets.xcassets */; };
+		8461757D1C75CB0E009FDCE3 /* CharacterMO+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 8461757A1C75CB0E009FDCE3 /* CharacterMO+CoreDataProperties.m */; };
+		8461757E1C75CB0E009FDCE3 /* CharacterMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8461757C1C75CB0E009FDCE3 /* CharacterMO.m */; };
 		8462EF9C1C48942D005A984E /* DataTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8462EF9A1C48942D005A984E /* DataTableViewCell.m */; };
 		8462EF9D1C48942D005A984E /* DataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8462EF9B1C48942D005A984E /* DataTableViewCell.xib */; };
 		846D3AF01C0D8635006BB020 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846D3AEE1C0D8635006BB020 /* InfoViewController.m */; };
@@ -176,6 +178,10 @@
 		842CD2681BB66482000E2703 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
 		842CD26A1BB66482000E2703 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		842CD26C1BB66482000E2703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		846175791C75CB0E009FDCE3 /* CharacterMO+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CharacterMO+CoreDataProperties.h"; sourceTree = "<group>"; };
+		8461757A1C75CB0E009FDCE3 /* CharacterMO+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CharacterMO+CoreDataProperties.m"; sourceTree = "<group>"; };
+		8461757B1C75CB0E009FDCE3 /* CharacterMO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterMO.h; sourceTree = "<group>"; };
+		8461757C1C75CB0E009FDCE3 /* CharacterMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterMO.m; sourceTree = "<group>"; };
 		8462EF991C48942D005A984E /* DataTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataTableViewCell.h; path = View/DataTableViewCell.h; sourceTree = "<group>"; };
 		8462EF9A1C48942D005A984E /* DataTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataTableViewCell.m; path = View/DataTableViewCell.m; sourceTree = "<group>"; };
 		8462EF9B1C48942D005A984E /* DataTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DataTableViewCell.xib; path = View/DataTableViewCell.xib; sourceTree = "<group>"; };
@@ -421,6 +427,10 @@
 				846D3AF71C0DC8CE006BB020 /* TrainingTime.m */,
 				840EA8AB1C71975E009476B6 /* Character.h */,
 				840EA8AC1C71975E009476B6 /* Character.m */,
+				846175791C75CB0E009FDCE3 /* CharacterMO+CoreDataProperties.h */,
+				8461757A1C75CB0E009FDCE3 /* CharacterMO+CoreDataProperties.m */,
+				8461757B1C75CB0E009FDCE3 /* CharacterMO.h */,
+				8461757C1C75CB0E009FDCE3 /* CharacterMO.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -753,6 +763,8 @@
 				8493B39C1BEDF1C800F93E0E /* UIImage+animatedGIF.m in Sources */,
 				8493B38D1BECBB0D00F93E0E /* CYLTabBarControllerConfig.m in Sources */,
 				8493B3831BEC53EE00F93E0E /* SensorData.m in Sources */,
+				8461757D1C75CB0E009FDCE3 /* CharacterMO+CoreDataProperties.m in Sources */,
+				8461757E1C75CB0E009FDCE3 /* CharacterMO.m in Sources */,
 				842CD2291BB66481000E2703 /* DataTableViewController.m in Sources */,
 				840EA8A41C717FE7009476B6 /* FightViewController.m in Sources */,
 				8493B3911BECCC7700F93E0E /* HomeViewController.m in Sources */,
