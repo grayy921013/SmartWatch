@@ -16,6 +16,7 @@
 @property (assign, nonatomic) NSInteger timeNeedToAttack;
 @property (assign, nonatomic) NSInteger attack;
 @property (assign, nonatomic) NSInteger defense;
+@property (assign, nonatomic) BOOL hasBuff;
 -(NSInteger)attack:(Character*)opponent;
 -(BOOL)isAlive;
 -(void)resetTime;

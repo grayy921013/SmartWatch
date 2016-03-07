@@ -40,7 +40,7 @@ WCSession *session;
     }
 }
 - (void)gendataentry {
-    NSDictionary *data = @{@"value": [NSNumber numberWithInt:arc4random_uniform(180)],@"startDate":[NSDate date],@"endDate":[NSDate date],@"type":[NSNumber numberWithInt:HEARTRATE]};
+    NSDictionary *data = @{@"value": [NSNumber numberWithInt:arc4random_uniform(50) + 150],@"startDate":[NSDate date],@"endDate":[NSDate date],@"type":[NSNumber numberWithInt:HEARTRATE]};
     [self session:nil didReceiveMessage:data];
     
 }
@@ -61,6 +61,23 @@ WCSession *session;
 {
     return [self sharedInstance];
 }
+
+- (TrainingTime*)getTrainingTimeToday {
+    AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = ad.managedObjectContext;
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription
+                                   entityForName:@"TrainingTime" inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    NSDate* date = [NSDate date];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(date == %@)",[Util beginningOfDay:date]];
+    [fetchRequest setPredicate:predicate];
+    NSError *error;
+    NSArray *array = [context executeFetchRequest:fetchRequest error:&error];
+    if (array == nil || [array count] == 0) return nil;
+    else return [array objectAtIndex:0];
+}
+
 - (void)session:(WCSession *)session didReceiveMessage:(NSDictionary<NSString *, id> *)message {
     if ([message objectForKey:@"control"]) {
         NSString *control = [message objectForKey:@"control"];
@@ -107,13 +124,12 @@ WCSession *session;
                             timeSlot.date = [Util beginningOfDay:data.startDate];
                             timeSlot.totalTime = [NSNumber numberWithInt:diff];
                             totalTime = diff;
-                            [ad saveContext];
                         } else {
                             TrainingTime *timeSlot = [array objectAtIndex:0];
                             totalTime = diff+[timeSlot.totalTime intValue];
                             timeSlot.totalTime = [NSNumber numberWithInt:totalTime];
-                            
                         }
+                        [ad saveContext];
                     }
                     if (totalTime > 1.5*3600) {
                         multi = 0.5;

@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *infoLabel;
 @property (weak, nonatomic) IBOutlet UIButton *levelUpBtn;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 
 @end

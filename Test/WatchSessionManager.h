@@ -20,4 +20,5 @@
 - (void)startSession;
 +(instancetype)sharedInstance;
 - (void)shouldGenData:(BOOL)generate;
+- (TrainingTime*)getTrainingTimeToday;
 @end

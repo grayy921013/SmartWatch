@@ -41,17 +41,14 @@
     dispatch_async (dispatch_get_main_queue(), ^{
         NSInteger point = [[NSUserDefaults standardUserDefaults] integerForKey:POINT_KEY];
         [self.pointLabel setText:[@(point) stringValue]];
-        
-        AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-        NSManagedObjectContext *context = ad.managedObjectContext;
-        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-        NSEntityDescription *entity = [NSEntityDescription
-                                       entityForName:@"TrainingTime" inManagedObjectContext:context];
-        [fetchRequest setEntity:entity];
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(date == %@)",[Util beginningOfDay:[NSDate date]]];
-        [fetchRequest setPredicate:predicate];
-        NSError *error;
-        NSArray *array = [context executeFetchRequest:fetchRequest error:&error];
+        TrainingTime* time = [[WatchSessionManager sharedInstance]getTrainingTimeToday];
+        NSInteger duration = [time.totalTime integerValue];
+        if (duration < 60*60) {
+            [self.timeLabel setText:[NSString stringWithFormat:@"%ld min", duration/60]];
+        } else {
+            double hour = (double)duration/3600;
+            [self.timeLabel setText:[NSString stringWithFormat:@"%.2f hour", hour]];
+        }
         CharacterMO* character = [CharacterMO getRecordByID:0];
         NSInteger expNeeded = [character.experiencePerLevel integerValue] * [character.level integerValue];
         [self.infoLabel setText:[NSString stringWithFormat:@"Exp need:%ld\nLevel now:%ld",expNeeded,[character.level integerValue]]];

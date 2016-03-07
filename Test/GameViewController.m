@@ -36,6 +36,7 @@
     return result;
 }
 - (void)updateUI {
+    if (self.char1.hasBuff) [self.buffView setHidden:false];
     [self.progress1 setProgress:(float)self.char1.healthNow/self.char1.health animated:YES];
     [self.progress2 setProgress:(float)self.char2.healthNow/self.char2.health animated:YES];
     [self.label1 setText:[NSString stringWithFormat:@"%ld | %ld",self.char1.healthNow,(long)self.char1.health]];
@@ -99,7 +100,17 @@
         [self performSelector:@selector(gameRunning) withObject:self afterDelay:2.0 ];
     }
 }
+
+- (void)checkTotalTime {
+    TrainingTime *timeslot = [[WatchSessionManager sharedInstance] getTrainingTimeToday];
+    if ([timeslot.totalTime intValue] >= 60 * 30) {
+        //add buff
+        self.char1.hasBuff = true;
+    }
+}
+
 - (void)gameStart {
+    [self checkTotalTime];
     [self updateUI];
     [self performSelector:@selector(gameRunning) withObject:self afterDelay:2.0 ];
 }

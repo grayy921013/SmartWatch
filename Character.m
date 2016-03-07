@@ -22,10 +22,11 @@
 }
 -(NSInteger)attack:(Character*)opponent{
     // -1 for miss : 10%; 0 for normal attack : 80%; 1 for critical attack: 10%
+    // if buff: no miss and double possibilty of critical hit
     int dice = arc4random() % 10;
-    if (dice == 0) {
+    if (!self.hasBuff && dice == 0) {
         return -1;
-    } else if (dice == 1) {
+    } else if ((!self.hasBuff &&dice == 1)||(self.hasBuff && dice <=1)) {
         opponent.healthNow = opponent.healthNow + opponent.defense - self.attack * 2;
         if (opponent.healthNow < 0) opponent.healthNow = 0;
         return 1;
