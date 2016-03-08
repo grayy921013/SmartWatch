@@ -2,17 +2,14 @@
 //  CYLPlusButton.m
 //  CYLCustomTabBarDemo
 //
-//  Created by 微博@iOS程序犭袁 (http://weibo.com/luohanchenyilong/) on 10/20/15.
+//  Created by 微博@iOS程序犭袁 ( http://weibo.com/luohanchenyilong/ ) on 10/20/15.
 //  Copyright © 2015 https://github.com/ChenYilong . All rights reserved.
 //
 
 #import "CYLPlusButton.h"
 #import "CYLTabBarController.h"
 
-UIButton<CYLPlusButtonSubclassing> *CYLExternPushlishButton = nil;
-@interface CYLPlusButton ()<UIActionSheetDelegate>
-
-@end
+UIButton<CYLPlusButtonSubclassing> *CYLExternPlusButton = nil;
 
 @implementation CYLPlusButton
 
@@ -22,7 +19,7 @@ UIButton<CYLPlusButtonSubclassing> *CYLExternPushlishButton = nil;
 + (void)registerSubclass {
     if ([self conformsToProtocol:@protocol(CYLPlusButtonSubclassing)]) {
         Class<CYLPlusButtonSubclassing> class = self;
-        CYLExternPushlishButton = [class plusButton];
+        CYLExternPlusButton = [class plusButton];
     }
 }
 

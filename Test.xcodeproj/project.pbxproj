@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0860DA08EDB52371B5E30FB9 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18532A0B743E03FADDA9A7AC /* Pods.framework */; };
+		840D9D7F1C8EC73900D92922 /* runningman.gif in Resources */ = {isa = PBXBuildFile; fileRef = 840D9D7E1C8EC73900D92922 /* runningman.gif */; };
 		840EA8A41C717FE7009476B6 /* FightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840EA8A21C717FE7009476B6 /* FightViewController.m */; };
 		840EA8A51C717FE7009476B6 /* FightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840EA8A31C717FE7009476B6 /* FightViewController.xib */; };
 		840EA8A91C719674009476B6 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840EA8A71C719674009476B6 /* GameViewController.m */; };
@@ -68,7 +70,6 @@
 		84B8FD511BE8E27300CCE8DC /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84B8FD4F1BE8E27300CCE8DC /* Model.xcdatamodeld */; };
 		84D0054C1BB9313D005992E5 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D0054B1BB9313D005992E5 /* HealthKit.framework */; };
 		84F8B68D1BBC0C830054C199 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F8B68C1BBC0C830054C199 /* HealthKit.framework */; };
-		FB9D246DDE13C85C0B8B1F80 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDC12AEFAC4DF9FAB0B1EA1 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,7 +131,8 @@
 /* Begin PBXFileReference section */
 		09BA1639C411435668F004CC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		0F6C3FE867D88A99F68942EC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		4EDC12AEFAC4DF9FAB0B1EA1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		18532A0B743E03FADDA9A7AC /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		840D9D7E1C8EC73900D92922 /* runningman.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = runningman.gif; sourceTree = "<group>"; };
 		840EA8A11C717FE7009476B6 /* FightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FightViewController.h; sourceTree = "<group>"; };
 		840EA8A21C717FE7009476B6 /* FightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FightViewController.m; sourceTree = "<group>"; };
 		840EA8A31C717FE7009476B6 /* FightViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FightViewController.xib; sourceTree = "<group>"; };
@@ -233,7 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84D0054C1BB9313D005992E5 /* HealthKit.framework in Frameworks */,
-				FB9D246DDE13C85C0B8B1F80 /* libPods.a in Frameworks */,
+				0860DA08EDB52371B5E30FB9 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +458,7 @@
 		8493B39D1BEDF27000F93E0E /* gifs */ = {
 			isa = PBXGroup;
 			children = (
+				840D9D7E1C8EC73900D92922 /* runningman.gif */,
 				8493B3A21BEDF85300F93E0E /* gif1.gif */,
 				8493B3A31BEDF85300F93E0E /* gif2.gif */,
 				8493B3A41BEDF85300F93E0E /* gif3.gif */,
@@ -471,7 +474,7 @@
 		B66D2AB70457FE491FC4FCFF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4EDC12AEFAC4DF9FAB0B1EA1 /* libPods.a */,
+				18532A0B743E03FADDA9A7AC /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -658,6 +661,7 @@
 				8493B3AB1BEDF85400F93E0E /* gif3.gif in Resources */,
 				846D3AF31C0DAD4B006BB020 /* Defaults.plist in Resources */,
 				840EA8A51C717FE7009476B6 /* FightViewController.xib in Resources */,
+				840D9D7F1C8EC73900D92922 /* runningman.gif in Resources */,
 				8493B3AA1BEDF85400F93E0E /* gif2.gif in Resources */,
 				840EA8CA1C72C7B8009476B6 /* RankTableViewController.xib in Resources */,
 				8462EF9D1C48942D005A984E /* DataTableViewCell.xib in Resources */,
@@ -1029,7 +1033,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Test/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(CONFIGURATION_BUILD_DIR)";
 				PRODUCT_BUNDLE_IDENTIFIER = VincentZhou.Test;
 				PRODUCT_NAME = "Smart Watch";
 				PROVISIONING_PROFILE = "";
@@ -1045,7 +1049,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Test/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(CONFIGURATION_BUILD_DIR)";
 				PRODUCT_BUNDLE_IDENTIFIER = VincentZhou.Test;
 				PRODUCT_NAME = "Smart Watch";
 				PROVISIONING_PROFILE = "";

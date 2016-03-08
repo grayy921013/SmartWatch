@@ -1,5 +1,5 @@
 PODS:
-  - CYLTabBarController (1.0.5)
+  - CYLTabBarController (1.2.1)
   - YLProgressBar (3.8.0)
 
 DEPENDENCIES:
@@ -7,7 +7,7 @@ DEPENDENCIES:
   - YLProgressBar
 
 SPEC CHECKSUMS:
-  CYLTabBarController: c758aba2b1aac34be1c217047079ab11b4a18f4a
+  CYLTabBarController: 62ee700d59dc1f42777053e6254933f499ab4564
   YLProgressBar: b6ec76bea4a1b8d6bdfd2995d828055a7e5f3e9a
 
 COCOAPODS: 0.39.0

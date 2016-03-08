@@ -20,6 +20,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.title = @"Home";
+    self.dayProgress.progressTintColor        = [UIColor colorWithRed:232/255.0f green:132/255.0f blue:12/255.0f alpha:1.0f];
+    self.dayProgress.type                     = YLProgressBarTypeFlat;
+    self.dayProgress.stripesOrientation       = YLProgressBarStripesOrientationVertical;
+    self.dayProgress.stripesDirection         = YLProgressBarStripesDirectionLeft;
+    self.dayProgress.stripesAnimationVelocity = 1.8f;
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"runningman" withExtension:@"gif"];
+    if (url != nil) self.progressIndicator.image = [UIImage animatedImageWithAnimatedGIFURL:url];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,12 +50,22 @@
         [self.pointLabel setText:[@(point) stringValue]];
         TrainingTime* time = [[WatchSessionManager sharedInstance]getTrainingTimeToday];
         NSInteger duration = [time.totalTime integerValue];
-        if (duration < 60*60) {
+        if (duration < 60) {
+             [self.timeLabel setText:[NSString stringWithFormat:@"%ld s", duration]];
+        } else if (duration < 60*60) {
             [self.timeLabel setText:[NSString stringWithFormat:@"%ld min", duration/60]];
         } else {
             double hour = (double)duration/3600;
             [self.timeLabel setText:[NSString stringWithFormat:@"%.2f hour", hour]];
         }
+        CGFloat percent = (CGFloat)duration / (30*60);
+        if (percent > 1) percent = 1;
+        [self.dayProgress setProgress:percent animated:YES];
+        [UIView animateWithDuration:0.2 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+            self.indicatorX.constant = percent * 180;
+            [self.dayProgress setNeedsLayout];
+            [self.dayProgress layoutIfNeeded];
+        } completion:^(BOOL finished) {}];
         CharacterMO* character = [CharacterMO getRecordByID:0];
         NSInteger expNeeded = [character.experiencePerLevel integerValue] * [character.level integerValue];
         [self.infoLabel setText:[NSString stringWithFormat:@"Exp need:%ld\nLevel now:%ld",expNeeded,[character.level integerValue]]];

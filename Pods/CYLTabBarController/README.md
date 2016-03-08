@@ -2,7 +2,7 @@
 
 
 <p align="center">
-![enter image description here](https://img.shields.io/badge/pod-v1.0.3-brightgreen.svg)
+![enter image description here](https://img.shields.io/badge/pod-v1.0.5-brightgreen.svg)
 ![enter image description here](https://img.shields.io/badge/Objective--C-compatible-orange.svg)   ![enter image description here](https://img.shields.io/badge/platform-iOS%207.0%2B-ff69b4.svg)
 
 
@@ -16,8 +16,9 @@
   2.  [第二步：设置CYLTabBarController的两个数组：控制器数组和TabBar属性数组](https://github.com/ChenYilong/CYLTabBarController#第二步设置cyltabbarcontroller的两个数组控制器数组和tabbar属性数组) 
   3.  [第三步：将CYLTabBarController设置为window的RootViewController](https://github.com/ChenYilong/CYLTabBarController#第三步将cyltabbarcontroller设置为window的rootviewcontroller) 
   4.  [第四步（可选）：创建自定义的形状不规则加号按钮](https://github.com/ChenYilong/CYLTabBarController#第四步可选创建自定义的形状不规则加号按钮) 
- 2.  [补充说明](https://github.com/ChenYilong/CYLTabBarController#补充说明) 
- 2.  [Q-A](https://github.com/ChenYilong/CYLTabBarController#q-a) 
+ 4.  [在 Swift 项目中使用 CYLTabBarController](https://github.com/ChenYilong/CYLTabBarController#在-swift-项目中使用-cyltabbarcontroller) 
+ 5.  [补充说明](https://github.com/ChenYilong/CYLTabBarController#补充说明) 
+ 6.  [Q-A](https://github.com/ChenYilong/CYLTabBarController#q-a) 
 
 
 
@@ -34,7 +35,7 @@
 
 
 
-（学习交流群：512437027）
+（学习交流群：465239521）
 
 
 
@@ -58,23 +59,46 @@
   4.  [第四步（可选）：创建自定义的形状不规则加号按钮](https://github.com/ChenYilong/CYLTabBarController#第四步可选创建自定义的形状不规则加号按钮) 
 
 
-### 第一步：使用cocoaPods导入CYLTabBarController
+### 第一步：使用CocoaPods导入CYLTabBarController
 
-在 `Podfile` 中如下导入：
+
+在 `Podfile` 中进行如下导入：
 
 
  ```Objective-C
- pod 'CYLTabBarController'
+pod 'CYLTabBarController'
  ```
+
+
 
 然后使用 `cocoaPods` 进行安装：
 
-建议使用如下方式：
+如果尚未安装 CocoaPods, 运行以下命令进行安装:
+
 
  ```Objective-C
- # 不升级CocoaPods的spec仓库
-pod update --verbose 
+gem install cocoapods
  ```
+
+
+安装成功后就可以安装依赖了：
+
+建议使用如下方式：
+
+
+ ```Objective-C
+ # 禁止升级CocoaPods的spec仓库，否则会卡在 Analyzing dependencies ，非常慢 
+ pod update --verbose --no-repo-update
+ ```
+
+
+如果提示找不到库，则可去掉 --no-repo-update
+
+
+ ```Objective-C
+pod update
+ ```
+
 
 
 
@@ -185,7 +209,9 @@ pod update --verbose
  ```
 
 
+### 在 Swift 项目中使用 CYLTabBarController
 
+参考： [《从头开始swift2.1 仿搜材通项目（三） 主流框架Tabbed的搭建》]( http://www.jianshu.com/p/c5bc2eae0f55?nomobile=yes ) 
 
 ### 补充说明
 如果想更进一步的自定义 `TabBar` 样式可在 `-application:didFinishLaunchingWithOptions:` 方法中设置
@@ -207,8 +233,8 @@ pod update --verbose
     // 设置文字属性
     UITabBarItem *tabBar = [UITabBarItem appearance];
     [tabBar setTitleTextAttributes:normalAttrs forState:UIControlStateNormal];
-    [tabBar setTitleTextAttributes:normalAttrs forState:UIControlStateHighlighted];
-
+    [tabBar setTitleTextAttributes:selectedAttrs forState:UIControlStateSelected];
+    
     // 设置背景图片
     UITabBar *tabBarAppearance = [UITabBar appearance];
     [tabBarAppearance setBackgroundImage:[UIImage imageNamed:@"tabbar_background"]];
@@ -221,6 +247,9 @@ pod update --verbose
     return YES;
 }
  ```
+
+更多文档信息可查看 [ ***CocoaDocs：CYLTabBarController*** ](http://cocoadocs.org/docsets/CYLTabBarController/1.0.5/index.html) 。
+
 ## Q-A
 
 Q：为什么放置6个TabBarItem会显示异常？
@@ -260,6 +289,31 @@ A：我已经在 Demo 中添加了如何实现该功能的代码：
 
 效果如下：
 ![simulator screen shot 2015 10 28 11 44 32](https://cloud.githubusercontent.com/assets/2911921/10779397/34956b0a-7d6b-11e5-82d9-fa75aa34e8d0.png)
+
+
+Q:当ViewController设置的self.title和tabBarItemsAttributes中对应的title不一致的时候，会出现如图的错误，排序不对了
+
+A：在 v1.0.7 版本中已经修复了该 bug，但是也需要注意：
+
+请勿使用 `self.title = @"同城";  ` 这种方式，请使用 `self.navigationItem.title = @"同城"; ` 
+
+`self.title = @"同城";  ` 这种方式，如果和tabBarItemsAttributes中对应的title不一致的时候可能会导致如下现象（不算 bug，但看起来也很奇怪）：
+
+![enter image description here](http://i68.tinypic.com/282l3x4.jpg )
+
+
+
+规则如下：
+
+ ```Objective-C
+
+    self.navigationItem.title = @"同城";    //✅sets navigation bar title.The right way to set the title of the navigation
+    self.tabBarItem.title = @"同城23333";   //❌sets tab bar title. Even the `tabBarItem.title` changed, this will be ignored in  tabbar.
+    self.title = @"同城1";                  //❌sets both of these. Do not do this‼️‼️ This may cause something strange like this : http://i68.tinypic.com/282l3x4.jpg 
+
+ ```
+
+
 
 （更多iOS开发干货，欢迎关注  [微博@iOS程序犭袁](http://weibo.com/luohanchenyilong/) ）
 
