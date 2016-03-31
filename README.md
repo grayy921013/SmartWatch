@@ -1,2 +1,2 @@
 # SmartWatch
-Thesis project on Apple Watch relating to heartrate.
+Thesis project on Apple Watch related to heartbeat rate.

@@ -9,17 +9,25 @@
 #import "GameViewController.h"
 
 @interface GameViewController ()
+@property (retain, nonatomic) CharacterMO* c1;
+@property (retain, nonatomic) CharacterMO* c2;
 @property (retain, nonatomic) Character* char1;
 @property (retain, nonatomic) Character* char2;
 @end
 
 @implementation GameViewController
 
--(id)initWithNibName:(NSString*) String bundle:(NSBundle*)bundle Character1:(Character*)char1 Character2:(Character*)char2{
+-(id)initWithNibName:(NSString*) String bundle:(NSBundle*)bundle against:(CharacterMO*)char2{
     self = [super initWithNibName:String bundle:bundle];
     if (self) {
-        self.char1 = char1;
-        self.char2 = char2;
+        self.c1 = char2;
+        self.c2 = [CharacterMO getUserCharacter];
+        self.char1 = [self.c1 convertToCharacter];
+        self.char2 = [self.c2 convertToCharacter];
+        self.char1.timeNeedToAttack = self.char2.speed;
+        self.char1.timeToAttack = self.char2.speed;
+        self.char2.timeNeedToAttack = self.char1.speed;
+        self.char2.timeToAttack = self.char1.speed;
     }
     return self;
 }
@@ -28,6 +36,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self gameStart];
+    [self.imageView1 setImage:[UIImage imageNamed:[NSString stringWithFormat:@"char%@.png", self.c1.character_id]]];
+    [self.imageView2 setImage:[UIImage imageNamed:[NSString stringWithFormat:@"char%@.png", self.c2.character_id]]];
 }
 - (NSInteger)attackByChar:(Character*)char1 atChar:(Character*)char2 {
     NSInteger result = [char1 attack:char2];

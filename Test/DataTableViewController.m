@@ -21,6 +21,7 @@
     } else {
         self.title = @"Energy";
     }
+    self.navigationController.navigationBar.translucent = NO;
     UIBarButtonItem *resetButton = [[UIBarButtonItem alloc]
                                    initWithTitle:@"Remove All"
                                    style:UIBarButtonItemStylePlain
@@ -29,7 +30,6 @@
     self.navigationItem.rightBarButtonItem = resetButton;
     self.array = [[NSMutableArray alloc] init];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
-    [self.tableView setSeparatorColor:[UIColor blueColor]];
 }
 - (void)resetData {
     NSArray *fetchedObjects = [self fetchObjects];

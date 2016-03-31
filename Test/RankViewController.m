@@ -21,6 +21,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.navigationController.navigationBar.translucent = NO;
+    self.title = @"Rank";
     [self.mainTabBar setSelectedItem:[[self.mainTabBar items] objectAtIndex:0]];
     if (self.tab2vc == nil) {
         self.tab2vc = [[RankTableViewController alloc] init];

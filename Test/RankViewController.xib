@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RankViewController">
@@ -17,7 +17,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e1R-mp-h8h">
-                    <rect key="frame" x="0.0" y="64" width="320" height="49"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="49" id="4TS-f7-GNF"/>
@@ -31,14 +31,14 @@
                     </connections>
                 </tabBar>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WIM-ve-lUu">
-                    <rect key="frame" x="0.0" y="113" width="320" height="455"/>
+                    <rect key="frame" x="0.0" y="49" width="320" height="519"/>
                     <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="WIM-ve-lUu" firstAttribute="top" secondItem="e1R-mp-h8h" secondAttribute="bottom" id="0II-O8-Z6j"/>
-                <constraint firstItem="e1R-mp-h8h" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="2MG-zx-8uY"/>
+                <constraint firstItem="e1R-mp-h8h" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="2MG-zx-8uY"/>
                 <constraint firstItem="WIM-ve-lUu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Hte-aR-HBD"/>
                 <constraint firstItem="e1R-mp-h8h" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="O5g-Mi-Wmu"/>
                 <constraint firstAttribute="trailing" secondItem="e1R-mp-h8h" secondAttribute="trailing" id="Qs7-5O-ueK"/>

@@ -38,7 +38,14 @@
     [self.window makeKeyAndVisible];
     [self customizeInterface];
     [CharacterMO init];
+    //register notification
+    UIUserNotificationType types = (UIUserNotificationType) (UIUserNotificationTypeBadge |
+                                                             UIUserNotificationTypeSound | UIUserNotificationTypeAlert);
     
+    UIUserNotificationSettings *mySettings =
+    [UIUserNotificationSettings settingsForTypes:types categories:nil];
+    
+    [[UIApplication sharedApplication] registerUserNotificationSettings:mySettings];
     return YES;
 }
 

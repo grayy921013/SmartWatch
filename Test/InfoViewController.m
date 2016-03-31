@@ -18,6 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.translucent = NO;
+    self.title = @"Setting";
     // Do any additional setup after loading the view from its nib.
     [self.ageField setText:[@([[NSUserDefaults standardUserDefaults] integerForKey:AGE_KEY])stringValue]];
     [self.rateField setText:[@([[NSUserDefaults standardUserDefaults] integerForKey:RATE_KEY])stringValue]];

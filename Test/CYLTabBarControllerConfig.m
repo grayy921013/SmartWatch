@@ -10,7 +10,7 @@
 //View Controllers
 #import "ShopViewController.h"
 #import "HomeViewController.h"
-#import "InfoViewController.h"
+#import "MainInfoViewController.h"
 #import "RankViewController.h"
 
 @interface CYLTabBarControllerConfig ()
@@ -37,7 +37,7 @@
         UIViewController *secondNavigationController = [[UINavigationController alloc]
                                                        initWithRootViewController:secondViewController];
         
-        InfoViewController *thirdViewController = [[InfoViewController alloc] init];
+        MainInfoViewController *thirdViewController = [[MainInfoViewController alloc] init];
         UIViewController *thirdNavigationController = [[UINavigationController alloc]
                                                         initWithRootViewController:thirdViewController];
         

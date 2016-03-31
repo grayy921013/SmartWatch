@@ -9,13 +9,15 @@
 #import "ShopViewController.h"
 
 @interface ShopViewController ()
-
+@property(nonatomic, retain) NSArray *array;
 @end
 
 @implementation ShopViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"Shop";
+    self.array = [CharacterMO getAvailableUserRecords];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -33,5 +35,37 @@
     // Pass the selected object to the new view controller.
 }
 */
+#pragma mark - Methods
 
+- (void)configureCell:(ShopTableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath {
+    CharacterMO* item = [self.array objectAtIndex:indexPath.row];
+    [cell setData:item];
+}
+
+- (void)reloadData {
+    [self.tableView reloadData];
+}
+
+#pragma mark - Table view
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *CellIdentifier = @"Cell";
+    ShopTableViewCell *cell = (ShopTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (!cell) {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"ShopTableViewCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+    }
+    [self configureCell:cell forIndexPath:indexPath];
+    cell.delegate = self;
+    return cell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.array == nil? 0:[self.array count];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 120;
+}
 @end

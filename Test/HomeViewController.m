@@ -19,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.navigationController.navigationBar.translucent = NO;
     self.title = @"Home";
     self.dayProgress.progressTintColor        = [UIColor colorWithRed:232/255.0f green:132/255.0f blue:12/255.0f alpha:1.0f];
     self.dayProgress.type                     = YLProgressBarTypeFlat;
@@ -66,9 +67,10 @@
             [self.dayProgress setNeedsLayout];
             [self.dayProgress layoutIfNeeded];
         } completion:^(BOOL finished) {}];
-        CharacterMO* character = [CharacterMO getRecordByID:0];
+        CharacterMO* character = [CharacterMO getUserCharacter];
         NSInteger expNeeded = [character.experiencePerLevel integerValue] * [character.level integerValue];
         [self.infoLabel setText:[NSString stringWithFormat:@"Exp need:%ld\nLevel now:%ld",expNeeded,[character.level integerValue]]];
+        [self.imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"char%@.png", character.character_id]]];
         if (point >= expNeeded) [self.levelUpBtn setEnabled:YES];
         else [self.levelUpBtn setEnabled:NO];
     });
@@ -79,7 +81,7 @@
     [self updateUI:nil];
 }
 - (IBAction)levelUp:(id)sender {
-    CharacterMO* character = [CharacterMO getRecordByID:0];
+    CharacterMO* character = [CharacterMO getUserCharacter];
     NSInteger expNeeded = [character.experiencePerLevel integerValue] * [character.level integerValue];
     NSInteger point = [[NSUserDefaults standardUserDefaults] integerForKey:POINT_KEY];
     if (point >= expNeeded) {

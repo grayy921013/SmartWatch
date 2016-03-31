@@ -10,6 +10,7 @@
 NSInteger last_heartrate_value;
 NSDate *last_heartrate_time = nil;
 NSTimer *timer;
+BOOL notified = false;
 static WatchSessionManager *sharedInstance;
 WCSession *session;
 - (instancetype)init {
@@ -78,12 +79,30 @@ WCSession *session;
     else return [array objectAtIndex:0];
 }
 
+- (void)presentNotification:(Data*) data {
+    UILocalNotification *localNotif = [[UILocalNotification alloc] init];
+    if (localNotif == nil)
+        return;
+    localNotif.fireDate = [NSDate date];
+    localNotif.timeZone = [NSTimeZone defaultTimeZone];
+    
+    localNotif.alertBody = [NSString stringWithFormat:@"%ld", data.value];
+    localNotif.alertAction = @"View Details";
+    localNotif.alertTitle = @"You have entered active zone, keep your pace!";
+    
+    localNotif.soundName = UILocalNotificationDefaultSoundName;
+    localNotif.applicationIconBadgeNumber = 1;
+    
+    
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotif];
+}
 - (void)session:(WCSession *)session didReceiveMessage:(NSDictionary<NSString *, id> *)message {
     if ([message objectForKey:@"control"]) {
         NSString *control = [message objectForKey:@"control"];
         if ([control isEqualToString:@"end"]) {
             last_heartrate_value = 0;
             last_heartrate_time = nil;
+            notified = false;
         }
     } else {
         Data *data = [Data initWithDic:message];
@@ -103,12 +122,20 @@ WCSession *session;
                 if (diff > 0 && diff < 300) {
                     NSInteger max = 220-[[NSUserDefaults standardUserDefaults] integerForKey:AGE_KEY];
                     NSInteger rest = [[NSUserDefaults standardUserDefaults] integerForKey:RATE_KEY];
+                    if (data.value < rest) {
+                        [[NSUserDefaults standardUserDefaults] setInteger:data.value forKey:RATE_KEY];
+                    }
                     NSInteger point = 0;
                     int totalTime = 0;
                     double multi = 1;
                     
                     //add duration to work out time of today
                     if (last_heartrate_value > max*0.6+rest*0.4) {
+                        //if not notified, notify
+                        if (!notified) {
+                            [self presentNotification:data];
+                            notified = true;
+                        }
                         NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
                         NSEntityDescription *entity = [NSEntityDescription
                                                        entityForName:@"TrainingTime" inManagedObjectContext:context];

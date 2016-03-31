@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ShopViewController : UIViewController
+#import "ShopTableViewCell.h"
+#import "CharacterMO.h"
+@interface ShopViewController : UITableViewController<UITableViewReload>
 
 @end

@@ -18,6 +18,11 @@ NS_ASSUME_NONNULL_BEGIN
 +(Character*)getCharacterByID:(NSInteger)Id;
 +(void)init;
 +(CharacterMO*)getRecordByID:(NSInteger)Id;
++(CharacterMO*)getUserCharacter;
++(NSInteger)getUserCharacterId;
++(void)setUserCharacterId:(NSInteger)id;
+-(Character*)convertToCharacter;
++(NSArray*)getAvailableUserRecords;
 -(void)levelUp;
 @end
 

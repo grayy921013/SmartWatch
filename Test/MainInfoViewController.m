@@ -7,6 +7,8 @@
 //
 
 #import "MainInfoViewController.h"
+#import "InfoViewController.h"
+#import "DataTableViewController.h"
 
 @interface MainInfoViewController ()
 
@@ -16,6 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"Info";
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -33,5 +36,15 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)oepnSetting:(id)sender {
+    InfoViewController *info = [[InfoViewController alloc] initWithNibName:@"InfoViewController" bundle:nil];
+    info.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:info animated:YES];
+}
+- (IBAction)openActivity:(id)sender {
+    DataTableViewController *data = [[DataTableViewController alloc] initWithType:HEARTRATE];
+    data.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:data animated:YES];
+}
 
 @end

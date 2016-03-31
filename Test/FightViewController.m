@@ -28,13 +28,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)gotoSingleGame:(id)sender {
-    Character *c1 = [CharacterMO getCharacterByID:0];
-    Character *c2 = [CharacterMO getCharacterByID:1];
-    c1.timeNeedToAttack = c2.speed;
-    c1.timeToAttack = c2.speed;
-    c2.timeNeedToAttack = c1.speed;
-    c2.timeToAttack = c1.speed;
-    GameViewController *game = [[GameViewController alloc] initWithNibName:@"GameViewController" bundle:nil Character1:c1 Character2:c2];
+    GameViewController *game = [[GameViewController alloc] initWithNibName:@"GameViewController" bundle:nil against:[CharacterMO getRecordByID:101]];
     [self.navigationController pushViewController:game animated:YES];
 }
 

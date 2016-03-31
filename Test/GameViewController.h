@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Character.h"
+#import "CharacterMO.h"
 #import "WatchSessionManager.h"
 
 @interface GameViewController : UIViewController
@@ -23,5 +23,5 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageView2Y;
 @property (weak, nonatomic) IBOutlet UILabel *notif;
 @property (weak, nonatomic) IBOutlet UIImageView *buffView;
--(id)initWithNibName:(NSString*) String bundle:(NSBundle*)bundle Character1:(Character*)char1 Character2:(Character*)char2;
+-(id)initWithNibName:(NSString*) String bundle:(NSBundle*)bundle against:(CharacterMO*)char2;
 @end
