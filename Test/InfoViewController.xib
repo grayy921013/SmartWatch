@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InfoViewController">
             <connections>
                 <outlet property="ageField" destination="78g-x4-2ui" id="wFg-Rz-VSm"/>
+                <outlet property="pickerView" destination="Wrf-12-p0c" id="Iwy-Af-h72"/>
                 <outlet property="rateField" destination="fCu-tX-tdp" id="3ef-oM-QW4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -60,14 +61,27 @@
                         <action selector="rateChanged:" destination="-1" eventType="editingDidEnd" id="O6e-yb-xKe"/>
                     </connections>
                 </textField>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wrf-12-p0c">
+                    <rect key="frame" x="0.0" y="219" width="320" height="216"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="216" id="EOp-fg-1UK"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="HU6-Ft-QSJ"/>
+                        <outlet property="delegate" destination="-1" id="iBy-J6-adB"/>
+                    </connections>
+                </pickerView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="Wrf-12-p0c" secondAttribute="trailing" id="AAv-Wv-Zp3"/>
                 <constraint firstItem="XPH-rk-VDx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="57" id="FBj-cQ-Ina"/>
                 <constraint firstAttribute="trailing" secondItem="fCu-tX-tdp" secondAttribute="trailing" constant="44" id="Mht-Pz-NWI"/>
                 <constraint firstItem="78g-x4-2ui" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="PBo-7c-HgL"/>
                 <constraint firstAttribute="trailing" secondItem="78g-x4-2ui" secondAttribute="trailing" constant="44" id="SS7-9h-pIL"/>
                 <constraint firstItem="FF6-WF-PV2" firstAttribute="top" secondItem="XPH-rk-VDx" secondAttribute="bottom" constant="69" id="V8d-9Z-WgJ"/>
+                <constraint firstItem="Wrf-12-p0c" firstAttribute="top" secondItem="fCu-tX-tdp" secondAttribute="bottom" constant="60" id="pBh-Wd-OoW"/>
+                <constraint firstItem="Wrf-12-p0c" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="sON-b2-FIH"/>
                 <constraint firstItem="XPH-rk-VDx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="uHp-0m-amV"/>
                 <constraint firstItem="FF6-WF-PV2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="35" id="w2L-vN-Lus"/>
                 <constraint firstItem="fCu-tX-tdp" firstAttribute="top" secondItem="78g-x4-2ui" secondAttribute="bottom" constant="59" id="xdO-lo-W7U"/>

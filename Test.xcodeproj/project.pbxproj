@@ -19,6 +19,7 @@
 		840EA8BD1C72B5BA009476B6 /* RankViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840EA8BB1C72B5BA009476B6 /* RankViewController.xib */; };
 		840EA8C91C72C7B8009476B6 /* RankTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840EA8C71C72C7B8009476B6 /* RankTableViewController.m */; };
 		840EA8CA1C72C7B8009476B6 /* RankTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840EA8C81C72C7B8009476B6 /* RankTableViewController.xib */; };
+		8421FAE91CB38CEB00B8CCF5 /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8421FAE81CB38CEB00B8CCF5 /* SoundManager.m */; };
 		842CD2231BB66481000E2703 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 842CD2221BB66481000E2703 /* main.m */; };
 		842CD2261BB66481000E2703 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 842CD2251BB66481000E2703 /* AppDelegate.m */; };
 		842CD2291BB66481000E2703 /* DataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842CD2281BB66481000E2703 /* DataTableViewController.m */; };
@@ -152,6 +153,8 @@
 		840EA8C61C72C7B8009476B6 /* RankTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankTableViewController.h; sourceTree = "<group>"; };
 		840EA8C71C72C7B8009476B6 /* RankTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankTableViewController.m; sourceTree = "<group>"; };
 		840EA8C81C72C7B8009476B6 /* RankTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RankTableViewController.xib; sourceTree = "<group>"; };
+		8421FAE71CB38CEB00B8CCF5 /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundManager.h; sourceTree = "<group>"; };
+		8421FAE81CB38CEB00B8CCF5 /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundManager.m; sourceTree = "<group>"; };
 		842CD21E1BB66481000E2703 /* Smart Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		842CD2221BB66481000E2703 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		842CD2241BB66481000E2703 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -325,10 +328,10 @@
 				8493B3901BECCC7700F93E0E /* HomeViewController.xib */,
 				846D3AED1C0D8635006BB020 /* InfoViewController.h */,
 				846D3AEE1C0D8635006BB020 /* InfoViewController.m */,
+				846D3AEF1C0D8635006BB020 /* InfoViewController.xib */,
 				8452BD8E1CA68936000AE39C /* MainInfoViewController.h */,
 				8452BD8F1CA68936000AE39C /* MainInfoViewController.m */,
 				8452BD901CA68936000AE39C /* MainInfoViewController.xib */,
-				846D3AEF1C0D8635006BB020 /* InfoViewController.xib */,
 				846D3AF21C0DAD4B006BB020 /* Defaults.plist */,
 				846D3AFA1C0DD1D8006BB020 /* Util.h */,
 				846D3AFB1C0DD1D8006BB020 /* Util.m */,
@@ -346,6 +349,8 @@
 				840EA8C61C72C7B8009476B6 /* RankTableViewController.h */,
 				840EA8C71C72C7B8009476B6 /* RankTableViewController.m */,
 				840EA8C81C72C7B8009476B6 /* RankTableViewController.xib */,
+				8421FAE71CB38CEB00B8CCF5 /* SoundManager.h */,
+				8421FAE81CB38CEB00B8CCF5 /* SoundManager.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -780,6 +785,7 @@
 				840EA8C91C72C7B8009476B6 /* RankTableViewController.m in Sources */,
 				8493B39C1BEDF1C800F93E0E /* UIImage+animatedGIF.m in Sources */,
 				8493B38D1BECBB0D00F93E0E /* CYLTabBarControllerConfig.m in Sources */,
+				8421FAE91CB38CEB00B8CCF5 /* SoundManager.m in Sources */,
 				8493B3831BEC53EE00F93E0E /* SensorData.m in Sources */,
 				8461757D1C75CB0E009FDCE3 /* CharacterMO+CoreDataProperties.m in Sources */,
 				8461757E1C75CB0E009FDCE3 /* CharacterMO.m in Sources */,

@@ -6,11 +6,12 @@
 //  Copyright © 2015 vincent. All rights reserved.
 //
 #import "WatchSessionManager.h"
+#import "SoundManager.h"
 @implementation WatchSessionManager
 NSInteger last_heartrate_value;
 NSDate *last_heartrate_time = nil;
 NSTimer *timer;
-BOOL notified = false;
+BOOL inZone = false;
 static WatchSessionManager *sharedInstance;
 WCSession *session;
 - (instancetype)init {
@@ -102,7 +103,7 @@ WCSession *session;
         if ([control isEqualToString:@"end"]) {
             last_heartrate_value = 0;
             last_heartrate_time = nil;
-            notified = false;
+            inZone = false;
         }
     } else {
         Data *data = [Data initWithDic:message];
@@ -132,9 +133,10 @@ WCSession *session;
                     //add duration to work out time of today
                     if (last_heartrate_value > max*0.6+rest*0.4) {
                         //if not notified, notify
-                        if (!notified) {
-                            [self presentNotification:data];
-                            notified = true;
+                        if (!inZone) {
+                            //[self presentNotification:data];
+                            [[SoundManager sharedInstance] playReachSound];
+                            inZone = true;
                         }
                         NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
                         NSEntityDescription *entity = [NSEntityDescription
@@ -157,6 +159,11 @@ WCSession *session;
                             timeSlot.totalTime = [NSNumber numberWithInt:totalTime];
                         }
                         [ad saveContext];
+                    } else {
+                        if (inZone) {
+                            [[SoundManager sharedInstance] playDropSound];
+                            inZone = false;
+                        }
                     }
                     if (totalTime > 1.5*3600) {
                         multi = 0.5;

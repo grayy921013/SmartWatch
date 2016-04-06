@@ -23,7 +23,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bear" translatesAutoresizingMaskIntoConstraints="NO" id="SCu-Hw-GgW">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SCu-Hw-GgW">
                     <rect key="frame" x="80" y="246" width="160" height="160"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="160" id="ehs-Ph-BVX"/>
@@ -114,7 +114,7 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bear" translatesAutoresizingMaskIntoConstraints="NO" id="TJf-fS-zyq">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TJf-fS-zyq">
                     <rect key="frame" x="70" y="188" width="20" height="28"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="28" id="GVn-II-EBk"/>
@@ -156,7 +156,6 @@
         </view>
     </objects>
     <resources>
-        <image name="bear" width="1000" height="1037"/>
         <image name="fight" width="47" height="47"/>
     </resources>
 </document>

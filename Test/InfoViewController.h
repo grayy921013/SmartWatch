@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "Constants.h"
 
-@interface InfoViewController : UIViewController
+@interface InfoViewController : UIViewController<UIPickerViewDelegate, UITableViewDataSource>
 
 @end

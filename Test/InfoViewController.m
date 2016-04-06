@@ -7,11 +7,12 @@
 //
 
 #import "InfoViewController.h"
+#import "SoundManager.h"
 
 @interface InfoViewController ()
+@property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
 @property (weak, nonatomic) IBOutlet UITextField *ageField;
 @property (weak, nonatomic) IBOutlet UITextField *rateField;
-
 @end
 
 @implementation InfoViewController
@@ -31,6 +32,8 @@
     [numberToolbar sizeToFit];
     self.ageField.inputAccessoryView = numberToolbar;
     self.rateField.inputAccessoryView = numberToolbar;
+    [self.pickerView selectRow:[[SoundManager sharedInstance] getReachSound] inComponent:0 animated:NO];
+    [self.pickerView selectRow:[[SoundManager sharedInstance] getDropSound] inComponent:1 animated:NO];
 }
 
 -(void)doneWithNumberPad{
@@ -59,6 +62,32 @@
 - (IBAction)rateChanged:(id)sender {
     [[NSUserDefaults standardUserDefaults] setInteger:[self.rateField.text intValue] forKey:RATE_KEY];
     [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+#pragma mark - Picker View Data source
+-(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+    return 2;
+}
+-(NSInteger)pickerView:(UIPickerView *)pickerView
+numberOfRowsInComponent:(NSInteger)component{
+    return [[[SoundManager sharedInstance] getSoundArray]count];
+}
+
+#pragma mark- Picker View Delegate
+
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:
+(NSInteger)row inComponent:(NSInteger)component{
+    if(component == 0) {
+        [[SoundManager sharedInstance]setReachSound:row];
+        [[SoundManager sharedInstance] playReachSound];
+    } else {
+        [[SoundManager sharedInstance]setDropSound:row];
+        [[SoundManager sharedInstance] playDropSound];
+    }
+}
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:
+(NSInteger)row forComponent:(NSInteger)component{
+    return [[[[SoundManager sharedInstance] getSoundArray] objectAtIndex:row] lastPathComponent];
 }
 
 @end
