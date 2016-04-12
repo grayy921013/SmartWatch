@@ -23,5 +23,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageView2Y;
 @property (weak, nonatomic) IBOutlet UILabel *notif;
 @property (weak, nonatomic) IBOutlet UIImageView *buffView;
--(id)initWithNibName:(NSString*) String bundle:(NSBundle*)bundle against:(CharacterMO*)char2;
+@property (weak, nonatomic) IBOutlet UILabel *name2;
+@property (weak, nonatomic) IBOutlet UILabel *name1;
+-(id)initAgainst:(CharacterMO*)char2;
 @end

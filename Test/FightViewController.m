@@ -28,7 +28,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)gotoSingleGame:(id)sender {
-    GameViewController *game = [[GameViewController alloc] initWithNibName:@"GameViewController" bundle:nil against:[CharacterMO getRecordByID:101]];
+    GameViewController *game = [[GameViewController alloc] initAgainst:[CharacterMO getRecordByID:101]];
     [self.navigationController pushViewController:game animated:YES];
 }
 

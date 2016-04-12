@@ -93,16 +93,16 @@
                         inManagedObjectContext:context];
     character.character_id = @0;
     character.name = @"Giant";
-    character.experiencePerLevel = @10;
+    character.experiencePerLevel = @50;
     character.level = @1;
-    character.health = @100;
-    character.healthinc = @10;
-    character.attack = @20;
-    character.attackinc = @2;
-    character.defense = @10;
-    character.defenseinc = @1;
-    character.speed = @10;
-    character.speedinc = @1;
+    character.health = @2000;
+    character.healthinc = @200;
+    character.attack = @50;
+    character.attackinc = @5;
+    character.defense = @0;
+    character.defenseinc = @0;
+    character.speed = @40;
+    character.speedinc = @0;
     [ad saveContext];
     
     character = [NSEntityDescription
@@ -110,16 +110,16 @@
                               inManagedObjectContext:context];
     character.character_id = @1;
     character.name = @"Hog Rider";
-    character.experiencePerLevel = @10;
+    character.experiencePerLevel = @40;
     character.level = @1;
-    character.health = @100;
-    character.healthinc = @10;
-    character.attack = @20;
-    character.attackinc = @2;
-    character.defense = @10;
-    character.defenseinc = @1;
-    character.speed = @10;
-    character.speedinc = @1;
+    character.health = @800;
+    character.healthinc = @80;
+    character.attack = @160;
+    character.attackinc = @16;
+    character.defense = @0;
+    character.defenseinc = @0;
+    character.speed = @40;
+    character.speedinc = @0;
     [ad saveContext];
     
     character = [NSEntityDescription
@@ -127,33 +127,33 @@
                  inManagedObjectContext:context];
     character.character_id = @2;
     character.name = @"Archer";
-    character.experiencePerLevel = @10;
+    character.experiencePerLevel = @30;
     character.level = @1;
-    character.health = @100;
-    character.healthinc = @10;
-    character.attack = @20;
-    character.attackinc = @2;
-    character.defense = @10;
-    character.defenseinc = @1;
-    character.speed = @10;
-    character.speedinc = @1;
+    character.health = @250;
+    character.healthinc = @30;
+    character.attack = @250;
+    character.attackinc = @30;
+    character.defense = @0;
+    character.defenseinc = @0;
+    character.speed = @50;
+    character.speedinc = @0;
     [ad saveContext];
     
     character = [NSEntityDescription
                  insertNewObjectForEntityForName:@"Character"
                  inManagedObjectContext:context];
     character.character_id = @101;
-    character.name = @"stage 1";
+    character.name = @"Boss";
     character.experiencePerLevel = @100;
     character.level = @1;
-    character.health = @100;
-    character.healthinc = @10;
-    character.attack = @20;
-    character.attackinc = @2;
-    character.defense = @10;
-    character.defenseinc = @1;
-    character.speed = @10;
-    character.speedinc = @1;
+    character.health = @340;
+    character.healthinc = @30;
+    character.attack = @130;
+    character.attackinc = @15;
+    character.defense = @0;
+    character.defenseinc = @0;
+    character.speed = @35;
+    character.speedinc = @0;
     [ad saveContext];
 }
 @end

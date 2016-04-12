@@ -17,8 +17,7 @@
 
 @implementation GameViewController
 
--(id)initWithNibName:(NSString*) String bundle:(NSBundle*)bundle against:(CharacterMO*)char2{
-    self = [super initWithNibName:String bundle:bundle];
+-(id)initAgainst:(CharacterMO*)char2{
     if (self) {
         self.c1 = char2;
         self.c2 = [CharacterMO getUserCharacter];
@@ -38,6 +37,8 @@
     [self gameStart];
     [self.imageView1 setImage:[UIImage imageNamed:[NSString stringWithFormat:@"char%@.png", self.c1.character_id]]];
     [self.imageView2 setImage:[UIImage imageNamed:[NSString stringWithFormat:@"char%@.png", self.c2.character_id]]];
+    [self.name1 setText:self.c1.name];
+    [self.name2 setText:self.c2.name];
 }
 - (NSInteger)attackByChar:(Character*)char1 atChar:(Character*)char2 {
     NSInteger result = [char1 attack:char2];
@@ -89,25 +90,32 @@
             }];
         }];
     }
-    if (result != 0) {
-        if (result == -1) {
-            [self.notif setText:@"Miss!"];
-        } else {
-            [self.notif setText:@"Critical!"];
-        }
-        [UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-            self.notif.alpha = 1;
-        } completion:^(BOOL finished) {
-            [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-                self.notif.alpha = 0;
-            } completion:^(BOOL finished) {
-                
-            }];
-        }];
-    }
     [self updateUI];
     if ([self.char1 isAlive] && [self.char2 isAlive]) {
+        if (result != 0) {
+            if (result == -1) {
+                [self.notif setText:@"Miss!"];
+            } else {
+                [self.notif setText:@"Critical!"];
+            }
+            [UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+                self.notif.alpha = 1;
+            } completion:^(BOOL finished) {
+                [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+                    self.notif.alpha = 0;
+                } completion:^(BOOL finished) {
+                    
+                }];
+            }];
+        }
         [self performSelector:@selector(gameRunning) withObject:self afterDelay:2.0 ];
+    } else if ([self.char2 isAlive]) {
+        [self.notif setText:@"Win!"];
+        [self.notif setAlpha:1];
+        [self.c1 levelUp];
+    } else {
+        [self.notif setText:@"Lose!"];
+        [self.notif setAlpha:1];
     }
 }
 
