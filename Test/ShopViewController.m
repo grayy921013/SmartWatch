@@ -7,8 +7,6 @@
 //
 
 #import "ShopViewController.h"
-#import <AVOSCloud/AVOSCloud.h>
-
 
 @interface ShopViewController ()
 @property(nonatomic, retain) NSArray *array;
@@ -20,10 +18,6 @@
     [super viewDidLoad];
     self.title = @"Shop";
     self.array = [CharacterMO getAvailableUserRecords];
-    AVObject *testObject = [AVObject objectWithClassName:@"TestObject"];
-    [testObject setObject:@"bar" forKey:@"foo"];
-    [testObject save];
-    
     // Do any additional setup after loading the view from its nib.
 }
 

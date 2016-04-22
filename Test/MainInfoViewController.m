@@ -9,8 +9,6 @@
 #import "MainInfoViewController.h"
 #import "InfoViewController.h"
 #import "DataTableViewController.h"
-#import <FBSDKCoreKit/FBSDKCoreKit.h>
-#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 @interface MainInfoViewController ()
 
@@ -21,9 +19,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Info";
-    FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
-    loginButton.center = self.view.center;
-    [self.view addSubview:loginButton];
     // Do any additional setup after loading the view from its nib.
 }
 

@@ -74,24 +74,6 @@
 		84B8FD511BE8E27300CCE8DC /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84B8FD4F1BE8E27300CCE8DC /* Model.xcdatamodeld */; };
 		84D0054C1BB9313D005992E5 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D0054B1BB9313D005992E5 /* HealthKit.framework */; };
 		84F8B68D1BBC0C830054C199 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F8B68C1BBC0C830054C199 /* HealthKit.framework */; };
-		C40016081CC5F47E00979930 /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C40016051CC5F47E00979930 /* AVOSCloud.framework */; };
-		C40016091CC5F47E00979930 /* AVOSCloudCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C40016061CC5F47E00979930 /* AVOSCloudCrashReporting.framework */; };
-		C400160A1CC5F47E00979930 /* AVOSCloudIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C40016071CC5F47E00979930 /* AVOSCloudIM.framework */; };
-		C400160B1CC5F54A00979930 /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C40016051CC5F47E00979930 /* AVOSCloud.framework */; };
-		C400160C1CC5F54A00979930 /* AVOSCloud.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C40016051CC5F47E00979930 /* AVOSCloud.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C400160D1CC5F54A00979930 /* AVOSCloudCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C40016061CC5F47E00979930 /* AVOSCloudCrashReporting.framework */; };
-		C400160E1CC5F54A00979930 /* AVOSCloudCrashReporting.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C40016061CC5F47E00979930 /* AVOSCloudCrashReporting.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C400160F1CC5F54A00979930 /* AVOSCloudIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C40016071CC5F47E00979930 /* AVOSCloudIM.framework */; };
-		C40016101CC5F54A00979930 /* AVOSCloudIM.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C40016071CC5F47E00979930 /* AVOSCloudIM.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C47DF47A1CC9E560006017CF /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47DF4771CC9E560006017CF /* FBSDKCoreKit.framework */; };
-		C47DF47B1CC9E560006017CF /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47DF4781CC9E560006017CF /* FBSDKLoginKit.framework */; };
-		C47DF47C1CC9E560006017CF /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47DF4791CC9E560006017CF /* FBSDKShareKit.framework */; };
-		C47DF47D1CC9E57C006017CF /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47DF4771CC9E560006017CF /* FBSDKCoreKit.framework */; };
-		C47DF47E1CC9E57C006017CF /* FBSDKCoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C47DF4771CC9E560006017CF /* FBSDKCoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C47DF47F1CC9E57C006017CF /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47DF4781CC9E560006017CF /* FBSDKLoginKit.framework */; };
-		C47DF4801CC9E57C006017CF /* FBSDKLoginKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C47DF4781CC9E560006017CF /* FBSDKLoginKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C47DF4811CC9E57C006017CF /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47DF4791CC9E560006017CF /* FBSDKShareKit.framework */; };
-		C47DF4821CC9E57C006017CF /* FBSDKShareKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C47DF4791CC9E560006017CF /* FBSDKShareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,22 +128,6 @@
 				842CD24C1BB66481000E2703 /* Test WatchKit App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C40016111CC5F54A00979930 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				C400160E1CC5F54A00979930 /* AVOSCloudCrashReporting.framework in Embed Frameworks */,
-				C47DF47E1CC9E57C006017CF /* FBSDKCoreKit.framework in Embed Frameworks */,
-				C47DF4821CC9E57C006017CF /* FBSDKShareKit.framework in Embed Frameworks */,
-				C47DF4801CC9E57C006017CF /* FBSDKLoginKit.framework in Embed Frameworks */,
-				C400160C1CC5F54A00979930 /* AVOSCloud.framework in Embed Frameworks */,
-				C40016101CC5F54A00979930 /* AVOSCloudIM.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -272,12 +238,6 @@
 		84D0054D1BB9313D005992E5 /* Test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Test.entitlements; sourceTree = "<group>"; };
 		84F8B68C1BBC0C830054C199 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.0.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		84F8B68E1BBC0C830054C199 /* Test WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Test WatchKit Extension.entitlements"; sourceTree = "<group>"; };
-		C40016051CC5F47E00979930 /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
-		C40016061CC5F47E00979930 /* AVOSCloudCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloudCrashReporting.framework; sourceTree = "<group>"; };
-		C40016071CC5F47E00979930 /* AVOSCloudIM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloudIM.framework; sourceTree = "<group>"; };
-		C47DF4771CC9E560006017CF /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		C47DF4781CC9E560006017CF /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		C47DF4791CC9E560006017CF /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,20 +245,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C40016091CC5F47E00979930 /* AVOSCloudCrashReporting.framework in Frameworks */,
-				C47DF47D1CC9E57C006017CF /* FBSDKCoreKit.framework in Frameworks */,
-				C400160D1CC5F54A00979930 /* AVOSCloudCrashReporting.framework in Frameworks */,
-				C47DF47B1CC9E560006017CF /* FBSDKLoginKit.framework in Frameworks */,
 				84D0054C1BB9313D005992E5 /* HealthKit.framework in Frameworks */,
-				C400160A1CC5F47E00979930 /* AVOSCloudIM.framework in Frameworks */,
 				0860DA08EDB52371B5E30FB9 /* Pods.framework in Frameworks */,
-				C47DF47F1CC9E57C006017CF /* FBSDKLoginKit.framework in Frameworks */,
-				C47DF47C1CC9E560006017CF /* FBSDKShareKit.framework in Frameworks */,
-				C40016081CC5F47E00979930 /* AVOSCloud.framework in Frameworks */,
-				C47DF4811CC9E57C006017CF /* FBSDKShareKit.framework in Frameworks */,
-				C400160B1CC5F54A00979930 /* AVOSCloud.framework in Frameworks */,
-				C47DF47A1CC9E560006017CF /* FBSDKCoreKit.framework in Frameworks */,
-				C400160F1CC5F54A00979930 /* AVOSCloudIM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,23 +492,9 @@
 		B66D2AB70457FE491FC4FCFF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C47DF4771CC9E560006017CF /* FBSDKCoreKit.framework */,
-				C47DF4781CC9E560006017CF /* FBSDKLoginKit.framework */,
-				C47DF4791CC9E560006017CF /* FBSDKShareKit.framework */,
-				C40016041CC5F47E00979930 /* AVOSCloud */,
 				18532A0B743E03FADDA9A7AC /* Pods.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C40016041CC5F47E00979930 /* AVOSCloud */ = {
-			isa = PBXGroup;
-			children = (
-				C40016051CC5F47E00979930 /* AVOSCloud.framework */,
-				C40016061CC5F47E00979930 /* AVOSCloudCrashReporting.framework */,
-				C40016071CC5F47E00979930 /* AVOSCloudIM.framework */,
-			);
-			path = AVOSCloud;
 			sourceTree = "<group>";
 		};
 		E9AE2A4D397686DF6E592011 /* Pods */ = {
@@ -586,7 +520,6 @@
 				842CD2761BB66482000E2703 /* Embed Watch Content */,
 				5383EE6537C05D3671B1615F /* Embed Pods Frameworks */,
 				84FE8E4C321B69C98B7B775B /* Copy Pods Resources */,
-				C40016111CC5F54A00979930 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1121,11 +1054,6 @@
 				CODE_SIGN_ENTITLEMENTS = Test/Test.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/AVOSCloud",
-					"$(PROJECT_DIR)",
-				);
 				INFOPLIST_FILE = Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(CONFIGURATION_BUILD_DIR)";
 				PRODUCT_BUNDLE_IDENTIFIER = VincentZhou.Test;
@@ -1142,11 +1070,6 @@
 				CODE_SIGN_ENTITLEMENTS = Test/Test.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/AVOSCloud",
-					"$(PROJECT_DIR)",
-				);
 				INFOPLIST_FILE = Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(CONFIGURATION_BUILD_DIR)";
 				PRODUCT_BUNDLE_IDENTIFIER = VincentZhou.Test;

@@ -7,8 +7,6 @@
 //
 #import "WatchSessionManager.h"
 #import "SoundManager.h"
-#import <AVOSCloud/AVOSCloud.h>
-
 @implementation WatchSessionManager
 NSInteger last_heartrate_value;
 NSDate *last_heartrate_time = nil;
@@ -23,8 +21,6 @@ WCSession *session;
             session.delegate = self;
         }
     }
-    AVObject *todoFolder = [[AVObject alloc] initWithClassName:@"Totalpoints"];// 构建对象
-    [todoFolder saveInBackground];// 保存到服务端
     return self;
 }
 - (void)startSession {
@@ -187,9 +183,6 @@ WCSession *session;
                     NSInteger newpoint = point + [[NSUserDefaults standardUserDefaults] integerForKey:POINT_KEY];
                     [[NSUserDefaults standardUserDefaults] setInteger:newpoint forKey:POINT_KEY];
                     [[NSUserDefaults standardUserDefaults] synchronize];
-                    
-                    NSUserDefaults *userDefaultes = [NSUserDefaults standardUserDefaults];
-                    NSString *userid = [userDefaultes stringForKey:@"userid"];
                 }
             }
             last_heartrate_time = data.startDate;
