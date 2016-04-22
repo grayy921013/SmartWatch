@@ -10,6 +10,9 @@
 #import "WatchSessionManager.h"
 #import "CYLTabBarControllerConfig.h"
 #import "CharacterMO.h"
+#import <AVOSCloud/AVOSCloud.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 @interface AppDelegate ()
 @property (strong, nonatomic) HKHealthStore *store;
@@ -46,6 +49,29 @@
     [UIUserNotificationSettings settingsForTypes:types categories:nil];
     
     [[UIApplication sharedApplication] registerUserNotificationSettings:mySettings];
+    
+    //Lean cloud update user points
+    [AVOSCloud setApplicationId:@"slVLIK1XwQFDDCvVqUvFbmNM-gzGzoHsz"
+                      clientKey:@"evFK4KSaDJ59oVd8hznjNkiP"];
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:@"0000000001" forKey:@"userid"];
+    NSString *userid = [userDefaults stringForKey:@"userid"];
+    AVQuery *query = [AVQuery queryWithClassName:@"Totalpoints"];
+    [query whereKey:@"userid" equalTo:userid];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        // object 就是 id 为 558e20cbe4b060308e3eb36c 的 Todo 对象实例
+        NSNumber *oldpoints = [objects[0] objectForKey:@"totalpoints"];
+        int value = [oldpoints intValue];
+        NSNumber *number = [NSNumber numberWithInt:value + 200];
+        [objects[0] setObject:number forKey:@"totalpoints"];
+        [objects[0] saveInBackground];
+    }];
+    
+    [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    //Facebook login claim
+    [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
     return YES;
 }
 
@@ -77,8 +103,8 @@
 #endif
     }
     [navigationBarAppearance setTitleTextAttributes:textAttributes];
-//    [navigationBarAppearance setBarTintColor:[UIColor blueColor]];
-//    [navigationBarAppearance setTintColor:[UIColor whiteColor]];
+    //    [navigationBarAppearance setBarTintColor:[UIColor blueColor]];
+    //    [navigationBarAppearance setTintColor:[UIColor whiteColor]];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -96,6 +122,7 @@
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
+    [FBSDKAppEvents activateApp];
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
@@ -179,5 +206,15 @@
             abort();
         }
     }
+}
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    return [[FBSDKApplicationDelegate sharedInstance] application:application
+                                                          openURL:url
+                                                sourceApplication:sourceApplication
+                                                       annotation:annotation];
 }
 @end

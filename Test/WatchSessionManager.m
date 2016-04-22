@@ -7,6 +7,8 @@
 //
 #import "WatchSessionManager.h"
 #import "SoundManager.h"
+#import <AVOSCloud/AVOSCloud.h>
+
 @implementation WatchSessionManager
 NSInteger last_heartrate_value;
 NSDate *last_heartrate_time = nil;
