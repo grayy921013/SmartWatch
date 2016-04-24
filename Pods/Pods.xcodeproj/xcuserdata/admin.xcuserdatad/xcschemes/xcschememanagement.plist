@@ -4,7 +4,27 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>CYLTabBarController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKCoreKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKLoginKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKShareKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,17 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>380C0DBCE528048751B269C67A0696B4</key>
+		<key>09846A0F46988573DAEDDD6B55466BEA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>491610A9120550D6CFC7AE16B2501422</key>
+		<key>4E286D373D75563CE26E479A68203892</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AAA6381DD61CC80261C263F0DBCB4C79</key>
+		<key>57FE58C60D309966815585DD3DE05ED5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7E61C9A8C176278C6C99C2C59E9C152E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8252A0A87A9620BDDCDAE695B99DB4B3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C43DEF8E5BFEC36D943258BA3F21834D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F3CE383BCD190DFD1B312E3920C7B769</key>
 		<dict>
 			<key>primary</key>
 			<true/>

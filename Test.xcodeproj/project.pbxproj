@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0860DA08EDB52371B5E30FB9 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18532A0B743E03FADDA9A7AC /* Pods.framework */; };
+		83E262BB6E405E854A997348 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4BE0B29EC4A790682B10E1A /* libPods.a */; };
 		840D9D7F1C8EC73900D92922 /* runningman.gif in Resources */ = {isa = PBXBuildFile; fileRef = 840D9D7E1C8EC73900D92922 /* runningman.gif */; };
 		840EA8A41C717FE7009476B6 /* FightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840EA8A21C717FE7009476B6 /* FightViewController.m */; };
 		840EA8A51C717FE7009476B6 /* FightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840EA8A31C717FE7009476B6 /* FightViewController.xib */; };
@@ -74,24 +74,6 @@
 		84B8FD511BE8E27300CCE8DC /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84B8FD4F1BE8E27300CCE8DC /* Model.xcdatamodeld */; };
 		84D0054C1BB9313D005992E5 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D0054B1BB9313D005992E5 /* HealthKit.framework */; };
 		84F8B68D1BBC0C830054C199 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F8B68C1BBC0C830054C199 /* HealthKit.framework */; };
-		C47DF4861CCA1E54006017CF /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47DF4831CCA1E54006017CF /* FBSDKCoreKit.framework */; };
-		C47DF4871CCA1E55006017CF /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47DF4841CCA1E54006017CF /* FBSDKLoginKit.framework */; };
-		C47DF4881CCA1E55006017CF /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47DF4851CCA1E54006017CF /* FBSDKShareKit.framework */; };
-		C47DF48D1CCA1E5A006017CF /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47DF48A1CCA1E5A006017CF /* AVOSCloud.framework */; };
-		C47DF48E1CCA1E5A006017CF /* AVOSCloudCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47DF48B1CCA1E5A006017CF /* AVOSCloudCrashReporting.framework */; };
-		C47DF48F1CCA1E5A006017CF /* AVOSCloudIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47DF48C1CCA1E5A006017CF /* AVOSCloudIM.framework */; };
-		C47DF4901CCA1E6F006017CF /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47DF48A1CCA1E5A006017CF /* AVOSCloud.framework */; };
-		C47DF4911CCA1E6F006017CF /* AVOSCloud.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C47DF48A1CCA1E5A006017CF /* AVOSCloud.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C47DF4921CCA1E6F006017CF /* AVOSCloudCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47DF48B1CCA1E5A006017CF /* AVOSCloudCrashReporting.framework */; };
-		C47DF4931CCA1E6F006017CF /* AVOSCloudCrashReporting.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C47DF48B1CCA1E5A006017CF /* AVOSCloudCrashReporting.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C47DF4941CCA1E6F006017CF /* AVOSCloudIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47DF48C1CCA1E5A006017CF /* AVOSCloudIM.framework */; };
-		C47DF4951CCA1E6F006017CF /* AVOSCloudIM.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C47DF48C1CCA1E5A006017CF /* AVOSCloudIM.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C47DF4961CCA1E70006017CF /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47DF4831CCA1E54006017CF /* FBSDKCoreKit.framework */; };
-		C47DF4971CCA1E70006017CF /* FBSDKCoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C47DF4831CCA1E54006017CF /* FBSDKCoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C47DF4981CCA1E70006017CF /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47DF4841CCA1E54006017CF /* FBSDKLoginKit.framework */; };
-		C47DF4991CCA1E70006017CF /* FBSDKLoginKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C47DF4841CCA1E54006017CF /* FBSDKLoginKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C47DF49A1CCA1E70006017CF /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47DF4851CCA1E54006017CF /* FBSDKShareKit.framework */; };
-		C47DF49B1CCA1E70006017CF /* FBSDKShareKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C47DF4851CCA1E54006017CF /* FBSDKShareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,12 +136,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C47DF4931CCA1E6F006017CF /* AVOSCloudCrashReporting.framework in Embed Frameworks */,
-				C47DF4971CCA1E70006017CF /* FBSDKCoreKit.framework in Embed Frameworks */,
-				C47DF49B1CCA1E70006017CF /* FBSDKShareKit.framework in Embed Frameworks */,
-				C47DF4991CCA1E70006017CF /* FBSDKLoginKit.framework in Embed Frameworks */,
-				C47DF4911CCA1E6F006017CF /* AVOSCloud.framework in Embed Frameworks */,
-				C47DF4951CCA1E6F006017CF /* AVOSCloudIM.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,7 +145,6 @@
 /* Begin PBXFileReference section */
 		09BA1639C411435668F004CC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		0F6C3FE867D88A99F68942EC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		18532A0B743E03FADDA9A7AC /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		840D9D7E1C8EC73900D92922 /* runningman.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = runningman.gif; sourceTree = "<group>"; };
 		840EA8A11C717FE7009476B6 /* FightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FightViewController.h; sourceTree = "<group>"; };
 		840EA8A21C717FE7009476B6 /* FightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FightViewController.m; sourceTree = "<group>"; };
@@ -272,12 +247,7 @@
 		84D0054D1BB9313D005992E5 /* Test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Test.entitlements; sourceTree = "<group>"; };
 		84F8B68C1BBC0C830054C199 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.0.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		84F8B68E1BBC0C830054C199 /* Test WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Test WatchKit Extension.entitlements"; sourceTree = "<group>"; };
-		C47DF4831CCA1E54006017CF /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		C47DF4841CCA1E54006017CF /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		C47DF4851CCA1E54006017CF /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
-		C47DF48A1CCA1E5A006017CF /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
-		C47DF48B1CCA1E5A006017CF /* AVOSCloudCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloudCrashReporting.framework; sourceTree = "<group>"; };
-		C47DF48C1CCA1E5A006017CF /* AVOSCloudIM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloudIM.framework; sourceTree = "<group>"; };
+		E4BE0B29EC4A790682B10E1A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,20 +255,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C47DF4921CCA1E6F006017CF /* AVOSCloudCrashReporting.framework in Frameworks */,
-				C47DF4961CCA1E70006017CF /* FBSDKCoreKit.framework in Frameworks */,
 				84D0054C1BB9313D005992E5 /* HealthKit.framework in Frameworks */,
-				C47DF4941CCA1E6F006017CF /* AVOSCloudIM.framework in Frameworks */,
-				C47DF48E1CCA1E5A006017CF /* AVOSCloudCrashReporting.framework in Frameworks */,
-				C47DF4861CCA1E54006017CF /* FBSDKCoreKit.framework in Frameworks */,
-				C47DF4881CCA1E55006017CF /* FBSDKShareKit.framework in Frameworks */,
-				C47DF4981CCA1E70006017CF /* FBSDKLoginKit.framework in Frameworks */,
-				C47DF4871CCA1E55006017CF /* FBSDKLoginKit.framework in Frameworks */,
-				0860DA08EDB52371B5E30FB9 /* Pods.framework in Frameworks */,
-				C47DF49A1CCA1E70006017CF /* FBSDKShareKit.framework in Frameworks */,
-				C47DF48D1CCA1E5A006017CF /* AVOSCloud.framework in Frameworks */,
-				C47DF48F1CCA1E5A006017CF /* AVOSCloudIM.framework in Frameworks */,
-				C47DF4901CCA1E6F006017CF /* AVOSCloud.framework in Frameworks */,
+				83E262BB6E405E854A997348 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,23 +502,9 @@
 		B66D2AB70457FE491FC4FCFF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C47DF4891CCA1E5A006017CF /* AVOSCloud */,
-				C47DF4831CCA1E54006017CF /* FBSDKCoreKit.framework */,
-				C47DF4841CCA1E54006017CF /* FBSDKLoginKit.framework */,
-				C47DF4851CCA1E54006017CF /* FBSDKShareKit.framework */,
-				18532A0B743E03FADDA9A7AC /* Pods.framework */,
+				E4BE0B29EC4A790682B10E1A /* libPods.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C47DF4891CCA1E5A006017CF /* AVOSCloud */ = {
-			isa = PBXGroup;
-			children = (
-				C47DF48A1CCA1E5A006017CF /* AVOSCloud.framework */,
-				C47DF48B1CCA1E5A006017CF /* AVOSCloudCrashReporting.framework */,
-				C47DF48C1CCA1E5A006017CF /* AVOSCloudIM.framework */,
-			);
-			path = AVOSCloud;
 			sourceTree = "<group>";
 		};
 		E9AE2A4D397686DF6E592011 /* Pods */ = {
@@ -688,7 +632,6 @@
 					};
 					842CD2361BB66481000E2703 = {
 						CreatedOnToolsVersion = 7.0;
-						TestTargetID = 842CD21D1BB66481000E2703;
 					};
 					842CD2411BB66481000E2703 = {
 						CreatedOnToolsVersion = 7.0;
@@ -987,10 +930,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -1124,9 +1064,9 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/AVOSCloud",
 				);
 				INFOPLIST_FILE = Test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(CONFIGURATION_BUILD_DIR)";
 				PRODUCT_BUNDLE_IDENTIFIER = VincentZhou.Test;
 				PRODUCT_NAME = "Smart Watch";
@@ -1145,9 +1085,9 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/AVOSCloud",
 				);
 				INFOPLIST_FILE = Test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(CONFIGURATION_BUILD_DIR)";
 				PRODUCT_BUNDLE_IDENTIFIER = VincentZhou.Test;
 				PRODUCT_NAME = "Smart Watch";
@@ -1158,24 +1098,20 @@
 		842CD27B1BB66482000E2703 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = TestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VincentZhou.TestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Test.app/Test";
 			};
 			name = Debug;
 		};
 		842CD27C1BB66482000E2703 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = TestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VincentZhou.TestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Test.app/Test";
 			};
 			name = Release;
 		};
@@ -1186,7 +1122,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VincentZhou.TestUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = Test;
+				PROVISIONING_PROFILE = "";
+				TEST_TARGET_NAME = "			";
 				USES_XCTRUNNER = YES;
 			};
 			name = Debug;
@@ -1198,7 +1135,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VincentZhou.TestUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = Test;
+				PROVISIONING_PROFILE = "";
+				TEST_TARGET_NAME = "			";
 				USES_XCTRUNNER = YES;
 			};
 			name = Release;

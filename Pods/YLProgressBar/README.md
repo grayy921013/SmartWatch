@@ -1,4 +1,8 @@
-![YLProgressBar](https://github.com/YannickL/YLProgressBar/raw/master/web/ylprogressbar_header.png)
+<p align="center">
+  <img src="https://github.com/YannickL/YLProgressBar/raw/master/web/ylprogressbar_header.png" alt="YLProgressBar" />
+</p>
+
+[![License](https://cocoapod-badges.herokuapp.com/l/YLProgressBar/badge.svg)](http://cocoadocs.org/docsets/YLProgressBar/) [![Supported Platforms](https://cocoapod-badges.herokuapp.com/p/YLProgressBar/badge.svg)](http://cocoadocs.org/docsets/YLProgressBar/) [![Version](https://cocoapod-badges.herokuapp.com/v/YLProgressBar/badge.svg)](http://cocoadocs.org/docsets/YLProgressBar/)
 
 The `YLProgressBar` is an UIProgressView replacement with an highly and fully customizable animated progress bar in pure Core Graphics
 
@@ -27,7 +31,7 @@ $ touch Podfile
 $ edit Podfile
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios
-pod 'YLProgressBar', '~> 3.8.0'
+pod 'YLProgressBar', '~> 3.8.1'
 ```
 
 Install into your project:
@@ -111,7 +115,7 @@ furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in<br />
 all copies or substantial portions of the Software.
- 
+
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR<br />
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,<br />
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE<br />

@@ -1,4 +1,8 @@
 platform :ios, '9.0'
-use_frameworks!
 pod 'YLProgressBar'
 pod 'CYLTabBarController'
+pod 'AVOSCloud'
+pod 'AVOSCloudCrashReporting'
+pod 'FBSDKCoreKit'
+pod 'FBSDKShareKit'
+pod 'FBSDKLoginKit'

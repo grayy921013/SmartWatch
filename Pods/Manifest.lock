@@ -1,13 +1,39 @@
 PODS:
-  - CYLTabBarController (1.2.1)
-  - YLProgressBar (3.8.0)
+  - AVOSCloud (3.2.8)
+  - AVOSCloudCrashReporting (3.2.8):
+    - AVOSCloud
+  - Bolts (1.7.0):
+    - Bolts/AppLinks (= 1.7.0)
+    - Bolts/Tasks (= 1.7.0)
+  - Bolts/AppLinks (1.7.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.7.0)
+  - CYLTabBarController (1.2.7)
+  - FBSDKCoreKit (4.11.0):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.11.0):
+    - FBSDKCoreKit
+  - FBSDKShareKit (4.11.0):
+    - FBSDKCoreKit
+  - YLProgressBar (3.8.1)
 
 DEPENDENCIES:
+  - AVOSCloud
+  - AVOSCloudCrashReporting
   - CYLTabBarController
+  - FBSDKCoreKit
+  - FBSDKLoginKit
+  - FBSDKShareKit
   - YLProgressBar
 
 SPEC CHECKSUMS:
-  CYLTabBarController: 62ee700d59dc1f42777053e6254933f499ab4564
-  YLProgressBar: b6ec76bea4a1b8d6bdfd2995d828055a7e5f3e9a
+  AVOSCloud: b789619942a4275e615f8f0782e7475675951b95
+  AVOSCloudCrashReporting: 2dddc7dfc8ef423492a01c0076b3e97716854701
+  Bolts: a0058fa3b331c5a1e4402d534f2dae36dbff31e4
+  CYLTabBarController: 639c5eca91cc564671bfd876e5fcc1a39cc49bf7
+  FBSDKCoreKit: 686ac982723a14ec9ddb85e2f81235d7706c891b
+  FBSDKLoginKit: bade9fc78277764149ccc5bfaadbf13c83175c6a
+  FBSDKShareKit: 2d1746144cfc8a9dbbd24997c34ee0471be51b6a
+  YLProgressBar: c6699d75d58042377132c9301d3ab8fd0204937d
 
 COCOAPODS: 0.39.0
