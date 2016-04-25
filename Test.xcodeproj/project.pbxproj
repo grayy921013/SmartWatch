@@ -18,7 +18,6 @@
 		840EA8BC1C72B5BA009476B6 /* RankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840EA8BA1C72B5BA009476B6 /* RankViewController.m */; };
 		840EA8BD1C72B5BA009476B6 /* RankViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840EA8BB1C72B5BA009476B6 /* RankViewController.xib */; };
 		840EA8C91C72C7B8009476B6 /* RankTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840EA8C71C72C7B8009476B6 /* RankTableViewController.m */; };
-		840EA8CA1C72C7B8009476B6 /* RankTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840EA8C81C72C7B8009476B6 /* RankTableViewController.xib */; };
 		8421FAE91CB38CEB00B8CCF5 /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8421FAE81CB38CEB00B8CCF5 /* SoundManager.m */; };
 		842CD2231BB66481000E2703 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 842CD2221BB66481000E2703 /* main.m */; };
 		842CD2261BB66481000E2703 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 842CD2251BB66481000E2703 /* AppDelegate.m */; };
@@ -161,7 +160,6 @@
 		840EA8BB1C72B5BA009476B6 /* RankViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RankViewController.xib; sourceTree = "<group>"; };
 		840EA8C61C72C7B8009476B6 /* RankTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankTableViewController.h; sourceTree = "<group>"; };
 		840EA8C71C72C7B8009476B6 /* RankTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankTableViewController.m; sourceTree = "<group>"; };
-		840EA8C81C72C7B8009476B6 /* RankTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RankTableViewController.xib; sourceTree = "<group>"; };
 		8421FAE71CB38CEB00B8CCF5 /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundManager.h; sourceTree = "<group>"; };
 		8421FAE81CB38CEB00B8CCF5 /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundManager.m; sourceTree = "<group>"; };
 		842CD21E1BB66481000E2703 /* Smart Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -358,7 +356,6 @@
 				840EA8BB1C72B5BA009476B6 /* RankViewController.xib */,
 				840EA8C61C72C7B8009476B6 /* RankTableViewController.h */,
 				840EA8C71C72C7B8009476B6 /* RankTableViewController.m */,
-				840EA8C81C72C7B8009476B6 /* RankTableViewController.xib */,
 				8421FAE71CB38CEB00B8CCF5 /* SoundManager.h */,
 				8421FAE81CB38CEB00B8CCF5 /* SoundManager.m */,
 			);
@@ -691,7 +688,6 @@
 				840EA8A51C717FE7009476B6 /* FightViewController.xib in Resources */,
 				840D9D7F1C8EC73900D92922 /* runningman.gif in Resources */,
 				8493B3AA1BEDF85400F93E0E /* gif2.gif in Resources */,
-				840EA8CA1C72C7B8009476B6 /* RankTableViewController.xib in Resources */,
 				8462EF9D1C48942D005A984E /* DataTableViewCell.xib in Resources */,
 				8493B3AE1BEDF85400F93E0E /* gif6.gif in Resources */,
 				840EA8AA1C719674009476B6 /* GameViewController.xib in Resources */,

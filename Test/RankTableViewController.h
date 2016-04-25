@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RankTableViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface RankTableViewController : UITableViewController
 
 @end

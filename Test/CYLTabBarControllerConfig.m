@@ -11,7 +11,7 @@
 #import "ShopViewController.h"
 #import "HomeViewController.h"
 #import "MainInfoViewController.h"
-#import "RankViewController.h"
+#import "RankTableViewController.h"
 
 @interface CYLTabBarControllerConfig ()
 
@@ -33,7 +33,7 @@
         UIViewController *firstNavigationController = [[UINavigationController alloc]
                                                        initWithRootViewController:firstViewController];
         
-        RankViewController *secondViewController = [[RankViewController alloc] init];
+        RankTableViewController *secondViewController = [[RankTableViewController alloc] init];
         UIViewController *secondNavigationController = [[UINavigationController alloc]
                                                        initWithRootViewController:secondViewController];
         
