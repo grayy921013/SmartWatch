@@ -54,20 +54,6 @@
     [AVOSCloud setApplicationId:@"slVLIK1XwQFDDCvVqUvFbmNM-gzGzoHsz"
                       clientKey:@"evFK4KSaDJ59oVd8hznjNkiP"];
     
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults setObject:@"0000000001" forKey:@"userid"];
-    NSString *userid = [userDefaults stringForKey:@"userid"];
-    AVQuery *query = [AVQuery queryWithClassName:@"Totalpoints"];
-    [query whereKey:@"userid" equalTo:userid];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        // object 就是 id 为 558e20cbe4b060308e3eb36c 的 Todo 对象实例
-        NSNumber *oldpoints = [objects[0] objectForKey:@"totalpoints"];
-        int value = [oldpoints intValue];
-        NSNumber *number = [NSNumber numberWithInt:value + 200];
-        [objects[0] setObject:number forKey:@"totalpoints"];
-        [objects[0] saveInBackground];
-    }];
-    
     [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     //Facebook login claim

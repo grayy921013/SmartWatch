@@ -10,6 +10,7 @@
 #import "WatchSessionManager.h"
 #import "FightViewController.h"
 #import "CharacterMO.h"
+#import "GameViewController.h"
 @interface HomeViewController ()
 
 @end
@@ -94,9 +95,12 @@
     [[WatchSessionManager sharedInstance] shouldGenData:[sender isOn]];
 }
 - (IBAction)gotoFight:(id)sender {
-    FightViewController *fight = [[FightViewController alloc] initWithNibName:@"FightViewController" bundle:nil];
-    fight.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:fight animated:YES];
+//    FightViewController *fight = [[FightViewController alloc] initWithNibName:@"FightViewController" bundle:nil];
+//    fight.hidesBottomBarWhenPushed = YES;
+//    [self.navigationController pushViewController:fight animated:YES];
+    GameViewController *game = [[GameViewController alloc] initAgainst:[CharacterMO getRecordByID:101]];
+    game.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:game animated:YES];
 }
 /*
  #pragma mark - Navigation

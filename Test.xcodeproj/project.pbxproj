@@ -49,6 +49,9 @@
 		846D3AF81C0DC8CE006BB020 /* TrainingTime+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 846D3AF51C0DC8CE006BB020 /* TrainingTime+CoreDataProperties.m */; };
 		846D3AF91C0DC8CE006BB020 /* TrainingTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 846D3AF71C0DC8CE006BB020 /* TrainingTime.m */; };
 		846D3AFC1C0DD1D8006BB020 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 846D3AFB1C0DD1D8006BB020 /* Util.m */; };
+		84788D501CCF3D3F00694F07 /* RankItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 84788D4F1CCF3D3F00694F07 /* RankItem.m */; };
+		84812E271CCF437300F88D83 /* RankTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84812E251CCF437300F88D83 /* RankTableViewCell.m */; };
+		84812E2A1CCF453900F88D83 /* RankTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84812E291CCF453900F88D83 /* RankTableViewCell.xib */; };
 		8493B3821BEC53EE00F93E0E /* SensorData+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 8493B37F1BEC53EE00F93E0E /* SensorData+CoreDataProperties.m */; };
 		8493B3831BEC53EE00F93E0E /* SensorData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8493B3811BEC53EE00F93E0E /* SensorData.m */; };
 		8493B3851BEC58EE00F93E0E /* SensorData+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 8493B37F1BEC53EE00F93E0E /* SensorData+CoreDataProperties.m */; };
@@ -215,6 +218,11 @@
 		846D3AF71C0DC8CE006BB020 /* TrainingTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainingTime.m; sourceTree = "<group>"; };
 		846D3AFA1C0DD1D8006BB020 /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
 		846D3AFB1C0DD1D8006BB020 /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
+		84788D4E1CCF3D3F00694F07 /* RankItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankItem.h; sourceTree = "<group>"; };
+		84788D4F1CCF3D3F00694F07 /* RankItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankItem.m; sourceTree = "<group>"; };
+		84812E241CCF437300F88D83 /* RankTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RankTableViewCell.h; path = View/RankTableViewCell.h; sourceTree = "<group>"; };
+		84812E251CCF437300F88D83 /* RankTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RankTableViewCell.m; path = View/RankTableViewCell.m; sourceTree = "<group>"; };
+		84812E291CCF453900F88D83 /* RankTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RankTableViewCell.xib; path = View/RankTableViewCell.xib; sourceTree = "<group>"; };
 		8493B37E1BEC53EE00F93E0E /* SensorData+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SensorData+CoreDataProperties.h"; sourceTree = "<group>"; };
 		8493B37F1BEC53EE00F93E0E /* SensorData+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SensorData+CoreDataProperties.m"; sourceTree = "<group>"; };
 		8493B3801BEC53EE00F93E0E /* SensorData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorData.h; sourceTree = "<group>"; };
@@ -426,6 +434,9 @@
 		8462EF981C4893DB005A984E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				84812E241CCF437300F88D83 /* RankTableViewCell.h */,
+				84812E251CCF437300F88D83 /* RankTableViewCell.m */,
+				84812E291CCF453900F88D83 /* RankTableViewCell.xib */,
 				8462EF991C48942D005A984E /* DataTableViewCell.h */,
 				8462EF9A1C48942D005A984E /* DataTableViewCell.m */,
 				8462EF9B1C48942D005A984E /* DataTableViewCell.xib */,
@@ -458,6 +469,8 @@
 				8461757A1C75CB0E009FDCE3 /* CharacterMO+CoreDataProperties.m */,
 				8461757B1C75CB0E009FDCE3 /* CharacterMO.h */,
 				8461757C1C75CB0E009FDCE3 /* CharacterMO.m */,
+				84788D4E1CCF3D3F00694F07 /* RankItem.h */,
+				84788D4F1CCF3D3F00694F07 /* RankItem.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -683,6 +696,7 @@
 				842CD22E1BB66481000E2703 /* Assets.xcassets in Resources */,
 				8493B3A11BEDF75400F93E0E /* gif0.gif in Resources */,
 				842CD22C1BB66481000E2703 /* Main.storyboard in Resources */,
+				84812E2A1CCF453900F88D83 /* RankTableViewCell.xib in Resources */,
 				8493B3AB1BEDF85400F93E0E /* gif3.gif in Resources */,
 				846D3AF31C0DAD4B006BB020 /* Defaults.plist in Resources */,
 				840EA8A51C717FE7009476B6 /* FightViewController.xib in Resources */,
@@ -811,7 +825,9 @@
 				846D3AF81C0DC8CE006BB020 /* TrainingTime+CoreDataProperties.m in Sources */,
 				8493B3821BEC53EE00F93E0E /* SensorData+CoreDataProperties.m in Sources */,
 				840EA8BC1C72B5BA009476B6 /* RankViewController.m in Sources */,
+				84788D501CCF3D3F00694F07 /* RankItem.m in Sources */,
 				84B8FD4E1BE8880B00CCE8DC /* WatchSessionManager.m in Sources */,
+				84812E271CCF437300F88D83 /* RankTableViewCell.m in Sources */,
 				842CD2231BB66481000E2703 /* main.m in Sources */,
 				846D3AFC1C0DD1D8006BB020 /* Util.m in Sources */,
 			);

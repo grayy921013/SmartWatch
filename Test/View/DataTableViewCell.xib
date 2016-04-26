@@ -8,11 +8,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="160" id="KGk-i7-Jjw" customClass="DataTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="105"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="KGk-i7-Jjw" customClass="DataTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="104"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tr9-6E-BD9">
@@ -33,23 +33,11 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4h-rT-acy">
-                        <rect key="frame" x="28" y="75" width="264" height="21"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="21" id="yQW-iF-HUs"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Tr9-6E-BD9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="6fX-Ji-n46"/>
                     <constraint firstAttribute="trailingMargin" secondItem="Tr9-6E-BD9" secondAttribute="trailing" constant="20" id="PGS-Ew-5dh"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="d4h-rT-acy" secondAttribute="trailing" constant="20" id="jEs-c0-NtM"/>
-                    <constraint firstItem="d4h-rT-acy" firstAttribute="top" secondItem="1iK-2E-VhW" secondAttribute="bottom" constant="10" id="kFJ-YR-eEd"/>
                     <constraint firstItem="1iK-2E-VhW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="m2i-yv-5XK"/>
-                    <constraint firstItem="d4h-rT-acy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="odT-62-358"/>
                     <constraint firstItem="Tr9-6E-BD9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="pF1-8K-3ea"/>
                     <constraint firstItem="1iK-2E-VhW" firstAttribute="top" secondItem="Tr9-6E-BD9" secondAttribute="bottom" constant="10" id="qsv-tv-iHA"/>
                     <constraint firstItem="Tr9-6E-BD9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="vTO-Qc-0Js"/>
@@ -59,7 +47,6 @@
             <connections>
                 <outlet property="label1" destination="Tr9-6E-BD9" id="8bh-10-NyH"/>
                 <outlet property="label2" destination="1iK-2E-VhW" id="CQg-ha-n5D"/>
-                <outlet property="label3" destination="d4h-rT-acy" id="T84-od-lrV"/>
             </connections>
             <point key="canvasLocation" x="327" y="326.5"/>
         </tableViewCell>

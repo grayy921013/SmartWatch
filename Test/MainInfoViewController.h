@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface MainInfoViewController : UIViewController
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+@interface MainInfoViewController : UIViewController<FBSDKLoginButtonDelegate>
 
 @end

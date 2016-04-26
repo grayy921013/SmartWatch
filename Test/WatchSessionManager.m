@@ -185,6 +185,30 @@ WCSession *session;
                     NSInteger newpoint = point + [[NSUserDefaults standardUserDefaults] integerForKey:POINT_KEY];
                     [[NSUserDefaults standardUserDefaults] setInteger:newpoint forKey:POINT_KEY];
                     [[NSUserDefaults standardUserDefaults] synchronize];
+                    
+                    //send to cloud
+                    
+                    NSString *userid = [[NSUserDefaults standardUserDefaults] stringForKey:USER_ID_KEY];
+                    if (userid != nil) {
+                        AVQuery *query = [AVQuery queryWithClassName:@"DailyPoints"];
+                        [query whereKey:@"UserID" equalTo:userid];
+                        [query whereKey:@"updatedAt" greaterThanOrEqualTo:[Util beginningOfDay:[NSDate date]]];
+                        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+                            if ([objects count] > 0) {
+                                //has point for today
+                                NSNumber *oldpoints = [objects[0] objectForKey:@"Points"];
+                                NSNumber *number = @([oldpoints intValue] + point);
+                                [objects[0] setObject:number forKey:@"Points"];
+                                [objects[0] saveInBackground];
+                            } else {
+                                //create new
+                                AVObject *post = [AVObject objectWithClassName:@"DailyPoints"];
+                                [post setObject:userid forKey:@"UserID"];
+                                [post setObject:@(point) forKey:@"Points"];
+                                [post saveInBackground];
+                            }
+                        }];
+                    }
                 }
             }
             last_heartrate_time = data.startDate;

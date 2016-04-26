@@ -15,6 +15,7 @@ NSString *const RATE_KEY = @"Rate_key";
 NSString *const CHARACTER_KEY = @"Char_key";
 NSString *const REACH_SOUND_KEY = @"Reach_sound_key";
 NSString *const DROP_SOUND_KEY = @"Drop_sound_key";
+NSString *const USER_ID_KEY = @"User_id_key";
 int THRESHOLD = 100;
 BOOL GEN_DATA = YES;
 @end

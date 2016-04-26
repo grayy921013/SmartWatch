@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DataTableViewCell : UITableViewCell
+@interface RankTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *label1;
 @property (weak, nonatomic) IBOutlet UILabel *label2;
 

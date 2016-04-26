@@ -8,9 +8,8 @@
 
 #import "MainInfoViewController.h"
 #import "InfoViewController.h"
+#import "Constants.h"
 #import "DataTableViewController.h"
-#import <FBSDKCoreKit/FBSDKCoreKit.h>
-#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 @interface MainInfoViewController ()
 
@@ -26,9 +25,26 @@
     loginButton.readPermissions =
     @[@"public_profile", @"email", @"user_friends"];
     [self.view addSubview:loginButton];
+    loginButton.delegate = self;
     // Do any additional setup after loading the view from its nib.
 }
 
+- (void)  loginButton:(FBSDKLoginButton *)loginButton
+didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
+                error:(NSError *)error {
+    if(!error && !result.isCancelled) {
+        NSLog(@"Logged in");
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        [userDefaults setObject:result.token.userID forKey:USER_ID_KEY];
+    }
+}
+/*!
+ @abstract Sent to the delegate when the button was used to logout.
+ @param loginButton The button that was clicked.
+ */
+- (void)loginButtonDidLogOut:(FBSDKLoginButton *)loginButton {
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:USER_ID_KEY];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

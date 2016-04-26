@@ -21,6 +21,7 @@
     } else {
         self.title = @"Energy";
     }
+    self.tableView.rowHeight = 80;
     self.navigationController.navigationBar.translucent = NO;
     UIBarButtonItem *resetButton = [[UIBarButtonItem alloc]
                                    initWithTitle:@"Remove All"
@@ -114,7 +115,6 @@
     Data *data = [self.array objectAtIndex:indexPath.row];
     [[cell label1] setText:[NSString stringWithFormat: @"value:%ld",data.value]];
     [[cell label2] setText:[NSString stringWithFormat: @"%@",[data.startDate descriptionWithLocale:[NSLocale systemLocale]]]];
-    [[cell label3] setText:[NSString stringWithFormat: @"%@",[data.endDate descriptionWithLocale:[NSLocale systemLocale]]]];
 }
 
 #pragma mark - Table view
@@ -133,11 +133,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.array == nil? 0:[self.array count];
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 160;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
