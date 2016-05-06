@@ -10,7 +10,6 @@
 #import "SoundManager.h"
 
 @interface InfoViewController ()
-@property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
 @property (weak, nonatomic) IBOutlet UITextField *ageField;
 @property (weak, nonatomic) IBOutlet UITextField *rateField;
 @end
@@ -32,8 +31,6 @@
     [numberToolbar sizeToFit];
     self.ageField.inputAccessoryView = numberToolbar;
     self.rateField.inputAccessoryView = numberToolbar;
-    [self.pickerView selectRow:[[SoundManager sharedInstance] getReachSound] inComponent:0 animated:NO];
-    [self.pickerView selectRow:[[SoundManager sharedInstance] getDropSound] inComponent:1 animated:NO];
 }
 
 -(void)doneWithNumberPad{
